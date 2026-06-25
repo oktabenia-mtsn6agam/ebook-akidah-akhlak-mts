@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akidah Akhlak Semester 1 Kelas 7 | Okta Benia, S.Pd.I</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #0d6832, #148f47);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav ul li a:hover {
+            opacity: 0.8;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0d6832, #1aaf55);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            font-style: italic;
+            opacity: 0.95;
+        }
+
+        .hero .author-card {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            display: inline-block;
+            margin-top: 1rem;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .hero .edition {
+            background: #ffd700;
+            color: #0d6832;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .hero .author-name {
+            font-size: 1.4rem;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+
+        .hero .author-info {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .btn-hero {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.9rem 2rem;
+            background: white;
+            color: #0d6832;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .btn-hero:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            color: #0d6832;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #1aaf55;
+            margin: 0.8rem auto;
+            border-radius: 2px;
+        }
+
+        /* Tentang Buku */
+        .tentang-content {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 2rem 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border-top: 4px solid #1aaf55;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .feature-card h3 {
+            color: #0d6832;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Struktur */
+        .struktur-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            margin-bottom: 1.5rem;
+            border-left: 5px solid #1aaf55;
+        }
+
+        .struktur-box p {
+            margin: 0.5rem 0;
+            font-size: 1.05rem;
+        }
+
+        .struktur-box strong {
+            color: #0d6832;
+        }
+
+        /* Daftar Bab */
+        .bab-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .bab-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .bab-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .bab-header {
+            background: linear-gradient(135deg, #0d6832, #1aaf55);
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .bab-header.uts-uas {
+            background: linear-gradient(135deg, #b8860b, #ffd700);
+            color: #0d6832;
+        }
+
+        .bab-number {
+            background: rgba(255,255,255,0.25);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .bab-header.uts-uas .bab-number {
+            background: rgba(13, 104, 50, 0.2);
+        }
+
+        .bab-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+        }
+
+        .bab-body {
+            padding: 1.2rem 1.5rem;
+        }
+
+        .bab-body p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .bab-body .open-btn {
+            display: inline-block;
+            margin-top: 0.8rem;
+            color: #1aaf55;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        /* Penulis */
+        .penulis-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .penulis-card h3 {
+            color: #0d6832;
+            font-size: 1.6rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .penulis-card .jabatan {
+            color: #1aaf55;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .penulis-card p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .penulis-card blockquote {
+            background: #f0faf4;
+            border-left: 4px solid #1aaf55;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            font-style: italic;
+            color: #0d6832;
+            border-radius: 0 8px 8px 0;
+        }
+
+        /* Kontak */
+        .kontak-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .kontak-box p {
+            margin: 0.7rem 0;
+            font-size: 1.05rem;
+        }
+
+        .kontak-box a {
+            color: #1aaf55;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .kontak-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d6832;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.3rem 0;
+            opacity: 0.9;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero .subtitle { font-size: 1.1rem; }
+            nav ul { gap: 0.8rem; font-size: 0.9rem; }
+            section h2 { font-size: 1.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+    <div class="container">
+        <div class="logo">📖 Akidah Akhlak K7</div>
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#tentang">Tentang Buku</a></li>
+            <li><a href="#bab">Daftar Bab</a></li>
+            <li><a href="#penulis">Penulis</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="beranda">
+    <span class="edition">📘 Edisi Semester 1 — Kurikulum Merdeka</span>
+    <h1>Akidah Akhlak</h1>
+    <p class="subtitle">Semester 1 Kelas 7 — Madrasah Tsanawiyah</p>
+    <div class="author-card">
+        <div class="author-name">Okta Benia, S.Pd.I</div>
+        <div class="author-info">Guru Pendidikan Agama Islam<br>MTsN 6 Agam</div>
+    </div>
+    <br>
+    <a href="#bab" class="btn-hero">📚 Lihat Daftar Bab</a>
+</section>
+
+<!-- Tentang Buku -->
+<section id="tentang">
+    <h2>Tentang Buku</h2>
+    <div class="tentang-content">
+        <p>Buku <strong>Akidah Akhlak Semester 1 Kelas 7</strong> ini disusun sebagai bahan ajar bagi peserta didik Madrasah Tsanawiyah (MTs) kelas VII. Buku ini membahas fondasi akidah Islam, pengenalan sifat-sifat Allah SWT dan Rasul-Nya, pembentukan akhlak terpuji, adab ibadah, serta kisah keteladanan para nabi sebagai pedoman hidup bagi generasi muslim.</p>
+    </div>
+
+    <div class="features">
+        <div class="feature-card">
+            <div class="icon">📖</div>
+            <h3>7 Bab Lengkap</h3>
+            <p>Materi tersusun sistematis dari akidah hingga kisah teladan nabi</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🕌</div>
+            <h3>Berbasis Nilai Islami</h3>
+            <p>Menanamkan nilai akidah dan akhlak mulia dalam kehidupan sehari-hari</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">💡</div>
+            <h3>Kontekstual & Aplikatif</h3>
+            <p>Materi dikemas relevan dengan kehidupan peserta didik masa kini</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">✅</div>
+            <h3>UTS & UAS</h3>
+            <p>Dilengkapi evaluasi tengah dan akhir semester yang terstruktur</p>
+        </div>
+    </div>
+</section>
+
+<!-- Struktur Pembahasan -->
+<section>
+    <h2>Struktur Pembahasan</h2>
+    <p style="text-align:center; margin-bottom:1.5rem; font-size:1.05rem;">Buku ini disusun secara sistematis dengan pembagian sebagai berikut:</p>
+    <div class="struktur-box">
+        <p><strong>Bab 1 – 2:</strong> Materi Pokok Akidah Islam (Pengertian Akidah & Sifat-sifat Allah dan Rasul)</p>
+        <p><strong>Bab 3:</strong> Ujian Tengah Semester (UTS) — Review Materi Bab 1 – 2</p>
+        <p><strong>Bab 4 – 6:</strong> Materi Pokok Akhlak & Ibadah (Akhlak Terpuji, Adab Shalat & Dzikir, Kisah Keteladanan Nabi)</p>
+        <p><strong>Bab 7:</strong> Ujian Akhir Semester (UAS) — Review Komprehensif Bab 1 – 6</p>
+    </div>
+</section>
+
+<!-- Daftar Bab -->
+<section id="bab">
+    <h2>Daftar Bab</h2>
+    <p style="text-align:center; margin-bottom:1rem; color:#666;">Klik pada setiap bab untuk membuka materi lengkap (file .html terpisah). Semua bab akan terbuka di tab baru.</p>
+
+    <div class="bab-grid">
+        <!-- Bab 1 -->
+        <a href="1.html" target="_blank" class="bab-card">
+            <div class="bab-header">
+                <div class="bab-number">1</div>
+                <div class="bab-title">Akidah Islam</div>
+            </div>
+            <div class="bab-body">
+                <p>Pengertian akidah Islam, sumber-sumber akidah, serta pembagian akidah dalam Islam (Rububiyah, Uluhiyah, dan Asma' wa Sifat).</p>
+                <span class="open-btn">Buka Materi →</span>
+            </div>
+        </a>
+
+        <!-- Bab 2 -->
+        <a href="2.html" target="_blank" class="bab-card">
+            <div class="bab-header">
+                <div class="bab-number">2</div>
+                <div class="bab-title">Sifat-sifat Allah dan Rasul</div>
+            </div>
+            <div class="bab-body">
+                <p>Mengenal sifat-sifat wajib, mustahil, dan jaiz bagi Allah SWT serta sifat-sifat utama para Rasul-Nya (Shiddiq, Amanah, Tabligh, Fathanah).</p>
+                <span class="open-btn">Buka Materi →</span>
+            </div>
+        </a>
+
+        <!-- Bab 3 - UTS -->
+        <a href="3.html" target="_blank" class="bab-card">
+            <div class="bab-header uts-uas">
+                <div class="bab-number">3</div>
+                <div class="bab-title">Ujian Tengah Semester (UTS)</div>
+            </div>
+            <div class="bab-body">
+                <p>Evaluasi materi Bab 1 dan Bab 2 sebagai bentuk penilaian tengah semester untuk mengukur pemahaman peserta didik.</p>
+                <span class="open-btn">Buka Materi →</span>
+            </div>
+        </a>
+
+        <!-- Bab 4 -->
+        <a href="4.html" target="_blank" class="bab-card">
+            <div class="bab-header">
+                <div class="bab-number">4</div>
+                <div class="bab-title">Akhlak Terpuji: Taat, Taubat, Ikhlas, dan Istiqamah</div>
+            </div>
+            <div class="bab-body">
+                <p>Memahami makna dan contoh perilaku taat, taubat, ikhlas, serta istiqamah dalam kehidupan sehari-hari sebagai cerminan akhlakul karimah.</p>
+                <span class="open-btn">Buka Materi →</span>
+            </div>
+        </a>
+
+        <!-- Bab 5 -->
+        <a href="5.html" target="_blank" class="bab-card">
+            <div class="bab-header">
+                <div class="bab-number">5</div>
+                <div class="bab-title">Adab Shalat dan Dzikir</div>
+            </div>
+            <div class="bab-body">
+                <p>Panduan lengkap adab dan tata cara shalat yang khusyuk, serta keutamaan dan bacaan-bacaan dzikir setelah shalat.</p>
+                <span class="open-btn">Buka Materi →</span>
+            </div>
+        </a>
+
+        <!-- Bab 6 -->
+        <a href="6.html" target="_blank" class="bab-card">
+            <div class="bab-header">
+                <div class="bab-number">6</div>
+                <div class="bab-title">Kisah Keteladanan Nabi Yunus AS</div>
+            </div>
+            <div class="bab-body">
+                <p>Mengambil hikmah dan teladan dari kisah perjuangan Nabi Yunus AS, kesabarannya dalam dakwah, serta pelajaran dari peristiwa ikan paus.</p>
+                <span class="open-btn">Buka Materi →</span>
+            </div>
+        </a>
+
+        <!-- Bab 7 - UAS -->
+        <a href="7.html" target="_blank" class="bab-card">
+            <div class="bab-header uts-uas">
+                <div class="bab-number">7</div>
+                <div class="bab-title">Ujian Akhir Semester (UAS)</div>
+            </div>
+            <div class="bab-body">
+                <p>Evaluasi komprehensif seluruh materi Semester 1 (Bab 1 – 6) sebagai bentuk penilaian akhir semester.</p>
+                <span class="open-btn">Buka Materi →</span>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- Tentang Penulis -->
+<section id="penulis">
+    <h2>Tentang Penulis</h2>
+    <div class="penulis-card">
+        <h3>Okta Benia, S.Pd.I</h3>
+        <p class="jabatan">Guru Pendidikan Agama Islam — MTsN 6 Agam</p>
+        <p>Penulis merupakan seorang pendidik aktif di lingkungan Kementerian Agama yang mengabdikan diri sebagai guru mata pelajaran Akidah Akhlak di MTsN 6 Agam. Buku ini disusun berdasarkan pengalaman mengajar di kelas serta upaya untuk menghadirkan materi pembelajaran yang mudah dipahami, kontekstual, dan bermakna bagi peserta didik.</p>
+        <blockquote>"Pendidikan akidah dan akhlak adalah pondasi utama dalam membentuk generasi muslim yang tidak hanya cerdas secara intelektual, tetapi juga mulia dalam budi pekerti."</blockquote>
+    </div>
+</section>
+
+<!-- Kontak -->
+<section id="kontak">
+    <h2>Informasi Kontak</h2>
+    <div class="kontak-box">
+        <p>Untuk informasi lebih lanjut tentang buku ini, silakan menghubungi:</p>
+        <p>📧 Email: <a href="mailto:oktabenia17@gmail.com">oktabenia17@gmail.com</a></p>
+        <p>🏫 Institusi: <strong>MTsN 6 Agam</strong></p>
+        <p>📅 Tahun Terbit: <strong>2026</strong></p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 Okta Benia, S.Pd.I — MTsN 6 Agam</p>
+    <p><strong>Akidah Akhlak Semester 1 Kelas 7</strong></p>
+    <p style="margin-top:0.5rem; font-size:0.9rem;">Hak Cipta Dilindungi Undang-Undang</p>
+</footer>
+
+</body>
+</html>

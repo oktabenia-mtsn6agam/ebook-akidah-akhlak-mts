@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 2: Sifat-sifat Allah dan Rasul | Akidah Akhlak Kelas 7</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* Header */
+        .top-bar {
+            background: linear-gradient(135deg, #0d6832, #148f47);
+            color: white;
+            padding: 0.8rem 2rem;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .top-bar a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .top-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb {
+            background: white;
+            padding: 0.8rem 2rem;
+            border-bottom: 2px solid #eee;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .breadcrumb .pill {
+            display: inline-block;
+            background: #e8f5ec;
+            color: #0d6832;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #0d6832, #1aaf55);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero .chapter-badge {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        .author-info {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.2);
+            margin-top: 1rem;
+        }
+
+        .author-info .name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info .position {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        .section {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-letter {
+            background: linear-gradient(135deg, #0d6832, #1aaf55);
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(13, 104, 50, 0.3);
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            color: #0d6832;
+        }
+
+        .section-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Definition Cards */
+        .def-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .def-card {
+            background: #f0faf4;
+            border-left: 4px solid #1aaf55;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+        }
+
+        .def-card .label {
+            font-size: 0.85rem;
+            color: #0d6832;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+        }
+
+        .def-card .term {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #0d6832;
+            margin-bottom: 0.5rem;
+        }
+
+        .def-card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin: 0;
+        }
+
+        /* Perspective Cards */
+        .perspective-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .perspective-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-top: 4px solid #1aaf55;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .perspective-card.islam {
+            border-top-color: #b8860b;
+            background: #fffdf5;
+        }
+
+        .perspective-card h4 {
+            color: #0d6832;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .perspective-card.islam h4 {
+            color: #b8860b;
+        }
+
+        /* Icon Grid */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin: 1.5rem 0;
+        }
+
+        .icon-card {
+            background: white;
+            padding: 1.5rem 1rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border-bottom: 3px solid #1aaf55;
+        }
+
+        .icon-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-card .emoji {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .icon-card h4 {
+            color: #0d6832;
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .icon-card p {
+            font-size: 0.88rem;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Video Button */
+        .video-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #0d6832, #1aaf55);
+            color: white;
+            padding: 0.7rem 1.3rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 3px 10px rgba(13, 104, 50, 0.3);
+        }
+
+        .video-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 104, 50, 0.4);
+        }
+
+        /* Quran Quote */
+        .quran-quote {
+            background: linear-gradient(135deg, #fffdf5, #fff9e6);
+            border-right: 5px solid #b8860b;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .quran-quote .arabic {
+            font-size: 1.8rem;
+            font-family: 'Traditional Arabic', 'Amiri', serif;
+            color: #0d6832;
+            margin-bottom: 0.8rem;
+            line-height: 2;
+            direction: rtl;
+        }
+
+        .quran-quote .translation {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+
+        .quran-quote .reference {
+            font-weight: bold;
+            color: #b8860b;
+            font-size: 0.9rem;
+        }
+
+        /* Key Concept Box */
+        .key-concept {
+            background: #e8f5ec;
+            border-left: 5px solid #0d6832;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .key-concept .label {
+            font-weight: bold;
+            color: #0d6832;
+            margin-bottom: 0.3rem;
+        }
+
+        .key-concept p {
+            margin: 0;
+            color: #333;
+        }
+
+        /* Reflection Box */
+        .reflection {
+            background: #fff9e6;
+            border-left: 5px solid #b8860b;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .reflection .label {
+            font-weight: bold;
+            color: #b8860b;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #0d6832, #1aaf55);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table td {
+            padding: 0.9rem 1rem;
+            border-bottom: 1px solid #eee;
+            font-size: 0.93rem;
+            vertical-align: top;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        /* Sifat Grid */
+        .sifat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .sifat-card {
+            background: white;
+            padding: 1.2rem;
+            border-radius: 10px;
+            border: 2px solid #e8f5ec;
+            transition: all 0.3s;
+        }
+
+        .sifat-card:hover {
+            border-color: #1aaf55;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .sifat-card .arabic {
+            font-family: 'Traditional Arabic', 'Amiri', serif;
+            font-size: 1.6rem;
+            color: #0d6832;
+            text-align: center;
+            margin-bottom: 0.3rem;
+            direction: rtl;
+        }
+
+        .sifat-card .latin {
+            font-weight: bold;
+            color: #0d6832;
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .sifat-card .meaning {
+            font-size: 0.85rem;
+            color: #666;
+            text-align: center;
+            font-style: italic;
+        }
+
+        /* Category Box */
+        .category-box {
+            background: linear-gradient(135deg, #f0faf4, #e8f5ec);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            border: 2px solid #c3e6cb;
+        }
+
+        .category-box h4 {
+            color: #0d6832;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .category-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .category-box li {
+            padding: 0.4rem 0;
+            border-bottom: 1px dashed #c3e6cb;
+            font-size: 0.95rem;
+        }
+
+        .category-box li:last-child {
+            border-bottom: none;
+        }
+
+        .category-box li strong {
+            color: #0d6832;
+        }
+
+        /* Keywords */
+        .keywords {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .keywords h3 {
+            color: #0d6832;
+            margin-bottom: 1rem;
+        }
+
+        .keyword-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .keyword-tag {
+            background: #e8f5ec;
+            color: #0d6832;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border: 1px solid #c3e6cb;
+        }
+
+        /* Quiz Box */
+        .quiz-box {
+            background: linear-gradient(135deg, #fff9e6, #fffdf5);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+            border: 2px dashed #b8860b;
+        }
+
+        .quiz-box .icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .quiz-box h3 {
+            color: #b8860b;
+            margin-bottom: 0.5rem;
+        }
+
+        .quiz-box p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .quiz-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #b8860b, #ffd700);
+            color: #0d6832;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3);
+        }
+
+        .quiz-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(184, 134, 11, 0.4);
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #1aaf55;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+
+        .nav-btn .label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+
+        .nav-btn .title {
+            font-weight: bold;
+            color: #0d6832;
+        }
+
+        .nav-btn.next {
+            text-align: right;
+            border-left: none;
+            border-right: 4px solid #1aaf55;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-box .close-btn {
+            position: absolute;
+            top: 10px; right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .modal-box .icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-box h3 {
+            color: #0d6832;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-box p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .modal-box .credit {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 1rem;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d6832;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.3rem 0;
+            opacity: 0.9;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .perspective-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <a href="index.html">← Kembali ke Daftar Isi</a> | Buku Akidah Akhlak Semester 1 Kelas 7
+</div>
+
+<div class="breadcrumb">
+    <span class="pill">SIFAT ALLAH</span>
+    <span class="pill">SIFAT RASUL</span>
+    <span class="pill">TAUHID AULIYAH</span>
+    Bab 2 dari 7
+</div>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="chapter-badge">BAB 02 · AKIDAH ISLAM</div>
+    <h1>Sifat-sifat Allah dan Rasul</h1>
+    <p class="subtitle">Mengenal kesempurnaan Allah SWT melalui sifat-sifat wajib-Nya yang dua puluh, serta meneladani sifat-sifat mulia para Rasul — fondasi tauhid yang menuntun hati seorang hamba menuju ma'rifatullah yang sejati.</p>
+    <div class="author-info">
+        <div class="name">Okta Benia, S.Pd.I</div>
+        <div class="position">Guru PAI · MTsN 6 Agam</div>
+    </div>
+</section>
+
+<!-- Section A -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">A</div>
+        <h2 class="section-title">Pengertian Sifat Allah dan Rasul</h2>
+    </div>
+    <div class="section-content">
+        <p>Memahami sifat-sifat Allah dan Rasul-Nya merupakan bagian integral dari akidah Islam. Pengetahuan ini bukan hanya menambah wawasan intelektual, tetapi juga menjadi fondasi keimanan yang menuntun seorang muslim untuk mengenal Tuhannya dengan sebenar-benarnya, serta meneladani para utusan-Nya dalam kehidupan.</p>
+
+        <p>Dalam kajian akidah, pembahasan tentang sifat Allah dikenal dengan istilah <strong>'Ilmu Tauhid</strong> atau <strong>'Ilmu Kalam</strong> — ilmu yang membahas tentang keesaan Allah, sifat-sifat-Nya, serta segala hal yang berkaitan dengan dzat-Nya. Sementara itu, pembahasan tentang sifat Rasul termasuk dalam bab <strong>Nubuwwah</strong> — kenabian dan kerasulan.</p>
+
+        <p>Para ulama Ahlussunnah wal Jama'ah sepakat bahwa Allah SWT memiliki sifat-sifat kesempurnaan yang wajib diimani, sifat-sifat kekurangan yang mustahil ada pada-Nya, dan satu sifat jaiz yang boleh ada atau tidak ada. Demikian pula para Rasul memiliki sifat-sifat wajib yang harus dimiliki, sifat-sifat mustahil yang tidak mungkin ada, serta satu sifat jaiz.</p>
+
+        <div class="def-grid">
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Sifat Wajib Allah</div>
+                <p>Sifat-sifat kesempurnaan yang pasti dan wajib ada pada Allah SWT. Sifat ini berjumlah 20 dan tidak mungkin tidak ada pada-Nya.</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Sifat Mustahil Allah</div>
+                <p>Sifat-sifat kekurangan yang mustahil ada pada Allah SWT. Setiap sifat wajib memiliki pasangan sifat mustahil yang menjadi lawannya.</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Sifat Jaiz Allah</div>
+                <p>Satu-satunya sifat jaiz bagi Allah, yaitu <em>Fi'lu kulli mumkinin au tarkuhu</em> — berwenang menciptakan sesuatu atau tidak menciptakannya.</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Sifat Wajib Rasul</div>
+                <p>Sifat-sifat mulia yang wajib dimiliki oleh para Rasul Allah, yaitu Shiddiq (benar), Amanah (terpercaya), Tabligh (menyampaikan), dan Fathanah (cerdas).</p>
+            </div>
+        </div>
+
+        <div class="perspective-grid">
+            <div class="perspective-card">
+                <h4>1 · Perspektif Umum</h4>
+                <p>Dalam kajian filsafat ketuhanan (teologi), sifat-sifat Tuhan menjadi objek pembahasan utama. Setiap agama dan tradisi memiliki konsep tentang atribut-atribut ketuhanan yang berbeda-beda, tergantung pada wahyu atau pemikiran yang mendasarinya.</p>
+            </div>
+            <div class="perspective-card islam">
+                <h4>2 · Perspektif Islam</h4>
+                <p>Dalam Islam, sifat-sifat Allah ditetapkan berdasarkan dalil naqli (Al-Quran dan As-Sunnah), bukan hasil spekulasi akal. Mengimani sifat-sifat Allah adalah bagian dari rukun iman dan kunci ma'rifatullah — mengenal Allah dengan sebenar-benarnya.</p>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">لَيْسَ كَمِثْلِهِۦ شَىْءٌ ۖ وَهُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ</div>
+            <div class="translation">"Tidak ada sesuatu pun yang serupa dengan Dia, dan Dia-lah Yang Maha Mendengar lagi Maha Melihat."</div>
+            <div class="reference">— QS. Asy-Syura [42]: 11</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Pengantar Sifat Allah dan Rasul</button>
+    </div>
+</div>
+
+<!-- Section B -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">B</div>
+        <h2 class="section-title">Hakikat Sifat Allah sebagai Fondasi Tauhid</h2>
+    </div>
+    <div class="section-content">
+        <p>Memahami hakikat sifat-sifat Allah berarti menyelami esensi keesaan-Nya yang sempurna. Sifat-sifat Allah bukanlah sesuatu yang terpisah dari dzat-Nya, melainkan melekat pada dzat-Nya secara kekal dan abadi. Mengimani sifat-sifat Allah adalah manifestasi dari tauhid yang murni.</p>
+
+        <p>Para ulama Ahlussunnah wal Jama'ah mengklasifikasikan 20 sifat wajib Allah ke dalam empat kategori utama, yaitu: <strong>Nafsiyah</strong>, <strong>Salbiyah</strong>, <strong>Ma'ani</strong>, dan <strong>Ma'nawiyah</strong>. Klasifikasi ini membantu kita memahami sifat-sifat Allah secara sistematis dan komprehensif.</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">🌟</div>
+                <h4>Sifat Nafsiyah</h4>
+                <p>Sifat yang berkaitan dengan dzat Allah itu sendiri. Hanya ada satu, yaitu Wujud (Ada).</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🚫</div>
+                <h4>Sifat Salbiyah</h4>
+                <p>Sifat yang meniadakan segala kekurangan dari Allah. Berjumlah lima sifat.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💎</div>
+                <h4>Sifat Ma'ani</h4>
+                <p>Sifat-sifat ma'nawiyah yang berdiri pada dzat Allah. Berjumlah tujuh sifat.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">✨</div>
+                <h4>Sifat Ma'nawiyah</h4>
+                <p>Sifat yang merupakan wujud nyata dari sifat ma'ani. Berjumlah tujuh sifat.</p>
+            </div>
+        </div>
+
+        <div class="key-concept">
+            <div class="label">📌 Konsep Kunci</div>
+            <p><strong>Total Sifat Wajib Allah = 1 (Nafsiyah) + 5 (Salbiyah) + 7 (Ma'ani) + 7 (Ma'nawiyah) = 20 Sifat</strong><br>
+            Setiap sifat wajib memiliki pasangan sifat mustahil sebagai lawannya, sehingga total sifat mustahil Allah juga berjumlah 20. Ditambah 1 sifat jaiz, maka keseluruhan sifat Allah adalah 41.</p>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">وَٱللَّهُ لَهُۥ ٱلْمَثَلُ ٱلْأَعْلَىٰ ۚ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ</div>
+            <div class="translation">"Dan Allah mempunyai sifat yang Maha Tinggi, dan Dia-lah Yang Maha Perkasa lagi Maha Bijaksana."</div>
+            <div class="reference">— QS. An-Nahl [16]: 60</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Hakikat Sifat Allah</button>
+    </div>
+</div>
+
+<!-- Section C -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">C</div>
+        <h2 class="section-title">Rincian Sifat-sifat Allah SWT</h2>
+    </div>
+    <div class="section-content">
+        <p>Berikut adalah rincian sifat-sifat Allah SWT berdasarkan klasifikasi para ulama Ahlussunnah wal Jama'ah. Setiap kategori memiliki karakteristik dan makna tersendiri yang perlu dipahami dengan baik oleh setiap muslim.</p>
+
+        <!-- Nafsiyah -->
+        <div class="category-box">
+            <h4>🌟 Sifat Nafsiyah (1 Sifat)</h4>
+            <p style="margin-bottom:0.8rem; font-size:0.95rem;">Sifat yang berkaitan dengan dzat Allah itu sendiri.</p>
+            <div class="sifat-grid" style="grid-template-columns: 1fr;">
+                <div class="sifat-card">
+                    <div class="arabic">وُجُوْدٌ</div>
+                    <div class="latin">Wujud</div>
+                    <div class="meaning">Ada — Allah pasti ada, tidak didahului oleh ketiadaan</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Salbiyah -->
+        <div class="category-box">
+            <h4>🚫 Sifat Salbiyah (5 Sifat)</h4>
+            <p style="margin-bottom:0.8rem; font-size:0.95rem;">Sifat yang meniadakan segala kekurangan dari Allah.</p>
+            <div class="sifat-grid">
+                <div class="sifat-card">
+                    <div class="arabic">قِدَمٌ</div>
+                    <div class="latin">Qidam</div>
+                    <div class="meaning">Terdahulu — tanpa permulaan</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">بَقَاءٌ</div>
+                    <div class="latin">Baqa'</div>
+                    <div class="meaning">Kekal — tanpa akhir</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">مُخَالَفَتُهُ لِلْحَوَادِثِ</div>
+                    <div class="latin">Mukhalafatu lil hawadits</div>
+                    <div class="meaning">Berbeda dengan makhluk</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">قِيَامُهُ بِنَفْسِهِ</div>
+                    <div class="latin">Qiyamuhu binafsihi</div>
+                    <div class="meaning">Berdiri sendiri</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">وَحْدَانِيَّةٌ</div>
+                    <div class="latin">Wahdaniyah</div>
+                    <div class="meaning">Esa / Tunggal</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ma'ani -->
+        <div class="category-box">
+            <h4>💎 Sifat Ma'ani (7 Sifat)</h4>
+            <p style="margin-bottom:0.8rem; font-size:0.95rem;">Sifat-sifat abstrak yang berdiri pada dzat Allah.</p>
+            <div class="sifat-grid">
+                <div class="sifat-card">
+                    <div class="arabic">قُدْرَةٌ</div>
+                    <div class="latin">Qudrat</div>
+                    <div class="meaning">Berkuasa</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">إِرَادَةٌ</div>
+                    <div class="latin">Iradat</div>
+                    <div class="meaning">Berkehendak</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">عِلْمٌ</div>
+                    <div class="latin">Ilmu</div>
+                    <div class="meaning">Mengetahui</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">حَيَاةٌ</div>
+                    <div class="latin">Hayat</div>
+                    <div class="meaning">Hidup</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">سَمْعٌ</div>
+                    <div class="latin">Sama'</div>
+                    <div class="meaning">Mendengar</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">بَصَرٌ</div>
+                    <div class="latin">Basar</div>
+                    <div class="meaning">Melihat</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">كَلَامٌ</div>
+                    <div class="latin">Kalam</div>
+                    <div class="meaning">Berfirman</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ma'nawiyah -->
+        <div class="category-box">
+            <h4>✨ Sifat Ma'nawiyah (7 Sifat)</h4>
+            <p style="margin-bottom:0.8rem; font-size:0.95rem;">Keadaan Allah yang bersifat dengan sifat ma'ani.</p>
+            <div class="sifat-grid">
+                <div class="sifat-card">
+                    <div class="arabic">كَائِنًا قَادِرًا</div>
+                    <div class="latin">Kaunuhu Qadiran</div>
+                    <div class="meaning">Keadaan-Nya Yang Berkuasa</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">كَائِنًا مُرِيْدًا</div>
+                    <div class="latin">Kaunuhu Muridan</div>
+                    <div class="meaning">Keadaan-Nya Yang Berkehendak</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">كَائِنًا عَالِمًا</div>
+                    <div class="latin">Kaunuhu 'Aliman</div>
+                    <div class="meaning">Keadaan-Nya Yang Mengetahui</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">كَائِنًا حَيًّا</div>
+                    <div class="latin">Kaunuhu Hayyan</div>
+                    <div class="meaning">Keadaan-Nya Yang Hidup</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">كَائِنًا سَمِيْعًا</div>
+                    <div class="latin">Kaunuhu Sami'an</div>
+                    <div class="meaning">Keadaan-Nya Yang Mendengar</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">كَائِنًا بَصِيْرًا</div>
+                    <div class="latin">Kaunuhu Bashiran</div>
+                    <div class="meaning">Keadaan-Nya Yang Melihat</div>
+                </div>
+                <div class="sifat-card">
+                    <div class="arabic">كَائِنًا مُتَكَلِّمًا</div>
+                    <div class="latin">Kaunuhu Mutakalliman</div>
+                    <div class="meaning">Keadaan-Nya Yang Berfirman</div>
+                </div>
+            </div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Rincian 20 Sifat Allah</button>
+    </div>
+</div>
+
+<!-- Section D -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">D</div>
+        <h2 class="section-title">Sifat-sifat Rasul Allah</h2>
+    </div>
+    <div class="section-content">
+        <p>Allah SWT mengutus para Rasul untuk menyampaikan wahyu-Nya kepada umat manusia. Agar risalah yang dibawa dapat dipercaya dan diterima, Allah menganugerahkan kepada para Rasul sifat-sifat mulia yang menjadi ciri khas kenabian. Sifat-sifat ini menjadi jaminan bahwa ajaran yang mereka sampaikan benar-benar berasal dari Allah.</p>
+
+        <p>Para ulama membagi sifat Rasul menjadi tiga kategori: <strong>sifat wajib</strong> (yang harus dimiliki), <strong>sifat mustahil</strong> (yang tidak mungkin ada), dan <strong>sifat jaiz</strong> (yang boleh ada).</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">✅</div>
+                <h4>Shiddiq (Benar)</h4>
+                <p>Selalu benar dalam perkataan dan perbuatan. Lawan dari kidzib (dusta).</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🤝</div>
+                <h4>Amanah (Terpercaya)</h4>
+                <p>Selalu dapat dipercaya dalam menyampaikan risalah. Lawan dari khianat.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">📢</div>
+                <h4>Tabligh (Menyampaikan)</h4>
+                <p>Selalu menyampaikan seluruh wahyu yang diterima. Lawan dari kitman (menyembunyikan).</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🧠</div>
+                <h4>Fathanah (Cerdas)</h4>
+                <p>Memiliki kecerdasan akal yang luar biasa. Lawan dari baladah (bodoh).</p>
+            </div>
+        </div>
+
+        <div class="key-concept">
+            <div class="label">📌 Sifat Mustahil Rasul</div>
+            <p><strong>1. Kidzib</strong> — Dusta<br>
+            <strong>2. Khianat</strong> — Tidak dapat dipercaya<br>
+            <strong>3. Kitman</strong> — Menyembunyikan risalah<br>
+            <strong>4. Baladah</strong> — Bodoh<br>
+            Keempat sifat mustahil ini adalah lawan dari sifat wajib Rasul.</p>
+        </div>
+
+        <div class="reflection">
+            <div class="label">📌 Sifat Jaiz Rasul</div>
+            <p><strong>Aradlul Basyariyah</strong> — Sifat kemanusiaan yang biasa dialami manusia, seperti makan, minum, tidur, menikah, sakit (kecuali penyakit yang menjijikkan), dan meninggal dunia. Sifat ini menegaskan bahwa Rasul adalah manusia pilihan, bukan malaikat atau tuhan.</p>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">وَمَآ أَرْسَلْنَا قَبْلَكَ إِلَّا رِجَالًا نُّوحِىٓ إِلَيْهِمْ</div>
+            <div class="translation">"Dan Kami tidak mengutus sebelum kamu, melainkan orang-orang lelaki yang Kami beri wahyu kepada mereka."</div>
+            <div class="reference">— QS. Yusuf [12]: 109</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Sifat-sifat Rasul</button>
+    </div>
+</div>
+
+<!-- Section E -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">E</div>
+        <h2 class="section-title">Sumber Dalil Sifat Allah dan Rasul</h2>
+    </div>
+    <div class="section-content">
+        <p>Akidah Islam tentang sifat-sifat Allah dan Rasul tidak dibangun di atas dugaan atau pemikiran semata, melainkan bersumber dari wahyu yang pasti kebenarannya. Seorang muslim wajib mengambil keyakinannya hanya dari sumber-sumber yang otoritatif.</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">📖</div>
+                <h4>Al-Quran</h4>
+                <p>Sumber utama yang menjelaskan sifat-sifat Allah secara rinci, seperti QS. Al-Ikhlas, Ayat Kursi, dan berbagai ayat sifat.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">📚</div>
+                <h4>As-Sunnah</h4>
+                <p>Hadis-hadis shahih yang menjelaskan sifat-sifat Allah dan kisah para Rasul, seperti Hadis Jibril tentang iman.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🤝</div>
+                <h4>Ijma' Ulama</h4>
+                <p>Kesepakatan ulama Ahlussunnah tentang 20 sifat wajib Allah dan sifat-sifat Rasul yang menjadi pedoman umat.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🧠</div>
+                <h4>Dalil Aqli</h4>
+                <p>Argumentasi rasional yang mendukung kebenaran sifat-sifat Allah, seperti dalil huduts dan imkan.</p>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">قُلْ هُوَ ٱللَّهُ أَحَدٌ ۝ ٱللَّهُ ٱلصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ ۝ وَلَمْ يَكُن لَّهُۥ كُفُوًا أَحَدٌۢ</div>
+            <div class="translation">"Katakanlah: Dia-lah Allah, Yang Maha Esa. Allah adalah Tuhan yang bergantung kepada-Nya segala sesuatu. Dia tiada beranak dan tidak pula diperanakkan, dan tidak ada seorang pun yang setara dengan Dia."</div>
+            <div class="reference">— QS. Al-Ikhlas [112]: 1-4</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Sumber Dalil</button>
+    </div>
+</div>
+
+<!-- Section F -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">F</div>
+        <h2 class="section-title">Fungsi Mengimani Sifat Allah dan Rasul</h2>
+    </div>
+    <div class="section-content">
+        <p>Mengimani sifat-sifat Allah dan Rasul memiliki fungsi strategis dalam kehidupan seorang muslim. Keimanan yang benar terhadap sifat-sifat ini akan membentuk pribadi yang bertauhid, berakhlak mulia, dan memiliki visi kehidupan yang jelas.</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">🕌</div>
+                <h4>Menyempurnakan Tauhid</h4>
+                <p>Mengenal Allah dengan sebenar-benarnya melalui sifat-sifat-Nya adalah inti dari tauhid yang murni.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💖</div>
+                <h4>Menumbuhkan Mahabbah</h4>
+                <p>Mengenal kesempurnaan Allah akan menumbuhkan rasa cinta yang mendalam kepada-Nya.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">😨</div>
+                <h4>Memperkuat Khauf & Raja'</h4>
+                <p>Menyeimbangkan rasa takut dan harap kepada Allah dalam setiap amal perbuatan.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🎯</div>
+                <h4>Meneladani Rasul</h4>
+                <p>Mengambil pelajaran dari sifat-sifat Rasul sebagai teladan dalam kehidupan sehari-hari.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🛡️</div>
+                <h4>Benteng dari Syirik</h4>
+                <p>Memahami sifat-sifat Allah yang sempurna akan menjaga dari menyekutukan-Nya.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌟</div>
+                <h4>Kunci Ma'rifatullah</h4>
+                <p>Mengenal Allah adalah tujuan tertinggi seorang hamba, yang hanya dicapai melalui pemahaman sifat-Nya.</p>
+            </div>
+        </div>
+
+        <div class="reflection">
+            <div class="label">📌 Refleksi</div>
+            <p><strong>Iman yang Membuahkan Akhlak</strong><br>
+            Ketika seorang muslim benar-benar mengimani bahwa Allah Maha Melihat (Basar), ia akan malu berbuat maksiat. Ketika ia mengimani bahwa Allah Maha Mendengar (Sama'), ia akan menjaga lisan dari kata-kata buruk. Ketika ia mengimani bahwa Allah Maha Mengetahui (Ilmu'), ia akan berhati-hati dalam setiap langkah. Inilah buah dari mengimani sifat-sifat Allah — akhlak mulia yang lahir dari keyakinan yang kokoh.</p>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Fungsi Mengimani Sifat</button>
+    </div>
+</div>
+
+<!-- Section G -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">G</div>
+        <h2 class="section-title">Perbandingan Perspektif Umum dan Islam</h2>
+    </div>
+    <div class="section-content">
+        <p>Untuk memahami keistimewaan akidah Islam tentang sifat-sifat Allah dan Rasul, berikut adalah perbandingan antara perspektif umum (filsafat/teologi lain) dengan perspektif Islam.</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Aspek</th>
+                    <th>Perspektif Umum / Filsafat</th>
+                    <th>Perspektif Islam</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Sumber Pengetahuan</strong></td>
+                    <td>Akal, intuisi, spekulasi filosofis</td>
+                    <td>Wahyu (Al-Quran & As-Sunnah) yang pasti kebenarannya</td>
+                </tr>
+                <tr>
+                    <td><strong>Konsep Ketuhanan</strong></td>
+                    <td>Bervariasi: trinitas, panteisme, deisme, antropomorfisme</td>
+                    <td>Tauhid murni — Allah Maha Esa dengan 20 sifat kesempurnaan</td>
+                </tr>
+                <tr>
+                    <td><strong>Sifat Tuhan</strong></td>
+                    <td>Seringkali disamakan dengan makhluk atau ditafsirkan simbolis</td>
+                    <td>Sifat Allah sempurna, tidak menyerupai makhluk, dan wajib diimani apa adanya</td>
+                </tr>
+                <tr>
+                    <td><strong>Konsep Kenabian</strong></td>
+                    <td>Nabi dianggap sebagai filsuf, pemikir, atau tokoh biasa</td>
+                    <td>Rasul adalah manusia pilihan yang ma'shum (terjaga dari dosa) dengan 4 sifat wajib</td>
+                </tr>
+                <tr>
+                    <td><strong>Metode Pembahasan</strong></td>
+                    <td>Rasional-spekulatif, terbuka terhadap revisi</td>
+                    <td>Naqli-aqli, bersumber wahyu dengan dukungan argumentasi rasional</td>
+                </tr>
+                <tr>
+                    <td><strong>Tujuan Akhir</strong></td>
+                    <td>Pengetahuan intelektual semata</td>
+                    <td>Ma'rifatullah, ketakwaan, dan kebahagiaan dunia-akhirat</td>
+                </tr>
+                <tr>
+                    <td><strong>Dampak Kehidupan</strong></td>
+                    <td>Seringkali tidak mengubah perilaku secara signifikan</td>
+                    <td>Membentuk akhlak mulia, ketakutan kepada Allah, dan ketenangan jiwa</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Perbandingan Perspektif</button>
+    </div>
+</div>
+
+<!-- Section H -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">H</div>
+        <h2 class="section-title">Urgensi Mempelajari Sifat Allah dan Rasul</h2>
+    </div>
+    <div class="section-content">
+        <p>Di tengah arus pemikiran modern yang seringkali mengaburkan konsep ketuhanan, mempelajari sifat-sifat Allah dan Rasul menjadi sangat penting bagi setiap muslim, terutama generasi muda. Berikut beberapa alasan strategis mengapa ilmu ini urgen untuk dipelajari:</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">🛡️</div>
+                <h4>Benteng dari Kesesatan</h4>
+                <p>Menjaga akidah dari pemahaman yang menyimpang tentang Allah, seperti tasybih, tajsim, dan ta'thil.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🕌</div>
+                <h4>Syarat Sahnya Ibadah</h4>
+                <p>Ibadah yang diterima adalah ibadah yang didasari akidah yang benar tentang Allah.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💎</div>
+                <h4>Kunci Ma'rifatullah</h4>
+                <p>Mengenal Allah adalah tujuan tertinggi penciptaan manusia dan jin (QS. Adz-Dzariyat: 56).</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌐</div>
+                <h4>Menjawab Tantangan Zaman</h4>
+                <p>Merespons pemikiran atheisme, liberalisme, dan pluralisme yang menyesatkan dengan dalil yang kuat.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🎯</div>
+                <h4>Meneladani Rasul</h4>
+                <p>Memahami sifat-sifat Rasul agar dapat menjadikannya teladan dalam kehidupan sehari-hari.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌟</div>
+                <h4>Kunci Keselamatan</h4>
+                <p>Akidah yang benar tentang Allah dan Rasul adalah kunci keselamatan di dunia dan akhirat.</p>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">وَمَا خَلَقْتُ ٱلْجِنَّ وَٱلْإِنسَ إِلَّا لِيَعْبُدُونِ</div>
+            <div class="translation">"Dan tidaklah Aku menciptakan jin dan manusia melainkan agar mereka beribadah kepada-Ku."</div>
+            <div class="reference">— QS. Adz-Dzariyat [51]: 56</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Urgensi Mempelajari Sifat</button>
+    </div>
+</div>
+
+<!-- Keywords -->
+<div class="section">
+    <div class="keywords">
+        <h3>◆ Kata Kunci Bab Ini</h3>
+        <div class="keyword-tags">
+            <span class="keyword-tag">Sifat Wajib</span>
+            <span class="keyword-tag">Sifat Mustahil</span>
+            <span class="keyword-tag">Sifat Jaiz</span>
+            <span class="keyword-tag">Nafsiyah</span>
+            <span class="keyword-tag">Salbiyah</span>
+            <span class="keyword-tag">Ma'ani</span>
+            <span class="keyword-tag">Ma'nawiyah</span>
+            <span class="keyword-tag">Wujud</span>
+            <span class="keyword-tag">Qidam</span>
+            <span class="keyword-tag">Baqa'</span>
+            <span class="keyword-tag">Qudrat</span>
+            <span class="keyword-tag">Iradat</span>
+            <span class="keyword-tag">Ilmu</span>
+            <span class="keyword-tag">Hayat</span>
+            <span class="keyword-tag">Sama'</span>
+            <span class="keyword-tag">Basar</span>
+            <span class="keyword-tag">Kalam</span>
+            <span class="keyword-tag">Shiddiq</span>
+            <span class="keyword-tag">Amanah</span>
+            <span class="keyword-tag">Tabligh</span>
+            <span class="keyword-tag">Fathanah</span>
+            <span class="keyword-tag">Ma'shum</span>
+            <span class="keyword-tag">Tauhid</span>
+            <span class="keyword-tag">Ma'rifatullah</span>
+        </div>
+        <div class="quran-quote">
+            <div class="arabic">ٱللَّهُ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ ۚ لَا تَأْخُذُهُۥ سِنَةٌ وَلَا نَوْمٌ</div>
+            <div class="translation">"Allah, tidak ada Tuhan (yang berhak disembah) melainkan Dia Yang Hidup kekal lagi terus menerus mengurus (makhluk-Nya); tidak mengantuk dan tidak tidur."</div>
+            <div class="reference">— QS. Al-Baqarah [2]: 255 (Ayat Kursi)</div>
+        </div>
+    </div>
+</div>
+
+<!-- Quiz -->
+<div class="section">
+    <div class="quiz-box">
+        <div class="icon">📝</div>
+        <h3>Uji Pemahaman Anda</h3>
+        <p>Setelah mempelajari Bab 2 tentang Sifat-sifat Allah dan Rasul, ukur pemahaman Anda melalui uji formatif yang telah disiapkan. Jawab 10 pertanyaan pilihan ganda dan esai singkat.</p>
+        <a href="uji-formatif-2.html" class="quiz-btn">📝 Ikuti Uji Formatif Bab 2 →</a>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="section">
+    <div class="chapter-nav">
+        <a href="1.html" class="nav-btn">
+            <div class="label">← Sebelumnya</div>
+            <div class="title">Bab 1: Akidah Islam</div>
+        </a>
+        <a href="index.html" class="nav-btn">
+            <div class="label">🏠</div>
+            <div class="title">Daftar Isi Buku</div>
+        </a>
+        <a href="3.html" class="nav-btn next">
+            <div class="label">Selanjutnya →</div>
+            <div class="title">Bab 3: Ujian Tengah Semester</div>
+        </a>
+    </div>
+</div>
+
+<!-- Modal Video -->
+<div class="modal-overlay" id="videoModal">
+    <div class="modal-box">
+        <button class="close-btn" onclick="closeModal()">✕</button>
+        <div class="icon">🎬</div>
+        <h3>Video Pembelajaran</h3>
+        <p>Video pembelajaran akan segera tersedia. Hubungi penulis untuk akses konten video lengkap.</p>
+        <button class="video-btn" onclick="closeModal()">Tutup</button>
+        <div class="credit">
+            <strong>O · BENIA</strong><br>
+            © 2026 · Okta Benia, S.Pd.I<br>
+            Guru PAI · MTsN 6 Agam · Hak Cipta Dilindungi Undang-Undang<br>
+            <a href="mailto:oktabenia17@gmail.com">oktabenia17@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 · <strong>Okta Benia, S.Pd.I</strong></p>
+    <p>Guru PAI · MTsN 6 Agam · Hak Cipta Dilindungi Undang-Undang</p>
+    <p><a href="mailto:oktabenia17@gmail.com">oktabenia17@gmail.com</a></p>
+</footer>
+
+<script>
+    function openModal() {
+        document.getElementById('videoModal').classList.add('active');
+    }
+    function closeModal() {
+        document.getElementById('videoModal').classList.remove('active');
+    }
+    document.getElementById('videoModal').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+    });
+</script>
+
+</body>
+</html>

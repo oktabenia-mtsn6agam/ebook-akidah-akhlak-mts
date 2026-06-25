@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 1: Akidah Islam | Akidah Akhlak Kelas 7</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        /* Header */
+        .top-bar {
+            background: linear-gradient(135deg, #0d6832, #148f47);
+            color: white;
+            padding: 0.8rem 2rem;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .top-bar a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .top-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .breadcrumb {
+            background: white;
+            padding: 0.8rem 2rem;
+            border-bottom: 2px solid #eee;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .breadcrumb .pill {
+            display: inline-block;
+            background: #e8f5ec;
+            color: #0d6832;
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #0d6832, #1aaf55);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero .chapter-badge {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin-bottom: 0.5rem;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.95;
+            font-style: italic;
+        }
+
+        .author-info {
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            display: inline-block;
+            border: 1px solid rgba(255,255,255,0.2);
+            margin-top: 1rem;
+        }
+
+        .author-info .name {
+            font-size: 1.1rem;
+            font-weight: bold;
+            margin-bottom: 0.2rem;
+        }
+
+        .author-info .position {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        /* Sections */
+        .section {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-letter {
+            background: linear-gradient(135deg, #0d6832, #1aaf55);
+            color: white;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(13, 104, 50, 0.3);
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            color: #0d6832;
+        }
+
+        .section-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            margin-bottom: 1.5rem;
+        }
+
+        .section-content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        /* Definition Cards */
+        .def-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .def-card {
+            background: #f0faf4;
+            border-left: 4px solid #1aaf55;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+        }
+
+        .def-card .label {
+            font-size: 0.85rem;
+            color: #0d6832;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.3rem;
+        }
+
+        .def-card .term {
+            font-size: 1.15rem;
+            font-weight: bold;
+            color: #0d6832;
+            margin-bottom: 0.5rem;
+        }
+
+        .def-card p {
+            font-size: 0.95rem;
+            color: #555;
+            margin: 0;
+        }
+
+        /* Perspective Cards */
+        .perspective-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .perspective-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-top: 4px solid #1aaf55;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .perspective-card.islam {
+            border-top-color: #b8860b;
+            background: #fffdf5;
+        }
+
+        .perspective-card h4 {
+            color: #0d6832;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .perspective-card.islam h4 {
+            color: #b8860b;
+        }
+
+        /* Icon Grid */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.2rem;
+            margin: 1.5rem 0;
+        }
+
+        .icon-card {
+            background: white;
+            padding: 1.5rem 1rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border-bottom: 3px solid #1aaf55;
+        }
+
+        .icon-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .icon-card .emoji {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .icon-card h4 {
+            color: #0d6832;
+            font-size: 1rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .icon-card p {
+            font-size: 0.88rem;
+            color: #666;
+            text-align: center;
+        }
+
+        /* Video Button */
+        .video-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, #0d6832, #1aaf55);
+            color: white;
+            padding: 0.7rem 1.3rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 3px 10px rgba(13, 104, 50, 0.3);
+        }
+
+        .video-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13, 104, 50, 0.4);
+        }
+
+        /* Quran Quote */
+        .quran-quote {
+            background: linear-gradient(135deg, #fffdf5, #fff9e6);
+            border-right: 5px solid #b8860b;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .quran-quote .arabic {
+            font-size: 1.8rem;
+            font-family: 'Traditional Arabic', 'Amiri', serif;
+            color: #0d6832;
+            margin-bottom: 0.8rem;
+            line-height: 2;
+            direction: rtl;
+        }
+
+        .quran-quote .translation {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+
+        .quran-quote .reference {
+            font-weight: bold;
+            color: #b8860b;
+            font-size: 0.9rem;
+        }
+
+        /* Key Concept Box */
+        .key-concept {
+            background: #e8f5ec;
+            border-left: 5px solid #0d6832;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .key-concept .label {
+            font-weight: bold;
+            color: #0d6832;
+            margin-bottom: 0.3rem;
+        }
+
+        .key-concept p {
+            margin: 0;
+            color: #333;
+        }
+
+        /* Reflection Box */
+        .reflection {
+            background: #fff9e6;
+            border-left: 5px solid #b8860b;
+            padding: 1.2rem 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .reflection .label {
+            font-weight: bold;
+            color: #b8860b;
+            margin-bottom: 0.3rem;
+        }
+
+        /* Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .comparison-table th {
+            background: linear-gradient(135deg, #0d6832, #1aaf55);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-size: 0.95rem;
+        }
+
+        .comparison-table td {
+            padding: 0.9rem 1rem;
+            border-bottom: 1px solid #eee;
+            font-size: 0.93rem;
+            vertical-align: top;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        /* Keywords */
+        .keywords {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .keywords h3 {
+            color: #0d6832;
+            margin-bottom: 1rem;
+        }
+
+        .keyword-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .keyword-tag {
+            background: #e8f5ec;
+            color: #0d6832;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            border: 1px solid #c3e6cb;
+        }
+
+        /* Quiz Box */
+        .quiz-box {
+            background: linear-gradient(135deg, #fff9e6, #fffdf5);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 2rem 0;
+            border: 2px dashed #b8860b;
+        }
+
+        .quiz-box .icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .quiz-box h3 {
+            color: #b8860b;
+            margin-bottom: 0.5rem;
+        }
+
+        .quiz-box p {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .quiz-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #b8860b, #ffd700);
+            color: #0d6832;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3);
+        }
+
+        .quiz-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(184, 134, 11, 0.4);
+        }
+
+        /* Navigation */
+        .chapter-nav {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            flex: 1;
+            min-width: 250px;
+            background: white;
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #1aaf55;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+        }
+
+        .nav-btn .label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+
+        .nav-btn .title {
+            font-weight: bold;
+            color: #0d6832;
+        }
+
+        .nav-btn.next {
+            text-align: right;
+            border-left: none;
+            border-right: 4px solid #1aaf55;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal-box {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+        }
+
+        .modal-box .close-btn {
+            position: absolute;
+            top: 10px; right: 15px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #999;
+        }
+
+        .modal-box .icon {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .modal-box h3 {
+            color: #0d6832;
+            margin-bottom: 0.5rem;
+        }
+
+        .modal-box p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .modal-box .credit {
+            font-size: 0.85rem;
+            color: #999;
+            margin-top: 1rem;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #0d6832;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.3rem 0;
+            opacity: 0.9;
+        }
+
+        footer a {
+            color: #ffd700;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .perspective-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Top Bar -->
+<div class="top-bar">
+    <a href="index.html">← Kembali ke Daftar Isi</a> | Buku Akidah Akhlak Semester 1 Kelas 7
+</div>
+
+<div class="breadcrumb">
+    <span class="pill">AKIDAH ISLAM</span>
+    <span class="pill">RUKN IMAN</span>
+    <span class="pill">SUMBU AKIDAH</span>
+    Bab 1 dari 7
+</div>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="chapter-badge">BAB 01 · PENGANTAR</div>
+    <h1>Akidah Islam</h1>
+    <p class="subtitle">Mengenal fondasi keimanan yang menjadi akar kokoh bagi setiap muslim — sebuah keyakinan yang menuntun hati, menenangkan jiwa, dan menerangi setiap langkah kehidupan menuju ridha Ilahi.</p>
+    <div class="author-info">
+        <div class="name">Okta Benia, S.Pd.I</div>
+        <div class="position">Guru PAI · MTsN 6 Agam</div>
+    </div>
+</section>
+
+<!-- Section A -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">A</div>
+        <h2 class="section-title">Pengertian Akidah Islam</h2>
+    </div>
+    <div class="section-content">
+        <p>Akidah Islam merupakan fondasi utama bagi setiap muslim. Tanpa akidah yang benar, ibadah dan amal seseorang tidak akan diterima di sisi Allah SWT. Akidah adalah akar, sedangkan amal adalah buah yang tumbuh dari akar tersebut. Memahami akidah berarti memahami esensi keimanan yang menjadi pondasi kehidupan seorang muslim.</p>
+
+        <p>Dalam perspektif bahasa, kata <strong>"akidah"</strong> berasal dari bahasa Arab <em>al-'aqdu</em> (العقد) yang berarti ikatan, perjanjian, atau sesuatu yang mengokohkan. Secara istilah, akidah adalah keyakinan hati yang pasti, tidak ada keraguan di dalamnya, yang wajib diimani oleh setiap muslim berdasarkan dalil-dalil dari Al-Quran dan As-Sunnah.</p>
+
+        <p>Dalam pandangan Islam, akidah bukan sekadar teori atau pengetahuan, melainkan keyakinan yang hidup di dalam hati, diucapkan dengan lisan, dan dibuktikan dengan amal perbuatan. Allah SWT berfirman yang artinya: <em>"Orang-orang yang beriman dan tidak mencampuradukkan iman mereka dengan kezaliman (syirik), mereka itulah yang mendapat keamanan dan mereka itu adalah orang-orang yang mendapat petunjuk."</em> (QS. Al-An'am: 82).</p>
+
+        <div class="def-grid">
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Akidah</div>
+                <p>Keyakinan hati yang pasti dan teguh, tidak ada keraguan sedikitpun di dalamnya, yang wajib diimani oleh setiap muslim berdasarkan Al-Quran dan As-Sunnah.</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Iman</div>
+                <p>Pembenaran dengan hati, pengucapan dengan lisan, dan pengamalan dengan perbuatan. Iman dapat bertambah dengan ketaatan dan berkurang dengan kemaksiatan.</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Tauhid</div>
+                <p>Mengesakan Allah SWT dalam rububiyah, uluhiyah, serta asma' wa sifat-Nya. Tauhid adalah inti dakwah seluruh nabi dan rasul sejak Nabi Adam AS hingga Nabi Muhammad SAW.</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Akhlak</div>
+                <p>Perilaku yang tertanam kuat dalam jiwa yang darinya lahir perbuatan-perbuatan mudah tanpa memerlukan pemikiran atau pertimbangan panjang.</p>
+            </div>
+        </div>
+
+        <div class="perspective-grid">
+            <div class="perspective-card">
+                <h4>1 · Perspektif Umum</h4>
+                <p>Dalam kajian filsafat umum, akidah dipandang sebagai sistem kepercayaan atau keyakinan yang dipegang teguh oleh seseorang atau kelompok. Akidah menjadi fondasi nilai, etika, dan pandangan hidup yang membentuk karakter serta perilaku manusia.</p>
+            </div>
+            <div class="perspective-card islam">
+                <h4>2 · Perspektif Islam</h4>
+                <p>Dalam Islam, akidah bukan sekadar pandangan hidup, melainkan wahyu dari Allah SWT yang bersifat mutlak. Akidah Islam bersumber dari Al-Quran dan As-Sunnah, bukan hasil pemikiran manusia. Ia adalah pondasi yang menentukan selamat atau tidaknya seseorang di akhirat kelak.</p>
+            </div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Pengantar Akidah Islam</button>
+    </div>
+</div>
+
+<!-- Section B -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">B</div>
+        <h2 class="section-title">Hakikat Akidah sebagai Fondasi Iman</h2>
+    </div>
+    <div class="section-content">
+        <p>Memahami hakikat akidah berarti menyelami esensi mendalam mengapa setiap muslim wajib memiliki keyakinan yang kokoh. Akidah bukan sekadar pengakuan lisan, melainkan kekuatan batin yang menjadi pondasi seluruh aspek kehidupan seorang muslim — mulai dari ibadah, muamalah, hingga akhlak.</p>
+
+        <p>Akidah Islam dibangun di atas <strong>Rukun Iman yang enam</strong>, yaitu: (1) Iman kepada Allah, (2) Iman kepada Malaikat-malaikat-Nya, (3) Iman kepada Kitab-kitab-Nya, (4) Iman kepada Rasul-rasul-Nya, (5) Iman kepada Hari Akhir, dan (6) Iman kepada Qada dan Qadar. Keenam rukun ini merupakan satu kesatuan yang tidak dapat dipisahkan.</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">☝️</div>
+                <h4>Iman kepada Allah</h4>
+                <p>Meyakini wujud, rububiyah, uluhiyah, serta asma' wa sifat Allah SWT sebagai Tuhan Yang Maha Esa.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">👼</div>
+                <h4>Iman kepada Malaikat</h4>
+                <p>Meyakini keberadaan malaikat sebagai makhluk ciptaan Allah yang senantiasa taat menjalankan perintah-Nya.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">📖</div>
+                <h4>Iman kepada Kitab</h4>
+                <p>Meyakini kitab-kitab Allah: Taurat, Zabur, Injil, dan Al-Quran sebagai pedoman hidup manusia.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🕌</div>
+                <h4>Iman kepada Rasul</h4>
+                <p>Meyakini para nabi dan rasul utusan Allah, dengan Nabi Muhammad SAW sebagai penutup para nabi.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">⏳</div>
+                <h4>Iman kepada Hari Akhir</h4>
+                <p>Meyakini adanya hari kiamat, kebangkitan, hisab, surga, dan neraka sebagai pembalasan amal.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌟</div>
+                <h4>Iman kepada Qada & Qadar</h4>
+                <p>Meyakini bahwa segala sesuatu terjadi atas takdir dan ketentuan Allah Yang Maha Bijaksana.</p>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">ءَامَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِۦ وَٱلْمُؤْمِنُونَ ۚ كُلٌّ ءَامَنَ بِٱللَّهِ وَمَلَـٰٓئِكَتِهِۦ وَكُتُبِهِۦ وَرُسُلِهِۦ</div>
+            <div class="translation">"Rasul telah beriman kepada Al-Quran yang diturunkan kepadanya dari Tuhannya, demikian juga orang-orang yang beriman. Semuanya beriman kepada Allah, malaikat-malaikat-Nya, kitab-kitab-Nya dan rasul-rasul-Nya."</div>
+            <div class="reference">— QS. Al-Baqarah [2]: 285</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Hakikat Akidah</button>
+    </div>
+</div>
+
+<!-- Section C -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">C</div>
+        <h2 class="section-title">Dimensi-Dimensi Akidah Islam</h2>
+    </div>
+    <div class="section-content">
+        <p>Akidah Islam memiliki dimensi-dimensi yang saling berkaitan. Pemahaman terhadap dimensi-dimensi ini penting untuk membangun keyakinan yang utuh dan kokoh, sehingga seorang muslim tidak mudah goyah oleh pengaruh negatif dari lingkungan maupun pemikiran yang menyimpang.</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">🏛️</div>
+                <h4>Dimensi Rububiyah</h4>
+                <p>Keyakinan bahwa Allah adalah satu-satunya Pencipta, Pemilik, dan Pengatur alam semesta.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🤲</div>
+                <h4>Dimensi Uluhiyah</h4>
+                <p>Mengesakan Allah dalam ibadah — hanya kepada-Nya kita menyembah dan memohon.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">📿</div>
+                <h4>Dimensi Asma' wa Sifat</h4>
+                <p>Mengimani nama-nama dan sifat-sifat Allah sebagaimana yang ditetapkan dalam Al-Quran dan Sunnah.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💖</div>
+                <h4>Dimensi Mahabbah</h4>
+                <p>Rasa cinta yang mendalam kepada Allah, Rasul-Nya, dan segala yang dicintai-Nya.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">😨</div>
+                <h4>Dimensi Khauf</h4>
+                <p>Rasa takut kepada azab Allah yang mendorong seorang muslim untuk menjauhi larangan-Nya.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🕊️</div>
+                <h4>Dimensi Raja'</h4>
+                <p>Harapan akan rahmat dan ampunan Allah yang membuat hati senantiasa optimis dan tenang.</p>
+            </div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Dimensi Akidah</button>
+    </div>
+</div>
+
+<!-- Section D -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">D</div>
+        <h2 class="section-title">Sumber-Sumber Akidah Islam</h2>
+    </div>
+    <div class="section-content">
+        <p>Akidah Islam tidak dibangun di atas dugaan atau taklid buta, melainkan bersumber dari wahyu yang pasti kebenarannya. Seorang muslim wajib mengambil akidahnya hanya dari sumber-sumber yang otoritatif dan terpercaya, bukan dari pemikiran manusia yang terbatas.</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">📖</div>
+                <h4>Al-Quran</h4>
+                <p>Kalam Allah yang menjadi sumber utama akidah Islam, terjaga kemurniannya sepanjang masa.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">📚</div>
+                <h4>As-Sunnah</h4>
+                <p>Hadis-hadis shahih Nabi Muhammad SAW yang menjelaskan dan merinci ajaran Al-Quran.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🤝</div>
+                <h4>Ijma' Sahabat</h4>
+                <p>Kesepakatan para sahabat Nabi dalam masalah akidah yang menjadi pedoman umat.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🧠</div>
+                <h4>Akal yang Sehat</h4>
+                <p>Akal berfungsi sebagai alat untuk memahami dan mentadabburi wahyu, bukan sebagai sumber akidah.</p>
+            </div>
+        </div>
+
+        <div class="key-concept">
+            <div class="label">📌 Konsep Kunci</div>
+            <p><strong>Akidah Islam = Al-Quran + As-Sunnah + Pemahaman Salafus Shalih</strong><br>
+            Akidah yang benar adalah akidah yang diambil langsung dari sumber wahyu, sebagaimana dipahami oleh generasi terbaik umat ini (salafus shalih), bukan hasil ijtihad atau pemikiran yang menyimpang dari tuntunan Nabi.</p>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Sumber Akidah</button>
+    </div>
+</div>
+
+<!-- Section E -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">E</div>
+        <h2 class="section-title">Ruang Lingkup Pembahasan Akidah</h2>
+    </div>
+    <div class="section-content">
+        <p>Ruang lingkup akidah Islam sangat luas, mencakup berbagai aspek yang saling berkaitan. Pemahaman komprehensif terhadap ruang lingkup ini penting untuk membentuk pribadi muslim yang utuh dalam keimanan.</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">☝️</div>
+                <h4>Tauhid</h4>
+                <p>Pengesaaan Allah dalam rububiyah, uluhiyah, serta asma' wa sifat-Nya.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">👼</div>
+                <h4>Iman kepada Gaib</h4>
+                <p>Malaikat, hari kiamat, surga, neraka, dan segala yang dikabarkan oleh Allah.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">📖</div>
+                <h4>Nubuwwah</h4>
+                <p>Kenabian, kisah para rasul, dan keteladanan mereka dalam berdakwah.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🚫</div>
+                <h4>Mu'jizat & Karamah</h4>
+                <p>Keistimewaan para nabi dan orang-orang shalih sebagai bukti kebenaran.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">⚖️</div>
+                <h4>Sam'iyyat</h4>
+                <p>Perkara gaib yang hanya dapat diketahui melalui wahyu, seperti siksa kubur.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌍</div>
+                <h4>Akhlak Berbasis Iman</h4>
+                <p>Perilaku mulia yang lahir dari akidah yang kokoh dan iman yang benar.</p>
+            </div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Ruang Lingkup Akidah</button>
+    </div>
+</div>
+
+<!-- Section F -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">F</div>
+        <h2 class="section-title">Fungsi dan Peran Akidah dalam Kehidupan</h2>
+    </div>
+    <div class="section-content">
+        <p>Akidah Islam memiliki fungsi yang sangat strategis dalam kehidupan seorang muslim. Ia bukan sekadar keyakinan teoritis, melainkan kekuatan yang menggerakkan seluruh aspek kehidupan.</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">🧭</div>
+                <h4>Fungsi Petunjuk</h4>
+                <p>Menjadi kompas kehidupan yang menuntun muslim ke jalan yang lurus dan diridhai Allah.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🛡️</div>
+                <h4>Fungsi Protektif</h4>
+                <p>Menjaga seorang muslim dari kesyirikan, bid'ah, dan pemikiran yang menyimpang.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💪</div>
+                <h4>Fungsi Motivasi</h4>
+                <p>Mendorong semangat beribadah dan beramal shalih dengan mengharap ridha Allah.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🕊️</div>
+                <h4>Fungsi Penenang</h4>
+                <p>Memberikan ketenangan jiwa dan ketentraman hati di tengah cobaan kehidupan.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🎯</div>
+                <h4>Fungsi Tujuan</h4>
+                <p>Memberikan arah dan tujuan hidup yang jelas, yaitu beribadah kepada Allah SWT.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌱</div>
+                <h4>Fungsi Pembentuk Akhlak</h4>
+                <p>Menjadi akar yang melahirkan akhlak mulia, seperti jujur, amanah, dan sabar.</p>
+            </div>
+        </div>
+
+        <div class="reflection">
+            <div class="label">📌 Refleksi</div>
+            <p><strong>Akidah: Akar Kehidupan Seorang Muslim</strong><br>
+            Sebagaimana pohon yang kokoh membutuhkan akar yang kuat, demikian pula amal seorang muslim. Tanpa akidah yang benar, amal sehebat apapun tidak akan diterima di sisi Allah. Sebaliknya, dengan akidah yang shahih, amal sekecil apapun akan bernilai besar di sisi-Nya. Inilah mizan (keseimbangan) yang diajarkan Islam — mengutamakan fondasi sebelum bangunan.</p>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Fungsi Akidah</button>
+    </div>
+</div>
+
+<!-- Section G -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">G</div>
+        <h2 class="section-title">Perbandingan Akidah Islam dengan Sistem Keyakinan Lain</h2>
+    </div>
+    <div class="section-content">
+        <p>Untuk memahami keistimewaan akidah Islam, berikut adalah perbandingan antara akidah Islam dengan sistem keyakinan atau filsafat lain dalam memandang hakikat kehidupan dan Tuhan.</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Aspek</th>
+                    <th>Akidah Islam</th>
+                    <th>Filsafat/Ajaran Lain</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Sumber Keyakinan</strong></td>
+                    <td>Wahyu Allah (Al-Quran & Sunnah) yang pasti kebenarannya</td>
+                    <td>Akal, intuisi, atau pemikiran manusia yang terbatas</td>
+                </tr>
+                <tr>
+                    <td><strong>Konsep Ketuhanan</strong></td>
+                    <td>Tauhid murni — Allah Maha Esa, tidak beranak dan tidak diperanakkan</td>
+                    <td>Bervariasi: politeisme, panteisme, trinitas, atau ateisme</td>
+                </tr>
+                <tr>
+                    <td><strong>Tujuan Hidup</strong></td>
+                    <td>Beribadah kepada Allah dan meraih kebahagiaan dunia-akhirat</td>
+                    <td>Kesenangan, kebebasan, atau pencapaian duniawi semata</td>
+                </tr>
+                <tr>
+                    <td><strong>Dasar Moral</strong></td>
+                    <td>Perintah dan larangan Allah yang bersifat mutlak</td>
+                    <td>Relatif, tergantung kesepakatan sosial atau budaya</td>
+                </tr>
+                <tr>
+                    <td><strong>Keyakinan Akhirat</strong></td>
+                    <td>Pasti ada hari kebangkitan, hisab, surga, dan neraka</td>
+                    <td>Seringkali diabaikan atau dianggap simbolis semata</td>
+                </tr>
+                <tr>
+                    <td><strong>Sifat Akidah</strong></td>
+                    <td>Mutlak, universal, dan berlaku sepanjang masa</td>
+                    <td>Relatif, temporal, dan dapat berubah sesuai zaman</td>
+                </tr>
+                <tr>
+                    <td><strong>Dampak Kehidupan</strong></td>
+                    <td>Ketenangan jiwa, akhlak mulia, dan keseimbangan hidup</td>
+                    <td>Seringkali menimbulkan kegelisahan dan kehampaan</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Perbandingan Akidah</button>
+    </div>
+</div>
+
+<!-- Section H -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">H</div>
+        <h2 class="section-title">Urgensi Mempelajari Akidah Islam</h2>
+    </div>
+    <div class="section-content">
+        <p>Di tengah arus globalisasi dan tantangan zaman yang semakin kompleks, pemahaman tentang akidah Islam menjadi sangat penting bagi setiap muslim, terutama generasi muda. Berikut beberapa alasan strategis mengapa mempelajari akidah sangat urgen:</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">🛡️</div>
+                <h4>Benteng dari Syubhat</h4>
+                <p>Akidah yang kokoh menjadi benteng dari pemikiran sesat, aliran menyimpang, dan ideologi yang merusak.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🕌</div>
+                <h4>Syarat Diterimanya Amal</h4>
+                <p>Tanpa akidah yang benar, amal ibadah tidak akan diterima di sisi Allah SWT.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🧠</div>
+                <h4>Ketahanan Mental</h4>
+                <p>Akidah yang kuat membentuk pribadi yang tangguh, sabar, dan optimis menghadapi cobaan.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌐</div>
+                <h4>Tantangan Globalisasi</h4>
+                <p>Menjaga identitas muslim di tengah gempuran budaya dan ideologi asing yang bertentangan.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💖</div>
+                <h4>Ketenangan Jiwa</h4>
+                <p>Akidah yang benar memberikan ketentraman hati yang tidak dapat diberikan oleh apapun di dunia ini.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌟</div>
+                <h4>Kunci Keselamatan</h4>
+                <p>Akidah yang shahih adalah kunci keselamatan di dunia dan kebahagiaan abadi di akhirat.</p>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">فَٱعْلَمْ أَنَّهُۥ لَآ إِلَـٰهَ إِلَّا ٱللَّهُ وَٱسْتَغْفِرْ لِذَنۢبِكَ</div>
+            <div class="translation">"Maka ketahuilah, bahwa sesungguhnya tidak ada Tuhan (yang berhak disembah) selain Allah dan mohonlah ampunan atas dosamu."</div>
+            <div class="reference">— QS. Muhammad [47]: 19</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Urgensi Akidah</button>
+    </div>
+</div>
+
+<!-- Keywords -->
+<div class="section">
+    <div class="keywords">
+        <h3>◆ Kata Kunci Bab Ini</h3>
+        <div class="keyword-tags">
+            <span class="keyword-tag">Akidah</span>
+            <span class="keyword-tag">Iman</span>
+            <span class="keyword-tag">Tauhid</span>
+            <span class="keyword-tag">Rububiyah</span>
+            <span class="keyword-tag">Uluhiyah</span>
+            <span class="keyword-tag">Asma' wa Sifat</span>
+            <span class="keyword-tag">Rukun Iman</span>
+            <span class="keyword-tag">Al-Quran</span>
+            <span class="keyword-tag">As-Sunnah</span>
+            <span class="keyword-tag">Akhlak</span>
+            <span class="keyword-tag">Ibadah</span>
+            <span class="keyword-tag">Qada & Qadar</span>
+        </div>
+        <div class="quran-quote">
+            <div class="arabic">شَهِدَ ٱللَّهُ أَنَّهُۥ لَآ إِلَـٰهَ إِلَّا هُوَ وَٱلْمَلَـٰٓئِكَةُ وَأُوْلُواْ ٱلْعِلْمِ قَآئِمًۢا بِٱلْقِسْطِ ۚ لَآ إِلَـٰهَ إِلَّا هُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ</div>
+            <div class="translation">"Allah menyatakan bahwasanya tidak ada Tuhan (yang berhak disembah) melainkan Dia, Yang menegakkan keadilan. Para malaikat dan orang-orang yang berilmu (juga menyatakan yang demikian itu). Tidak ada Tuhan (yang berhak disembah) melainkan Dia, Yang Maha Perkasa lagi Maha Bijaksana."</div>
+            <div class="reference">— QS. Ali 'Imran [3]: 18</div>
+        </div>
+    </div>
+</div>
+
+<!-- Quiz -->
+<div class="section">
+    <div class="quiz-box">
+        <div class="icon">📝</div>
+        <h3>Uji Pemahaman Anda</h3>
+        <p>Setelah mempelajari Bab 1 tentang Akidah Islam, ukur pemahaman Anda melalui uji formatif yang telah disiapkan. Jawab 10 pertanyaan pilihan ganda dan esai singkat.</p>
+        <a href="uji-formatif-1.html" class="quiz-btn">📝 Ikuti Uji Formatif Bab 1 →</a>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="section">
+    <div class="chapter-nav">
+        <a href="index.html" class="nav-btn">
+            <div class="label">← Kembali ke</div>
+            <div class="title">Daftar Isi Buku</div>
+        </a>
+        <a href="2.html" class="nav-btn next">
+            <div class="label">Selanjutnya →</div>
+            <div class="title">Bab 2: Sifat-sifat Allah dan Rasul</div>
+        </a>
+    </div>
+</div>
+
+<!-- Modal Video -->
+<div class="modal-overlay" id="videoModal">
+    <div class="modal-box">
+        <button class="close-btn" onclick="closeModal()">✕</button>
+        <div class="icon">🎬</div>
+        <h3>Video Pembelajaran</h3>
+        <p>Video pembelajaran akan segera tersedia. Hubungi penulis untuk akses konten video lengkap.</p>
+        <button class="video-btn" onclick="closeModal()">Tutup</button>
+        <div class="credit">
+            <strong>O · BENIA</strong><br>
+            © 2026 · Okta Benia, S.Pd.I<br>
+            Guru PAI · MTsN 6 Agam · Hak Cipta Dilindungi Undang-Undang<br>
+            <a href="mailto:oktabenia17@gmail.com">oktabenia17@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 · <strong>Okta Benia, S.Pd.I</strong></p>
+    <p>Guru PAI · MTsN 6 Agam · Hak Cipta Dilindungi Undang-Undang</p>
+    <p><a href="mailto:oktabenia17@gmail.com">oktabenia17@gmail.com</a></p>
+</footer>
+
+<script>
+    function openModal() {
+        document.getElementById('videoModal').classList.add('active');
+    }
+    function closeModal() {
+        document.getElementById('videoModal').classList.remove('active');
+    }
+    document.getElementById('videoModal').addEventListener('click', function(e) {
+        if (e.target === this) closeModal();
+    });
+</script>
+
+</body>
+</html>
