@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 6: Kisah Keteladanan Nabi Yunus AS | Akidah Akhlak Kelas 7</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: #f8f9fa; }
+
+        .top-bar { background: linear-gradient(135deg, #0d6832, #148f47); color: white; padding: 0.8rem 2rem; text-align: center; font-size: 0.95rem; }
+        .top-bar a { color: #ffd700; text-decoration: none; font-weight: 600; }
+        .top-bar a:hover { text-decoration: underline; }
+
+        .breadcrumb { background: white; padding: 0.8rem 2rem; border-bottom: 2px solid #eee; font-size: 0.9rem; color: #666; }
+        .breadcrumb .pill { display: inline-block; background: #e8f5ec; color: #0d6832; padding: 0.2rem 0.8rem; border-radius: 20px; font-weight: 600; margin-right: 0.5rem; font-size: 0.85rem; }
+
+        .hero { background: linear-gradient(135deg, #0d6832, #1aaf55); color: white; padding: 4rem 2rem; text-align: center; }
+        .hero .chapter-badge { font-size: 1.1rem; opacity: 0.95; margin-bottom: 0.5rem; letter-spacing: 2px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        .hero .subtitle { font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem; opacity: 0.95; font-style: italic; }
+        .author-info { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 1rem 2rem; border-radius: 12px; display: inline-block; border: 1px solid rgba(255,255,255,0.2); margin-top: 1rem; }
+        .author-info .name { font-size: 1.1rem; font-weight: bold; margin-bottom: 0.2rem; }
+        .author-info .position { font-size: 0.9rem; opacity: 0.9; }
+
+        .section { max-width: 1000px; margin: 3rem auto; padding: 0 2rem; }
+        .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+        .section-letter { background: linear-gradient(135deg, #0d6832, #1aaf55); color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0; box-shadow: 0 4px 12px rgba(13, 104, 50, 0.3); }
+        .section-title { font-size: 1.6rem; color: #0d6832; }
+        .section-content { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        .section-content p { margin-bottom: 1rem; text-align: justify; }
+
+        .def-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .def-card { background: #f0faf4; border-left: 4px solid #1aaf55; padding: 1.2rem 1.5rem; border-radius: 8px; }
+        .def-card .label { font-size: 0.85rem; color: #0d6832; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.3rem; }
+        .def-card .term { font-size: 1.15rem; font-weight: bold; color: #0d6832; margin-bottom: 0.5rem; }
+        .def-card p { font-size: 0.95rem; color: #555; margin: 0; }
+
+        .icon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; margin: 1.5rem 0; }
+        .icon-card { background: white; padding: 1.5rem 1rem; border-radius: 12px; text-align: center; box-shadow: 0 3px 12px rgba(0,0,0,0.08); transition: transform 0.3s; border-bottom: 3px solid #1aaf55; }
+        .icon-card:hover { transform: translateY(-5px); }
+        .icon-card .emoji { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .icon-card h4 { color: #0d6832; font-size: 1rem; margin-bottom: 0.4rem; }
+        .icon-card p { font-size: 0.88rem; color: #666; text-align: center; }
+
+        .video-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #0d6832, #1aaf55); color: white; padding: 0.7rem 1.3rem; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 0.9rem; margin-top: 1rem; cursor: pointer; border: none; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 3px 10px rgba(13, 104, 50, 0.3); }
+        .video-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(13, 104, 50, 0.4); }
+
+        .quran-quote { background: linear-gradient(135deg, #fffdf5, #fff9e6); border-right: 5px solid #b8860b; padding: 1.5rem; margin: 1.5rem 0; border-radius: 10px; text-align: center; }
+        .quran-quote .arabic { font-size: 1.8rem; font-family: 'Traditional Arabic', 'Amiri', serif; color: #0d6832; margin-bottom: 0.8rem; line-height: 2; direction: rtl; }
+        .quran-quote .translation { font-style: italic; color: #555; margin-bottom: 0.5rem; }
+        .quran-quote .reference { font-weight: bold; color: #b8860b; font-size: 0.9rem; }
+
+        .key-concept { background: #e8f5ec; border-left: 5px solid #0d6832; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+        .key-concept .label { font-weight: bold; color: #0d6832; margin-bottom: 0.3rem; }
+        .key-concept p { margin: 0; color: #333; }
+
+        .reflection { background: #fff9e6; border-left: 5px solid #b8860b; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+        .reflection .label { font-weight: bold; color: #b8860b; margin-bottom: 0.3rem; }
+
+        /* Timeline */
+        .timeline { position: relative; padding: 1rem 0; margin: 1.5rem 0; }
+        .timeline::before { content: ''; position: absolute; left: 30px; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, #1aaf55, #0d6832); }
+        .timeline-item { position: relative; padding-left: 70px; margin-bottom: 1.5rem; }
+        .timeline-item::before { content: ''; position: absolute; left: 22px; top: 5px; width: 20px; height: 20px; border-radius: 50%; background: linear-gradient(135deg, #0d6832, #1aaf55); border: 3px solid white; box-shadow: 0 2px 8px rgba(13, 104, 50, 0.3); }
+        .timeline-item .time-label { font-weight: bold; color: #0d6832; font-size: 0.9rem; margin-bottom: 0.3rem; }
+        .timeline-item .time-content { background: white; padding: 1rem 1.2rem; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 3px solid #1aaf55; }
+
+        /* Story Card */
+        .story-card { background: linear-gradient(135deg, #f0faf4, #e8f5ec); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #c3e6cb; }
+        .story-card h4 { color: #0d6832; margin-bottom: 0.8rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .story-card p { margin-bottom: 0.8rem; }
+        .story-card ul { padding-left: 1.5rem; }
+        .story-card li { padding: 0.3rem 0; }
+
+        .keywords { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.06); margin: 2rem 0; text-align: center; }
+        .keywords h3 { color: #0d6832; margin-bottom: 1rem; }
+        .keyword-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .keyword-tag { background: #e8f5ec; color: #0d6832; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.88rem; font-weight: 600; border: 1px solid #c3e6cb; }
+
+        .quiz-box { background: linear-gradient(135deg, #fff9e6, #fffdf5); padding: 2rem; border-radius: 15px; text-align: center; margin: 2rem 0; border: 2px dashed #b8860b; }
+        .quiz-box .icon { font-size: 3rem; margin-bottom: 0.5rem; }
+        .quiz-box h3 { color: #b8860b; margin-bottom: 0.5rem; }
+        .quiz-box p { color: #555; margin-bottom: 1rem; }
+        .quiz-btn { display: inline-block; background: linear-gradient(135deg, #b8860b, #ffd700); color: #0d6832; padding: 0.8rem 2rem; border-radius: 30px; text-decoration: none; font-weight: bold; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3); }
+        .quiz-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(184, 134, 11, 0.4); }
+
+        .chapter-nav { display: flex; justify-content: space-between; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
+        .nav-btn { flex: 1; min-width: 250px; background: white; padding: 1.2rem 1.5rem; border-radius: 12px; text-decoration: none; color: #333; box-shadow: 0 3px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; border-left: 4px solid #1aaf55; }
+        .nav-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+        .nav-btn .label { font-size: 0.85rem; color: #666; margin-bottom: 0.3rem; }
+        .nav-btn .title { font-weight: bold; color: #0d6832; }
+        .nav-btn.next { text-align: right; border-left: none; border-right: 4px solid #1aaf55; }
+
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-overlay.active { display: flex; }
+        .modal-box { background: white; padding: 2.5rem; border-radius: 15px; max-width: 500px; width: 90%; text-align: center; position: relative; }
+        .modal-box .close-btn { position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #999; }
+        .modal-box .icon { font-size: 4rem; margin-bottom: 1rem; }
+        .modal-box h3 { color: #0d6832; margin-bottom: 0.5rem; }
+        .modal-box p { color: #666; margin-bottom: 1rem; }
+        .modal-box .credit { font-size: 0.85rem; color: #999; margin-top: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
+
+        footer { background: #0d6832; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+        footer p { margin: 0.3rem 0; opacity: 0.9; }
+        footer a { color: #ffd700; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .section-title { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <a href="index.html">← Kembali ke Daftar Isi</a> | Buku Akidah Akhlak Semester 1 Kelas 7
+</div>
+
+<div class="breadcrumb">
+    <span class="pill">NABI YUNUS</span>
+    <span class="pill">DZUN NUN</span>
+    <span class="pill">IKAN PAUS</span>
+    <span class="pill">TAUBAT</span>
+    Bab 6 dari 7
+</div>
+
+<section class="hero">
+    <div class="chapter-badge">BAB 06 · KISAH KETELADANAN</div>
+    <h1>Kisah Keteladanan Nabi Yunus AS</h1>
+    <p class="subtitle">Pelajaran agung dari sang Dzun Nun — nabi yang ditelan ikan paus karena ketidaksabarannya, namun diselamatkan oleh rahmat Allah melalui doa yang tulus. Kisah abadi tentang kesabaran, taubat, dan kasih sayang Allah yang tak terhingga.</p>
+    <div class="author-info">
+        <div class="name">Okta Benia, S.Pd.I</div>
+        <div class="position">Guru PAI · MTsN 6 Agam</div>
+    </div>
+</section>
+
+<!-- Section A -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">A</div>
+        <h2 class="section-title">Pengantar Kisah Nabi Yunus AS</h2>
+    </div>
+    <div class="section-content">
+        <p>Kisah Nabi Yunus AS adalah salah satu kisah paling dramatis dan penuh pelajaran dalam Al-Quran. Beliau diutus oleh Allah SWT kepada kaum Asyura di kota Ninive (sekarang wilayah Irak) — salah satu kota terbesar dan paling maju pada zamannya. Namun, kaumnya menolak dakwahnya dengan keras, sehingga beliau pergi meninggalkan mereka dalam keadaan marah dan kecewa.</p>
+
+        <p>Di tengah perjalanan di atas kapal yang dilanda badai, Nabi Yunus undian dan harus melompat ke laut. Beliau ditelan ikan paus atas izin Allah, dan di dalam kegelapan perut ikan itulah beliau mengumandangkan doa yang agung — doa Dzun Nun yang menjadi warisan spiritual bagi seluruh umat Islam hingga hari ini.</p>
+
+        <p>Allah SWT mengabadikan kisah ini dalam Al-Quran sebagai pelajaran abadi tentang kesabaran, kebesaran Allah, dan kasih sayang-Nya yang tak terhingga. Kisah ini juga mengajarkan bahwa tidak ada jalan keluar dari kegelapan kecuali dengan bertawakkal dan bertasbih kepada Allah.</p>
+
+        <div class="def-grid">
+            <div class="def-card">
+                <div class="label">📌 Identitas</div>
+                <div class="term">Nabi Yunus AS</div>
+                <p>Nabi dan Rasul Allah yang diutus kepada kaum Asyura di kota Ninive. Dikenal juga dengan julukan <em>Dzun Nun</em> (pemilik ikan) dan <em>Shahib al-Hut</em> (sahabat ikan).</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Identitas</div>
+                <div class="term">Dzun Nun</div>
+                <p>Julukan Nabi Yunus yang berarti "Pemilik/Sahabat Ikan" — merujuk pada peristiwa beliau ditelan ikan paus dan diselamatkan oleh Allah.</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Lokasi</div>
+                <div class="term">Kota Ninive</div>
+                <p>Kota kuno di wilayah Irak modern, ibukota Kerajaan Asyuria. Penduduknya berjumlah lebih dari 100.000 orang (QS. As-Saffat: 147).</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Doa</div>
+                <div class="term">Doa Dzun Nun</div>
+                <p>Doa Nabi Yunus di dalam perut ikan: <em>Laa ilaaha illa anta subhaanaka inni kuntu minaz-zhaalimiin</em> — doa yang menjadi kunci keselamatan setiap muslim yang tertimpa kesusahan.</p>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">وَإِنَّ يُونُسَ لَمِنَ ٱلْمُرْسَلِينَ</div>
+            <div class="translation">"Dan sesungguhnya Yunus termasuk salah seorang rasul-rasul."</div>
+            <div class="reference">— QS. As-Saffat [37]: 139</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Pengantar Kisah Nabi Yunus</button>
+    </div>
+</div>
+
+<!-- Section B -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">B</div>
+        <h2 class="section-title">Kronologi Kisah Nabi Yunus AS</h2>
+    </div>
+    <div class="section-content">
+        <p>Kisah Nabi Yunus AS memiliki alur yang dramatis dan penuh pelajaran. Berikut adalah kronologi peristiwa penting dalam kisah beliau, sebagaimana diceritakan dalam Al-Quran:</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="time-label">📍 Fase 1: Diutus kepada Kaum Ninive</div>
+                <div class="time-content">
+                    <p>Allah SWT mengutus Nabi Yunus AS kepada penduduk kota Ninive — kaum penyembah berhala yang berjumlah lebih dari 100.000 orang. Beliau menyeru mereka untuk meninggalkan penyembahan berhala dan kembali kepada tauhid.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">😔 Fase 2: Penolakan dan Ketidaksabaran</div>
+                <div class="time-content">
+                    <p>Kaum Ninive menolak dakwah Nabi Yunus dengan keras. Mereka mengancam dan menantang beliau. Dalam keadaan kecewa dan marah, Nabi Yunus meninggalkan kaumnya tanpa izin dari Allah, dengan persangkaan bahwa Allah tidak akan menyempitkannya.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">🚢 Fase 3: Berlayar dan Undian</div>
+                <div class="time-content">
+                    <p>Nabi Yunus menaiki kapal yang berlayar di lautan. Ketika badai besar melanda dan kapal hampir tenggelam, para penumpang melakukan undian untuk menentukan siapa yang harus dikorbankan. Undian jatuh kepada Nabi Yunus, dan beliau pun melompat ke laut.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">🐋 Fase 4: Ditelan Ikan Paus</div>
+                <div class="time-content">
+                    <p>Atas perintah Allah, seekor ikan paus besar menelan Nabi Yunus. Namun Allah memerintahkan ikan tersebut untuk tidak memakan daging dan tulangnya — hanya menahannya di dalam perut sebagai "penjara" sementara bagi sang nabi.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">🤲 Fase 5: Doa di Kegelapan</div>
+                <div class="time-content">
+                    <p>Di dalam tiga kegelapan — kegelapan malam, kegelapan lautan, dan kegelapan perut ikan — Nabi Yunus berseru dengan doa yang agung: <em>"Laa ilaaha illa anta subhaanaka inni kuntu minaz-zhaalimiin"</em> (Tiada Tuhan selain Engkau, Maha Suci Engkau, sesungguhnya aku termasuk orang-orang yang zalim).</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">✨ Fase 6: Keselamatan oleh Allah</div>
+                <div class="time-content">
+                    <p>Allah SWT mengabulkan doa Nabi Yunus. Ikan paus memuntahkannya ke daratan dalam keadaan sakit namun selamat. Allah menumbuhkan pohon yaqthin (labu) untuk memberikan naungan dan makanan baginya hingga beliau pulih.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="time-label">🏡 Fase 7: Kembali kepada Kaumnya</div>
+                <div class="time-content">
+                    <p>Nabi Yunus kembali kepada kaumnya dan mendapati mereka telah beriman — sebanyak lebih dari 100.000 orang — setelah melihat tanda-tanda azab yang akan menimpa mereka. Mereka bertaubat, dan Allah pun mengampuni mereka.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">فَٱسْتَجَبْنَا لَهُۥ وَنَجَّيْنَـٰهُ مِنَ ٱلْغَمِّ ۚ وَكَذَٰلِكَ نُنجِى ٱلْمُؤْمِنِينَ</div>
+            <div class="translation">"Maka Kami kabulkan doanya dan Kami selamatkan dia dari kedukaan. Dan demikianlah Kami selamatkan orang-orang yang beriman."</div>
+            <div class="reference">— QS. Al-Anbiya [21]: 88</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Kronologi Kisah</button>
+    </div>
+</div>
+
+<!-- Section C -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">C</div>
+        <h2 class="section-title">Dimensi-Dimensi Kisah Nabi Yunus</h2>
+    </div>
+    <div class="section-content">
+        <p>Kisah Nabi Yunus memiliki dimensi-dimensi yang saling berkaitan. Setiap dimensi memberikan pelajaran berharga bagi kehidupan seorang muslim.</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">🕌</div>
+                <h4>Dimensi Akidah</h4>
+                <p>Keyakinan kepada keesaan Allah dan kekuasaan-Nya yang mutlak atas segala sesuatu — termasuk ikan paus dan lautan.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💖</div>
+                <h4>Dimensi Akhlak</h4>
+                <p>Pelajaran tentang kesabaran, tawakkal, dan taubat — akhlak utama yang harus dimiliki seorang da'i.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">📖</div>
+                <h4>Dimensi Dakwah</h4>
+                <p>Metode dakwah yang benar: sabar menghadapi penolakan, tidak terburu-buru, dan selalu berharap hidayah bagi kaumnya.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🤲</div>
+                <h4>Dimensi Doa</h4>
+                <p>Doa Dzun Nun sebagai warisan spiritual — kunci keselamatan dari segala kesusahan dan kegelapan.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌊</div>
+                <h4>Dimensi Spiritual</h4>
+                <p>Perjalanan spiritual dari kegelapan menuju cahaya — dari keputusasaan menuju harapan akan rahmat Allah.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌍</div>
+                <h4>Dimensi Universal</h4>
+                <p>Kisah ini berlaku sepanjang zaman — pelajaran tentang kesabaran, taubat, dan kasih sayang Allah bagi seluruh umat manusia.</p>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">فَلَوْلَآ أَنَّهُۥ كَانَ مِنَ ٱلْمُسَبِّحِينَ لَلَبِثَ فِى بَطْنِهِۦٓ إِلَىٰ يَوْمِ يُبْعَثُونَ</div>
+            <div class="translation">"Maka sekiranya dia tidak termasuk orang-orang yang banyak berzikir (bertasbih) kepada Allah, niscaya ia akan tetap tinggal di perut ikan itu sampai hari dibangkitkan."</div>
+            <div class="reference">— QS. As-Saffat [37]: 143-144</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Dimensi Kisah</button>
+    </div>
+</div>
+
+<!-- Section D -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">D</div>
+        <h2 class="section-title">Dalil-Dalil Naqli tentang Kisah Nabi Yunus</h2>
+    </div>
+    <div class="section-content">
+        <p>Kisah Nabi Yunus AS diabadikan dalam beberapa surah Al-Quran, yang menunjukkan pentingnya kisah ini sebagai pelajaran bagi umat Islam. Berikut adalah dalil-dalil naqli utama:</p>
+
+        <div class="quran-quote">
+            <div class="arabic">فَنَادَىٰ فِى ٱلظُّلُمَـٰتِ أَن لَّآ إِلَـٰهَ إِلَّآ أَنتَ سُبْحَـٰنَكَ إِنِّى كُنتُ مِنَ ٱلظَّـٰلِمِينَ</div>
+            <div class="translation">"Maka ia menyeru dalam keadaan yang gelap-gulita: 'Bahwa tidak ada Tuhan (yang berhak disembah) selain Engkau, Maha Suci Engkau, sesungguhnya aku adalah termasuk orang-orang yang zalim.'"</div>
+            <div class="reference">— QS. Al-Anbiya [21]: 87 (Doa Dzun Nun)</div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">فَٱسْتَجَبْنَا لَهُۥ وَنَجَّيْنَـٰهُ مِنَ ٱلْغَمِّ ۚ وَكَذَٰلِكَ نُنجِى ٱلْمُؤْمِنِينَ</div>
+            <div class="translation">"Maka Kami kabulkan doanya dan Kami selamatkan dia dari kedukaan. Dan demikianlah Kami selamatkan orang-orang yang beriman."</div>
+            <div class="reference">— QS. Al-Anbiya [21]: 88</div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">فَلَوْلَآ أَنَّهُۥ كَانَ مِنَ ٱلْمُسَبِّحِينَ لَلَبِثَ فِى بَطْنِهِۦٓ إِلَىٰ يَوْمِ يُبْعَثُونَ</div>
+            <div class="translation">"Maka sekiranya dia tidak termasuk orang-orang yang banyak berzikir (bertasbih) kepada Allah, niscaya ia akan tetap tinggal di perut ikan itu sampai hari dibangkitkan."</div>
+            <div class="reference">— QS. As-Saffat [37]: 143-144</div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">فَأَلْقَـٰهُ ٱلْبُحَارُ فَٱلْتَقَمَهُۥ ٱلْحُوتُ وَهُوَ مُلِيمٌ</div>
+            <div class="translation">"Kemudian dia dilemparkan ke laut, lalu ia ditelan oleh ikan besar dalam keadaan tercela."</div>
+            <div class="reference">— QS. As-Saffat [37]: 142</div>
+        </div>
+
+        <div class="key-concept">
+            <div class="label">📌 Hadis tentang Doa Dzun Nun</div>
+            <p>Rasulullah SAW bersabda: <em>"Doa Dzun Nun (Nabi Yunus) ketika ia berdoa dalam perut ikan paus: 'Laa ilaaha illa anta subhaanaka inni kuntu minaz-zhaalimiin' — sesungguhnya tidak seorang muslim pun berdoa dengan doa ini dalam suatu urusan, melainkan Allah akan mengabulkannya."</em> (HR. Tirmidzi). Hadis ini menunjukkan keutamaan luar biasa dari doa yang diajarkan Nabi Yunus.</p>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Dalil-Dalil Naqli</button>
+    </div>
+</div>
+
+<!-- Section E -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">E</div>
+        <h2 class="section-title">Keteladanan dari Kisah Nabi Yunus</h2>
+    </div>
+    <div class="section-content">
+        <p>Kisah Nabi Yunus AS mengandung banyak pelajaran dan keteladanan yang dapat kita ambil untuk kehidupan sehari-hari. Berikut adalah nilai-nilai keteladanan utama:</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">🤲</div>
+                <h4>Keteladanan dalam Doa</h4>
+                <p>Nabi Yunus mengajarkan kita pentingnya berdoa dengan penuh kerendahan hati, mengakui kesalahan, dan bertasbih kepada Allah dalam setiap keadaan.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💪</div>
+                <h4>Keteladanan dalam Kesabaran</h4>
+                <p>Seorang da'i harus sabar dalam menghadapi penolakan kaumnya. Ketidaksabaran Nabi Yunus menjadi pelajaran berharga tentang pentingnya istiqamah.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🔄</div>
+                <h4>Keteladanan dalam Taubat</h4>
+                <p>Nabi Yunus mengakui kesalahannya dengan jujur: <em>"Inni kuntu minaz-zhaalimiin"</em> (sesungguhnya aku termasuk orang-orang yang zalim). Taubat yang jujur adalah kunci ampunan Allah.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌟</div>
+                <h4>Keteladanan dalam Tawakkal</h4>
+                <p>Meskipun dalam keadaan paling sulit — di dalam perut ikan paus di dasar lautan — Nabi Yunus tetap bertawakkal kepada Allah dan tidak putus asa.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">📖</div>
+                <h4>Keteladanan dalam Dzikir</h4>
+                <p>Kebiasaan berdzikir dan bertasbih kepada Allah menjadi penyebab keselamatan Nabi Yunus. Dzikir adalah "senjata" seorang mukmin dalam setiap keadaan.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💖</div>
+                <h4>Kasih Sayang Allah</h4>
+                <p>Allah menyelamatkan Nabi Yunus dan mengampuni kaum Ninive yang bertaubat. Ini menunjukkan bahwa rahmat Allah lebih luas daripada murka-Nya.</p>
+            </div>
+        </div>
+
+        <div class="story-card">
+            <h4>📌 Pelajaran Penting</h4>
+            <p>Kisah Nabi Yunus mengajarkan bahwa <strong>tidak ada jalan keluar dari kegelapan kecuali dengan kembali kepada Allah</strong>. Tiga kegelapan yang dihadapi Nabi Yunus — kegelapan malam, kegelapan lautan, dan kegelapan perut ikan — adalah metafora dari kegelapan hidup yang hanya dapat diterangi dengan cahaya tauhid dan dzikir.</p>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Keteladanan</button>
+    </div>
+</div>
+
+<!-- Section F -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">F</div>
+        <h2 class="section-title">Fungsi dan Manfaat Mempelajari Kisah Nabi Yunus</h2>
+    </div>
+    <div class="section-content">
+        <p>Mempelajari kisah Nabi Yunus AS memiliki fungsi dan manfaat yang sangat besar bagi kehidupan seorang muslim. Berikut adalah beberapa fungsi dan manfaatnya:</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">💖</div>
+                <h4>Penguatan Iman</h4>
+                <p>Kisah ini menguatkan keyakinan akan kekuasaan Allah yang mampu menyelamatkan hamba-Nya dari keadaan paling sulit sekalipun.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🕊️</div>
+                <h4>Ketenangan Jiwa</h4>
+                <p>Doa Dzun Nun menjadi obat bagi hati yang gelisah, cemas, dan tertimpa kesusahan — sumber ketenangan spiritual.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💪</div>
+                <h4>Ketahanan Mental</h4>
+                <p>Pelajaran tentang kesabaran dan tawakkal membentuk pribadi yang tangguh dalam menghadapi cobaan hidup.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🤲</div>
+                <h4>Pembiasaan Doa</h4>
+                <p>Mendorong umat Islam untuk membiasakan doa Dzun Nun dalam kehidupan sehari-hari, terutama saat tertimpa kesulitan.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">📚</div>
+                <h4>Inspirasi Dakwah</h4>
+                <p>Menjadi panduan bagi para da'i dalam menjalankan tugas dakwah dengan sabar, bijaksana, dan penuh harapan.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌟</div>
+                <h4>Pengharapan akan Rahmat Allah</h4>
+                <p>Kisah ini mengajarkan bahwa rahmat Allah selalu lebih dekat daripada yang kita sangka — tidak ada yang mustahil bagi-Nya.</p>
+            </div>
+        </div>
+
+        <div class="reflection">
+            <div class="label">📌 Refleksi</div>
+            <p><strong>Tiga Kegelapan dan Cahaya Tauhid</strong><br>
+            Nabi Yunus berada dalam tiga kegelapan: kegelapan malam, kegelapan lautan, dan kegelapan perut ikan. Namun cahaya tauhid di hatinya tidak pernah padam. Ketika seorang muslim berada dalam "tiga kegelapan" hidupnya — kegelapan masalah, kegelapan dosa, dan kegelapan keputusasaan — cahaya doa dan dzikir akan menjadi penuntun menuju keselamatan. Inilah mukjizat spiritual yang diajarkan kisah Nabi Yunus.</p>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Fungsi dan Manfaat</button>
+    </div>
+</div>
+
+<!-- Section G -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">G</div>
+        <h2 class="section-title">Perbandingan Perspektif Umum dan Islam</h2>
+    </div>
+    <div class="section-content">
+        <p>Untuk memahami keistimewaan kisah Nabi Yunus dalam Islam, berikut perbandingan antara perspektif umum (mitologi/sejarah) dengan perspektif Islam.</p>
+
+        <table class="comparison-table" style="width: 100%; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 12px rgba(0,0,0,0.08);">
+            <thead>
+                <tr style="background: linear-gradient(135deg, #0d6832, #1aaf55); color: white;">
+                    <th style="padding: 1rem; text-align: left; font-size: 0.95rem;">Aspek</th>
+                    <th style="padding: 1rem; text-align: left; font-size: 0.95rem;">Perspektif Umum / Mitologi</th>
+                    <th style="padding: 1rem; text-align: left; font-size: 0.95rem;">Perspektif Islam</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;"><strong>Sumber Kisah</strong></td>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;">Legenda, mitologi, atau cerita rakyat</td>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;">Wahyu Allah (Al-Quran) yang pasti kebenarannya</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;"><strong>Status Tokoh</strong></td>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;">Tokoh fiktif atau simbolis</td>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;">Nabi dan Rasul Allah yang diutus kepada kaum nyata</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;"><strong>Makna Peristiwa</strong></td>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;">Cerita hiburan atau alegori</td>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;">Pelajaran spiritual dan akidah yang wajib diimani</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;"><strong>Peran Ikan Paus</strong></td>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;">Fenomena alam atau kebetulan</td>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;">Perintah Allah sebagai "penjara" sekaligus sarana keselamatan</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;"><strong>Tujuan Kisah</strong></td>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;">Menghibur atau menakut-nakuti</td>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;">Pelajaran tentang tauhid, kesabaran, taubat, dan kasih sayang Allah</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;"><strong>Aplikasi Kehidupan</strong></td>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;">Tidak ada aplikasi praktis</td>
+                    <td style="padding: 0.9rem 1rem; border-bottom: 1px solid #eee;">Doa Dzun Nun sebagai amalan harian, keteladanan akhlak, dan penguatan iman</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0.9rem 1rem;"><strong>Nilai Spiritual</strong></td>
+                    <td style="padding: 0.9rem 1rem;">Tidak ada dimensi spiritual</td>
+                    <td style="padding: 0.9rem 1rem;">Warisan spiritual abadi — doa, dzikir, dan keteladanan akhlak</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Perbandingan Perspektif</button>
+    </div>
+</div>
+
+<!-- Section H -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">H</div>
+        <h2 class="section-title">Urgensi Mempelajari Kisah Nabi Yunus</h2>
+    </div>
+    <div class="section-content">
+        <p>Di tengah tantangan hidup yang semakin kompleks, mempelajari kisah Nabi Yunus AS menjadi sangat penting bagi setiap muslim, terutama generasi muda. Berikut beberapa alasan strategis mengapa kisah ini urgen untuk dipelajari:</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">🛡️</div>
+                <h4>Penguatan Akidah</h4>
+                <p>Kisah ini menguatkan keyakinan akan kekuasaan Allah yang mutlak atas segala sesuatu — termasuk ikan paus dan lautan.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💖</div>
+                <h4>Obat Hati</h4>
+                <p>Doa Dzun Nun menjadi obat bagi hati yang gelisah, cemas, dan tertimpa kesusahan — solusi spiritual yang efektif.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💪</div>
+                <h4>Ketahanan Mental</h4>
+                <p>Pelajaran tentang kesabaran dan tawakkal membentuk pribadi yang tangguh dalam menghadapi cobaan hidup.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌐</div>
+                <h4>Tantangan Zaman</h4>
+                <p>Di era modern yang penuh tekanan, kisah Nabi Yunus menjadi sumber inspirasi dan motivasi spiritual.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🎯</div>
+                <h4>Panduan Dakwah</h4>
+                <p>Menjadi panduan bagi para da'i dalam menjalankan tugas dakwah dengan sabar, bijaksana, dan penuh harapan.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌟</div>
+                <h4>Kunci Keselamatan</h4>
+                <p>Doa Dzun nun adalah kunci keselamatan dari segala kesusahan — warisan spiritual yang harus dijaga dan diamalkan.</p>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">وَأَرْسَلْنَـٰهُ إِلَىٰ مِاْئَةِ أَلْفٍ أَوْ يَزِيدُونَ فَـَٔامَنُواْ فَمَتَّعْنَـٰهُمْ إِلَىٰ حِينٍ</div>
+            <div class="translation">"Dan Kami utus dia kepada seratus ribu (orang) atau lebih, sehingga mereka beriman, maka Kami berikan kenikmatan hidup kepada mereka hingga suatu waktu."</div>
+            <div class="reference">— QS. As-Saffat [37]: 147-148</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Urgensi Kisah</button>
+    </div>
+</div>
+
+<!-- Keywords -->
+<div class="section">
+    <div class="keywords">
+        <h3>◆ Kata Kunci Bab Ini</h3>
+        <div class="keyword-tags">
+            <span class="keyword-tag">Nabi Yunus</span>
+            <span class="keyword-tag">Dzun Nun</span>
+            <span class="keyword-tag">Ikan Paus</span>
+            <span class="keyword-tag">Ninive</span>
+            <span class="keyword-tag">Doa Dzun Nun</span>
+            <span class="keyword-tag">Laa ilaaha illa anta</span>
+            <span class="keyword-tag">Tiga Kegelapan</span>
+            <span class="keyword-tag">Kesabaran</span>
+            <span class="keyword-tag">Taubat</span>
+            <span class="keyword-tag">Tawakkal</span>
+            <span class="keyword-tag">Dakwah</span>
+            <span class="keyword-tag">Pohon Yaqthin</span>
+            <span class="keyword-tag">Tasbih</span>
+            <span class="keyword-tag">Keselamatan</span>
+        </div>
+        <div class="quran-quote">
+            <div class="arabic">لَّآ إِلَـٰهَ إِلَّآ أَنتَ سُبْحَـٰنَكَ إِنِّى كُنتُ مِنَ ٱلظَّـٰلِمِينَ</div>
+            <div class="translation">"Tiada Tuhan (yang berhak disembah) selain Engkau, Maha Suci Engkau, sesungguhnya aku adalah termasuk orang-orang yang zalim."</div>
+            <div class="reference">— QS. Al-Anbiya [21]: 87 (Doa Dzun Nun)</div>
+        </div>
+    </div>
+</div>
+
+<!-- Quiz -->
+<div class="section">
+    <div class="quiz-box">
+        <div class="icon">📝</div>
+        <h3>Uji Pemahaman Anda</h3>
+        <p>Setelah mempelajari Bab 6 tentang Kisah Keteladanan Nabi Yunus AS, ukur pemahaman Anda melalui uji formatif yang telah disiapkan.</p>
+        <a href="uji-formatif-6.html" class="quiz-btn">📝 Ikuti Uji Formatif Bab 6 →</a>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="section">
+    <div class="chapter-nav">
+        <a href="5.html" class="nav-btn">
+            <div class="label">← Sebelumnya</div>
+            <div class="title">Bab 5: Adab Shalat dan Dzikir</div>
+        </a>
+        <a href="index.html" class="nav-btn">
+            <div class="label">🏠</div>
+            <div class="title">Daftar Isi Buku</div>
+        </a>
+        <a href="7.html" class="nav-btn next">
+            <div class="label">Selanjutnya →</div>
+            <div class="title">Bab 7: Ujian Akhir Semester</div>
+        </a>
+    </div>
+</div>
+
+<!-- Modal Video -->
+<div class="modal-overlay" id="videoModal">
+    <div class="modal-box">
+        <button class="close-btn" onclick="closeModal()">✕</button>
+        <div class="icon">🎬</div>
+        <h3>Video Pembelajaran</h3>
+        <p>Video pembelajaran akan segera tersedia. Hubungi penulis untuk akses konten video lengkap.</p>
+        <button class="video-btn" onclick="closeModal()">Tutup</button>
+        <div class="credit">
+            <strong>O · BENIA</strong><br>
+            © 2026 · Okta Benia, S.Pd.I<br>
+            Guru PAI · MTsN 6 Agam · Hak Cipta Dilindungi Undang-Undang<br>
+            <a href="mailto:oktabenia17@gmail.com">oktabenia17@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 · <strong>Okta Benia, S.Pd.I</strong></p>
+    <p>Guru PAI · MTsN 6 Agam · Hak Cipta Dilindungi Undang-Undang</p>
+    <p><a href="mailto:oktabenia17@gmail.com">oktabenia17@gmail.com</a></p>
+</footer>
+
+<script>
+    function openModal() { document.getElementById('videoModal').classList.add('active'); }
+    function closeModal() { document.getElementById('videoModal').classList.remove('active'); }
+    document.getElementById('videoModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+</script>
+
+</body>
+</html>

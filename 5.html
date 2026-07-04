@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bab 5: Adab Shalat dan Dzikir | Akidah Akhlak Kelas 7</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: #f8f9fa; }
+
+        .top-bar { background: linear-gradient(135deg, #0d6832, #148f47); color: white; padding: 0.8rem 2rem; text-align: center; font-size: 0.95rem; }
+        .top-bar a { color: #ffd700; text-decoration: none; font-weight: 600; }
+        .top-bar a:hover { text-decoration: underline; }
+
+        .breadcrumb { background: white; padding: 0.8rem 2rem; border-bottom: 2px solid #eee; font-size: 0.9rem; color: #666; }
+        .breadcrumb .pill { display: inline-block; background: #e8f5ec; color: #0d6832; padding: 0.2rem 0.8rem; border-radius: 20px; font-weight: 600; margin-right: 0.5rem; font-size: 0.85rem; }
+
+        .hero { background: linear-gradient(135deg, #0d6832, #1aaf55); color: white; padding: 4rem 2rem; text-align: center; }
+        .hero .chapter-badge { font-size: 1.1rem; opacity: 0.95; margin-bottom: 0.5rem; letter-spacing: 2px; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.2); }
+        .hero .subtitle { font-size: 1.2rem; max-width: 800px; margin: 0 auto 2rem; opacity: 0.95; font-style: italic; }
+        .author-info { background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); padding: 1rem 2rem; border-radius: 12px; display: inline-block; border: 1px solid rgba(255,255,255,0.2); margin-top: 1rem; }
+        .author-info .name { font-size: 1.1rem; font-weight: bold; margin-bottom: 0.2rem; }
+        .author-info .position { font-size: 0.9rem; opacity: 0.9; }
+
+        .section { max-width: 1000px; margin: 3rem auto; padding: 0 2rem; }
+        .section-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+        .section-letter { background: linear-gradient(135deg, #0d6832, #1aaf55); color: white; width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; flex-shrink: 0; box-shadow: 0 4px 12px rgba(13, 104, 50, 0.3); }
+        .section-title { font-size: 1.6rem; color: #0d6832; }
+        .section-content { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        .section-content p { margin-bottom: 1rem; text-align: justify; }
+
+        .def-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .def-card { background: #f0faf4; border-left: 4px solid #1aaf55; padding: 1.2rem 1.5rem; border-radius: 8px; }
+        .def-card .label { font-size: 0.85rem; color: #0d6832; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.3rem; }
+        .def-card .term { font-size: 1.15rem; font-weight: bold; color: #0d6832; margin-bottom: 0.5rem; }
+        .def-card p { font-size: 0.95rem; color: #555; margin: 0; }
+
+        .perspective-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
+        .perspective-card { background: white; padding: 1.5rem; border-radius: 12px; border-top: 4px solid #1aaf55; box-shadow: 0 3px 12px rgba(0,0,0,0.08); }
+        .perspective-card.islam { border-top-color: #b8860b; background: #fffdf5; }
+        .perspective-card h4 { color: #0d6832; margin-bottom: 0.8rem; font-size: 1.1rem; }
+        .perspective-card.islam h4 { color: #b8860b; }
+
+        .icon-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem; margin: 1.5rem 0; }
+        .icon-card { background: white; padding: 1.5rem 1rem; border-radius: 12px; text-align: center; box-shadow: 0 3px 12px rgba(0,0,0,0.08); transition: transform 0.3s; border-bottom: 3px solid #1aaf55; }
+        .icon-card:hover { transform: translateY(-5px); }
+        .icon-card .emoji { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .icon-card h4 { color: #0d6832; font-size: 1rem; margin-bottom: 0.4rem; }
+        .icon-card p { font-size: 0.88rem; color: #666; text-align: center; }
+
+        .video-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #0d6832, #1aaf55); color: white; padding: 0.7rem 1.3rem; border-radius: 25px; text-decoration: none; font-weight: 600; font-size: 0.9rem; margin-top: 1rem; cursor: pointer; border: none; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 3px 10px rgba(13, 104, 50, 0.3); }
+        .video-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(13, 104, 50, 0.4); }
+
+        .quran-quote { background: linear-gradient(135deg, #fffdf5, #fff9e6); border-right: 5px solid #b8860b; padding: 1.5rem; margin: 1.5rem 0; border-radius: 10px; text-align: center; }
+        .quran-quote .arabic { font-size: 1.8rem; font-family: 'Traditional Arabic', 'Amiri', serif; color: #0d6832; margin-bottom: 0.8rem; line-height: 2; direction: rtl; }
+        .quran-quote .translation { font-style: italic; color: #555; margin-bottom: 0.5rem; }
+        .quran-quote .reference { font-weight: bold; color: #b8860b; font-size: 0.9rem; }
+
+        .key-concept { background: #e8f5ec; border-left: 5px solid #0d6832; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+        .key-concept .label { font-weight: bold; color: #0d6832; margin-bottom: 0.3rem; }
+        .key-concept p { margin: 0; color: #333; }
+
+        .reflection { background: #fff9e6; border-left: 5px solid #b8860b; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+        .reflection .label { font-weight: bold; color: #b8860b; margin-bottom: 0.3rem; }
+
+        .comparison-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 3px 12px rgba(0,0,0,0.08); }
+        .comparison-table th { background: linear-gradient(135deg, #0d6832, #1aaf55); color: white; padding: 1rem; text-align: left; font-size: 0.95rem; }
+        .comparison-table td { padding: 0.9rem 1rem; border-bottom: 1px solid #eee; font-size: 0.93rem; vertical-align: top; }
+        .comparison-table tr:last-child td { border-bottom: none; }
+        .comparison-table tr:hover { background: #f8f9fa; }
+
+        /* Adab List */
+        .adab-list { background: linear-gradient(135deg, #f0faf4, #e8f5ec); padding: 1.5rem; border-radius: 12px; margin: 1.5rem 0; border: 2px solid #c3e6cb; }
+        .adab-list h4 { color: #0d6832; margin-bottom: 1rem; font-size: 1.1rem; display: flex; align-items: center; gap: 0.5rem; }
+        .adab-list ol { padding-left: 1.5rem; }
+        .adab-list li { padding: 0.5rem 0; border-bottom: 1px dashed #c3e6cb; font-size: 0.95rem; }
+        .adab-list li:last-child { border-bottom: none; }
+        .adab-list li strong { color: #0d6832; }
+
+        /* Doa Card */
+        .doa-card { background: linear-gradient(135deg, #fffdf5, #fff9e6); border-right: 5px solid #b8860b; padding: 1.2rem 1.5rem; border-radius: 10px; margin: 1rem 0; }
+        .doa-card .arabic { font-family: 'Traditional Arabic', 'Amiri', serif; font-size: 1.6rem; color: #0d6832; direction: rtl; line-height: 2; margin-bottom: 0.5rem; text-align: center; }
+        .doa-card .latin { font-style: italic; color: #666; font-size: 0.9rem; margin-bottom: 0.3rem; text-align: center; }
+        .doa-card .translation { color: #333; font-size: 0.95rem; text-align: center; margin-bottom: 0.3rem; }
+        .doa-card .reference { font-weight: bold; color: #b8860b; font-size: 0.85rem; text-align: center; }
+
+        .keywords { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.06); margin: 2rem 0; text-align: center; }
+        .keywords h3 { color: #0d6832; margin-bottom: 1rem; }
+        .keyword-tags { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; margin-bottom: 1.5rem; }
+        .keyword-tag { background: #e8f5ec; color: #0d6832; padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.88rem; font-weight: 600; border: 1px solid #c3e6cb; }
+
+        .quiz-box { background: linear-gradient(135deg, #fff9e6, #fffdf5); padding: 2rem; border-radius: 15px; text-align: center; margin: 2rem 0; border: 2px dashed #b8860b; }
+        .quiz-box .icon { font-size: 3rem; margin-bottom: 0.5rem; }
+        .quiz-box h3 { color: #b8860b; margin-bottom: 0.5rem; }
+        .quiz-box p { color: #555; margin-bottom: 1rem; }
+        .quiz-btn { display: inline-block; background: linear-gradient(135deg, #b8860b, #ffd700); color: #0d6832; padding: 0.8rem 2rem; border-radius: 30px; text-decoration: none; font-weight: bold; transition: transform 0.3s, box-shadow 0.3s; box-shadow: 0 4px 12px rgba(184, 134, 11, 0.3); }
+        .quiz-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(184, 134, 11, 0.4); }
+
+        .chapter-nav { display: flex; justify-content: space-between; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
+        .nav-btn { flex: 1; min-width: 250px; background: white; padding: 1.2rem 1.5rem; border-radius: 12px; text-decoration: none; color: #333; box-shadow: 0 3px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; border-left: 4px solid #1aaf55; }
+        .nav-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+        .nav-btn .label { font-size: 0.85rem; color: #666; margin-bottom: 0.3rem; }
+        .nav-btn .title { font-weight: bold; color: #0d6832; }
+        .nav-btn.next { text-align: right; border-left: none; border-right: 4px solid #1aaf55; }
+
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 1000; justify-content: center; align-items: center; }
+        .modal-overlay.active { display: flex; }
+        .modal-box { background: white; padding: 2.5rem; border-radius: 15px; max-width: 500px; width: 90%; text-align: center; position: relative; }
+        .modal-box .close-btn { position: absolute; top: 10px; right: 15px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #999; }
+        .modal-box .icon { font-size: 4rem; margin-bottom: 1rem; }
+        .modal-box h3 { color: #0d6832; margin-bottom: 0.5rem; }
+        .modal-box p { color: #666; margin-bottom: 1rem; }
+        .modal-box .credit { font-size: 0.85rem; color: #999; margin-top: 1rem; border-top: 1px solid #eee; padding-top: 1rem; }
+
+        footer { background: #0d6832; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
+        footer p { margin: 0.3rem 0; opacity: 0.9; }
+        footer a { color: #ffd700; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .perspective-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <a href="index.html">← Kembali ke Daftar Isi</a> | Buku Akidah Akhlak Semester 1 Kelas 7
+</div>
+
+<div class="breadcrumb">
+    <span class="pill">ADAB SHALAT</span>
+    <span class="pill">DZIKIR</span>
+    <span class="pill">Khusyuk</span>
+    <span class="pill">WIRID</span>
+    Bab 5 dari 7
+</div>
+
+<section class="hero">
+    <div class="chapter-badge">BAB 05 · IBADAH</div>
+    <h1>Adab Shalat dan Dzikir</h1>
+    <p class="subtitle">Shalat adalah tiang agama dan puncak ibadah seorang muslim — sedangkan dzikir adalah penyambung ruh yang menghidupkan hati. Memahami adab keduanya adalah kunci meraih shalat yang khusyuk dan dzikir yang berbekas di jiwa.</p>
+    <div class="author-info">
+        <div class="name">Okta Benia, S.Pd.I</div>
+        <div class="position">Guru PAI · MTsN 6 Agam</div>
+    </div>
+</section>
+
+<!-- Section A -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">A</div>
+        <h2 class="section-title">Pengertian Shalat dan Dzikir</h2>
+    </div>
+    <div class="section-content">
+        <p>Shalat dan dzikir merupakan dua ibadah yang tidak terpisahkan dalam kehidupan seorang muslim. Shalat adalah ibadah yang paling utama setelah syahadat, sedangkan dzikir adalah amalan yang paling ringan di lisan namun paling berat timbangannya di akhirat.</p>
+
+        <p>Secara bahasa, <strong>"shalat"</strong> berasal dari bahasa Arab <em>ash-shalah</em> (الصلاة) yang bermakna doa. Secara istilah syar'i, shalat adalah ibadah yang terdiri dari perkataan dan perbuatan tertentu yang dimulai dengan takbiratul ihram dan diakhiri dengan salam, dengan syarat-syarat dan rukun-rukun yang telah ditentukan syariat.</p>
+
+        <p>Sedangkan <strong>"dzikir"</strong> berasal dari kata <em>adz-dzikr</em> (الذكر) yang berarti mengingat. Secara istilah, dzikir adalah mengingat Allah SWT dengan hati, lisan, atau keduanya — baik melalui tasbih, tahmid, tahlil, takbir, istighfar, maupun bacaan Al-Quran.</p>
+
+        <div class="def-grid">
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Shalat</div>
+                <p>Ibadah yang terdiri dari perkataan dan perbuatan tertentu, dimulai dengan takbiratul ihram dan diakhiri dengan salam, sesuai syarat dan rukun yang ditentukan syariat.</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Dzikir</div>
+                <p>Mengingat Allah SWT dengan hati, lisan, atau keduanya — melalui tasbih, tahmid, tahlil, takbir, istighfar, dan bacaan Al-Quran.</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Khusyuk</div>
+                <p>Hadirnya hati dalam ibadah, tunduk dan rendah diri kepada Allah, serta fokus penuh pada apa yang diucapkan dan dilakukan dalam shalat.</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Adab</div>
+                <p>Tata krama dan etika yang diajarkan syariat dalam melaksanakan ibadah, baik yang bersifat lahiriah maupun batiniah.</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Wirid</div>
+                <p>Amalan dzikir yang dibaca secara rutin dan konsisten pada waktu-waktu tertentu, biasanya setelah shalat fardhu.</p>
+            </div>
+            <div class="def-card">
+                <div class="label">📌 Definisi</div>
+                <div class="term">Iqamah</div>
+                <p>Seruan untuk mendirikan shalat yang diucapkan sesaat sebelum shalat dimulai, sebagai tanda shalat akan segera dilaksanakan.</p>
+            </div>
+        </div>
+
+        <div class="perspective-grid">
+            <div class="perspective-card">
+                <h4>1 · Perspektif Umum</h4>
+                <p>Dalam kajian spiritualitas umum, shalat dan dzikir dipandang sebagai bentuk meditasi atau kontemplasi yang memberikan ketenangan jiwa dan kesehatan mental. Banyak penelitian modern membuktikan manfaat psikologis dari ritual ibadah.</p>
+            </div>
+            <div class="perspective-card islam">
+                <h4>2 · Perspektif Islam</h4>
+                <p>Dalam Islam, shalat dan dzikir bukan sekadar meditasi, melainkan ibadah wajib yang merupakan manifestasi langsung dari penghambaan kepada Allah. Ia memiliki dimensi lahiriah (fiqih) dan batiniah (tasawuf) yang saling melengkapi.</p>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">إِنَّ ٱلصَّلَوٰةَ تَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ</div>
+            <div class="translation">"Sesungguhnya shalat itu mencegah dari (perbuatan-perbuatan) keji dan mungkar."</div>
+            <div class="reference">— QS. Al-'Ankabut [29]: 45</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Pengantar Shalat dan Dzikir</button>
+    </div>
+</div>
+
+<!-- Section B -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">B</div>
+        <h2 class="section-title">Hakikat Shalat sebagai Tiang Agama</h2>
+    </div>
+    <div class="section-content">
+        <p>Shalat memiliki kedudukan yang sangat agung dalam Islam. Ia adalah rukun Islam yang kedua setelah syahadat, merupakan amalan pertama yang akan dihisab pada Hari Kiamat, dan menjadi pembeda antara seorang muslim dengan orang kafir.</p>
+
+        <p>Rasulullah SAW bersabda: <em>"Pondasi agama itu tiga: shalat, puasa, dan zakat."</em> (HR. Tirmidzi). Dalam hadis lain, beliau bersabda: <em>"Perjanjian antara kami dan mereka (orang kafir) adalah shalat. Barangsiapa yang meninggalkannya, maka sungguh ia telah kafir."</em> (HR. Ahmad, Tirmidzi, An-Nasa'i).</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">🕌</div>
+                <h4>Tiang Agama</h4>
+                <p>Shalat adalah tiang ('imadud diin) — agama seseorang runtuh jika ia meninggalkan shalat.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🔑</div>
+                <h4>Kunci Surga</h4>
+                <p>Rasulullah SAW bersabda: <em>"Kunci surga adalah shalat."</em> (HR. Ahmad).</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💧</div>
+                <h4>Penghapus Dosa</h4>
+                <p>Shalat lima waktu menghapus dosa-dosa kecil di antaranya, sebagaimana mandi menghapus kotoran.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">⚖️</div>
+                <h4>Amalan Pertama dihisab</h4>
+                <p>Amal yang pertama kali dihisab pada Hari Kiamat. Jika shalatnya baik, baiklah seluruh amal.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌙</div>
+                <h4>Mi'raj Mukmin</h4>
+                <p>Shalat adalah mi'raj (naik ke hadirat Allah) bagi seorang mukmin — momen pertemuan hamba dengan Tuhannya.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🛡️</div>
+                <h4>Pencegah Maksiat</h4>
+                <p>Shalat yang benar akan mencegah pelakunya dari perbuatan keji dan mungkar.</p>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">ٱتْلُ مَآ أُوحِيَ إِلَيْكَ مِنَ ٱلْكِتَـٰبِ وَأَقِمِ ٱلصَّلَوٰةَ ۖ إِنَّ ٱلصَّلَوٰةَ تَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ</div>
+            <div class="translation">"Bacakanlah apa yang telah diwahyukan kepadamu, yaitu Al-Kitab (Al-Quran) dan dirikanlah shalat. Sesungguhnya shalat itu mencegah dari (perbuatan-perbuatan) keji dan mungkar."</div>
+            <div class="reference">— QS. Al-'Ankabut [29]: 45</div>
+        </div>
+
+        <div class="key-concept">
+            <div class="label">📌 Konsep Kunci</div>
+            <p><strong>Shalat Lima Waktu</strong> adalah fardhu 'ain bagi setiap muslim yang telah baligh dan berakal. Melaksanakannya adalah wajib, meninggalkannya adalah dosa besar yang dapat mengeluarkan seseorang dari Islam (menurut jumhur ulama).</p>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Hakikat Shalat</button>
+    </div>
+</div>
+
+<!-- Section C -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">C</div>
+        <h2 class="section-title">Dimensi-Dimensi Shalat dan Dzikir</h2>
+    </div>
+    <div class="section-content">
+        <p>Shalat dan dzikir memiliki dimensi-dimensi yang saling melengkapi. Pemahaman terhadap dimensi-dimensi ini penting agar ibadah kita tidak hanya berbentuk lahiriah semata, tetapi juga menyentuh hakikat batiniah.</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">🤲</div>
+                <h4>Dimensi Lahiriah (Fiqih)</h4>
+                <p>Syarat sah, rukun, sunnah, dan tata cara shalat yang diatur dalam ilmu fiqih — gerakan, bacaan, dan posisi tubuh.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💖</div>
+                <h4>Dimensi Batiniah (Tasawuf)</h4>
+                <p>Kehadiran hati (hudhurul qalb), khusyuk, tadabbur bacaan, dan keikhlasan niat dalam setiap gerakan shalat.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">📿</div>
+                <h4>Dimensi Dzikir Lisan</h4>
+                <p>Mengingat Allah dengan lisan melalui tasbih, tahmid, tahlil, takbir, dan istighfar — baik dalam shalat maupun di luarnya.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🧠</div>
+                <h4>Dimensi Dzikir Hati</h4>
+                <p>Mengingat Allah dalam hati dengan merenungkan kebesaran-Nya, nikmat-Nya, dan kekuasaan-Nya.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">👥</div>
+                <h4>Dimensi Sosial (Berjamaah)</h4>
+                <p>Shalat berjamaah mempererat ukhuwah, melatih kedisiplinan, dan menyatukan barisan kaum muslimin.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌍</div>
+                <h4>Dimensi Universal</h4>
+                <p>Shalat menghadap kiblat yang sama, waktu yang sama, gerakan yang sama — menyatukan umat Islam sedunia.</p>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">يَـٰٓأَيُّهَا ٱلَّذِينَ ءَامَنُواْ ٱذْكُرُواْ ٱللَّهَ ذِكْرًا كَثِيرًا وَسَبِّحُوهُ بُكْرَةً وَأَصِيلًا</div>
+            <div class="translation">"Wahai orang-orang yang beriman, ingatlah Allah dengan dzikir yang sebanyak-banyaknya, dan bertasbihlah kepada-Nya pada waktu pagi dan petang."</div>
+            <div class="reference">— QS. Al-Ahzab [33]: 41-42</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Dimensi Shalat dan Dzikir</button>
+    </div>
+</div>
+
+<!-- Section D -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">D</div>
+        <h2 class="section-title">Adab-Adab Shalat</h2>
+    </div>
+    <div class="section-content">
+        <p>Adab shalat mencakup berbagai tata krama yang diajarkan Rasulullah SAW, mulai dari persiapan sebelum shalat, pelaksanaan shalat, hingga amalan setelah shalat. Mengamalkan adab-adab ini akan menjadikan shalat kita lebih sempurna dan khusyuk.</p>
+
+        <!-- Adab Sebelum Shalat -->
+        <div class="adab-list">
+            <h4>🌿 Adab Sebelum Shalat</h4>
+            <ol>
+                <li><strong>Memperhatikan pakaian</strong> — bersih, menutup aurat, dan rapi (QS. Al-A'raf: 31).</li>
+                <li><strong>Berberas diri (thaharah)</strong> — berwudhu dengan sempurna, membersihkan diri dari hadas dan najis.</li>
+                <li><strong>Memakai wewangian</strong> — terutama bagi laki-laki, sebagai bentuk penghormatan kepada ibadah.</li>
+                <li><strong>Menyegerakan shalat</strong> — segera melaksanakan shalat ketika waktunya masuk.</li>
+                <li><strong>Mengumandangkan adzan dan iqamah</strong> — sebagai seruan panggilan shalat.</li>
+                <li><strong>Menyapu tempat shalat</strong> — memastikan tempat shalat bersih dari najis.</li>
+                <li><strong>Memperbaiki shaf</strong> — meluruskan dan merapatkan barisan dalam shalat berjamaah.</li>
+            </ol>
+        </div>
+
+        <!-- Adab Saat Shalat -->
+        <div class="adab-list">
+            <h4>🤲 Adab Saat Shalat</h4>
+            <ol>
+                <li><strong>Khusyuk</strong> — menghadirkan hati, merenungkan makna bacaan, dan fokus pada ibadah.</li>
+                <li><strong>Tuma'ninah</strong> — tenang dan tidak tergesa-gesa dalam setiap gerakan shalat.</li>
+                <li><strong>Menundukkan pandangan</strong> — fokus ke tempat sujud, tidak menoleh tanpa keperluan.</li>
+                <li><strong>Menghadirkan hati saat membaca Al-Fatihah</strong> — karena shalat tanpa Al-Fatihah tidak sah.</li>
+                <li><strong>Tadabbur bacaan</strong> — meresapi makna ayat-ayat yang dibaca, terutama saat ruku' dan sujud.</li>
+                <li><strong>Tidak bermain-main</strong> — tidak menggerak-gerakkan jari, tidak melihat jam, tidak melamun.</li>
+                <li><strong>Mengamalkan sunnah-sunnah shalat</strong> — seperti mengangkat tangan saat takbir, membaca doa iftitah, dll.</li>
+            </ol>
+        </div>
+
+        <!-- Adab Setelah Shalat -->
+        <div class="adab-list">
+            <h4>📿 Adab Setelah Shalat</h4>
+            <ol>
+                <li><strong>Membaca istighfar 3x</strong> — <em>Astagfirullahal 'azhim</em>.</li>
+                <li><strong>Membaca doa setelah salam</strong> — <em>Allahumma antas salam wa minkas salam...</em></li>
+                <li><strong>Melaksanakan dzikir pagi/petang</strong> — tasbih 33x, tahmid 33x, takbir 34x.</li>
+                <li><strong>Membaca Ayat Kursi</strong> — setelah setiap shalat fardhu.</li>
+                <li><strong>Membaca surah Al-Ikhlas, Al-Falaq, An-Nas</strong> — setelah shalat Subuh dan Maghrib.</li>
+                <li><strong>Melaksanakan shalat sunnah rawatib</strong> — qabliyah dan ba'diyah.</li>
+                <li><strong>Tidak langsung beranjak</strong> — tetap duduk sejenak untuk berdzikir dan berdoa.</li>
+            </ol>
+        </div>
+
+        <div class="doa-card">
+            <div class="arabic">اَللّٰهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ</div>
+            <div class="latin">Allahumma antas-salam wa minkas-salam, tabarakta yaa dzal-jalali wal-ikram.</div>
+            <div class="translation">"Ya Allah, Engkaulah sumber keselamatan dan dari-Mu keselamatan, Maha Suci Engkau wahai Dzat yang memiliki keagungan dan kemuliaan."</div>
+            <div class="reference">— HR. Muslim (Doa setelah salam)</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Adab Shalat</button>
+    </div>
+</div>
+
+<!-- Section E -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">E</div>
+        <h2 class="section-title">Dalil-Dalil Naqli tentang Shalat dan Dzikir</h2>
+    </div>
+    <div class="section-content">
+        <p>Perintah melaksanakan shalat dan dzikir terdapat dalam banyak ayat Al-Quran dan hadis Rasulullah SAW. Berikut adalah beberapa dalil naqli yang menjadi landasan ibadah ini.</p>
+
+        <div class="quran-quote">
+            <div class="arabic">إِنَّنِىٓ أَنَا ٱللَّهُ لَآ إِلَـٰهَ إِلَّآ أَنَا۠ فَٱعْبُدْنِى وَأَقِمِ ٱلصَّلَوٰةَ لِذِكْرِىٓ</div>
+            <div class="translation">"Sesungguhnya Aku ini adalah Allah, tidak ada Tuhan (yang hak) selain Aku, maka sembahlah Aku dan dirikanlah shalat untuk mengingat-Ku."</div>
+            <div class="reference">— QS. Thaha [20]: 14</div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">حَـٰفِظُواْ عَلَى ٱلصَّلَوَٰتِ وَٱلصَّلَوٰةِ ٱلْوُسْطَىٰ وَقُومُواْ لِلَّهِ قَـٰنِتِينَ</div>
+            <div class="translation">"Peliharalah semua shalat(mu), dan (peliharalah) shalat wusthaa. Berdirilah untuk Allah (dalam shalatmu) dengan khusyuk."</div>
+            <div class="reference">— QS. Al-Baqarah [2]: 238</div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">وَٱذْكُر رَّبَّكَ فِى نَفْسِكَ تَضَرُّعًا وَخِيفَةً</div>
+            <div class="translation">"Dan sebutlah (nama) Tuhanmu dalam hatimu dengan merendahkan diri dan rasa takut, dan dengan tidak mengeraskan suara."</div>
+            <div class="reference">— QS. Al-A'raf [7]: 205</div>
+        </div>
+
+        <div class="key-concept">
+            <div class="label">📌 Hadis tentang Dzikir Setelah Shalat</div>
+            <p>Rasulullah SAW bersabda: <em>"Barangsiapa yang bertasbih setelah setiap shalat sebanyak 33x, bertahmid 33x, dan bertakbir 34x, maka itu lebih baik baginya daripada seekor kuda perang."</em> (HR. Muslim). Inilah fondasi wirid dzikir setelah shalat yang diamalkan umat Islam hingga hari ini.</p>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Dalil-Dalil Naqli</button>
+    </div>
+</div>
+
+<!-- Section F -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">F</div>
+        <h2 class="section-title">Tata Cara dan Bacaan Shalat</h2>
+    </div>
+    <div class="section-content">
+        <p>Shalat memiliki rukun-rukun yang wajib dilaksanakan, serta sunnah-sunnah yang menyempurnakannya. Berikut adalah ringkasan tata cara shalat fardhu beserta bacaan-bacaan pentingnya.</p>
+
+        <div class="adab-list">
+            <h4>📋 Rukun Shalat (13 Rukun)</h4>
+            <ol>
+                <li><strong>Niat</strong> — di dalam hati saat takbiratul ihram.</li>
+                <li><strong>Berdiri</strong> — bagi yang mampu, saat shalat fardhu.</li>
+                <li><strong>Takbiratul Ihram</strong> — mengucapkan "Allahu Akbar" sebagai pembuka shalat.</li>
+                <li><strong>Membaca Al-Fatihah</strong> — pada setiap rakaat.</li>
+                <li><strong>Ruku' dengan tuma'ninah</strong> — membungkuk dengan tangan di lutut.</li>
+                <li><strong>I'tidal dengan tuma'ninah</strong> — bangkit dari ruku' dan berdiri tegak.</li>
+                <li><strong>Sujud dengan tuma'ninah</strong> — dua kali sujud dalam setiap rakaat.</li>
+                <li><strong>Duduk di antara dua sujud</strong> — dengan tuma'ninah.</li>
+                <li><strong>Duduk tasyahud akhir</strong> — sebelum salam.</li>
+                <li><strong>Membaca tasyahud akhir</strong> — at-tahiyyat.</li>
+                <li><strong>Shalawat atas Nabi</strong> — setelah tasyahud akhir.</li>
+                <li><strong>Salam pertama</strong> — menoleh ke kanan.</li>
+                <li><strong>Tertib</strong> — melaksanakan rukun secara berurutan.</li>
+            </ol>
+        </div>
+
+        <div class="doa-card">
+            <div class="arabic">اَلتَّحِيَّاتُ الْمُبَارَكَاتُ الصَّلَوَاتُ الطَّيِّبَاتُ لِلّٰهِ، اَلسَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللّٰهِ وَبَرَكَاتُهُ، اَلسَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللّٰهِ الصَّالِحِيْنَ، أَشْهَدُ أَنْ لَا إِلٰهَ إِلَّا اللّٰهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُوْلُهُ</div>
+            <div class="latin">At-tahiyyatul mubaarakaatush-shalawaatuth-thayyibaatu lillaah. As-salaamu 'alaika ayyuhan-nabiyyu wa rahmatullaahi wa barakaatuh. As-salaamu 'alainaa wa 'alaa 'ibaadillaahish-shaalihiin. Asyhadu an laa ilaaha illallaah, wa asyhadu anna Muhammadan 'abduhu wa rasuuluh.</div>
+            <div class="translation">"Segala penghormatan yang berkat, segala shalat yang baik adalah bagi Allah. Semoga salam sejahtera atasmu wahai Nabi, beserta rahmat Allah dan berkah-Nya. Semoga salam sejahtera atas kami dan atas hamba-hamba Allah yang shalih. Aku bersaksi bahwa tiada Tuhan selain Allah, dan aku bersaksi bahwa Muhammad adalah hamba dan utusan-Nya."</div>
+            <div class="reference">— Bacaan Tasyahud Akhir</div>
+        </div>
+
+        <div class="doa-card">
+            <div class="arabic">اَللّٰهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلَى إِبْرَاهِيْمَ وَعَلَى آلِ إِبْرَاهِيْمَ، وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلَى إِبْرَاهِيْمَ وَعَلَى آلِ إِبْرَاهِيْمَ فِي الْعَالَمِيْنَ إِنَّكَ حَمِيْدٌ مَجِيْدٌ</div>
+            <div class="latin">Allahumma shalli 'alaa Muhammad wa 'alaa aali Muhammad, kamaa shallaita 'alaa Ibraahim wa 'alaa aali Ibraahim. Wa baarik 'alaa Muhammad wa 'alaa aali Muhammad, kamaa baarakta 'alaa Ibraahim wa 'alaa aali Ibraahim, fil-'aalamiina innaka hamiidum majiid.</div>
+            <div class="translation">"Ya Allah, limpahkanlah rahmat kepada Nabi Muhammad dan keluarga Muhammad, sebagaimana Engkau telah melimpahkan rahmat kepada Nabi Ibrahim dan keluarga Ibrahim. Dan limpahkanlah berkah kepada Muhammad dan keluarga Muhammad, sebagaimana Engkau telah melimpahkan berkah kepada Ibrahim dan keluarga Ibrahim di seluruh alam. Sesungguhnya Engkau Maha Terpuji lagi Maha Mulia."</div>
+            <div class="reference">— Shalawat Ibrahimiyah</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Tata Cara Shalat</button>
+    </div>
+</div>
+
+<!-- Section G -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">G</div>
+        <h2 class="section-title">Dzikir Setelah Shalat</h2>
+    </div>
+    <div class="section-content">
+        <p>Dzikir setelah shalat merupakan amalan yang sangat dianjurkan oleh Rasulullah SAW. Ia adalah penyempurna shalat dan pembuka pintu rahmat Allah. Berikut adalah wirid dzikir yang umum diamalkan setelah shalat fardhu.</p>
+
+        <div class="doa-card">
+            <div class="arabic">أَسْتَغْفِرُ اللّٰهَ الْعَظِيْمَ (٣x) اَللّٰهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ</div>
+            <div class="latin">Astaghfirullahal 'azhim (3x). Allahumma antas-salam wa minkas-salam, tabarakta yaa dzal-jalali wal-ikram.</div>
+            <div class="translation">"Aku memohon ampun kepada Allah Yang Maha Agung (3x). Ya Allah, Engkaulah sumber keselamatan dan dari-Mu keselamatan, Maha Suci Engkau wahai Dzat yang memiliki keagungan dan kemuliaan."</div>
+            <div class="reference">— HR. Muslim (Setelah salam)</div>
+        </div>
+
+        <div class="doa-card">
+            <div class="arabic">سُبْحَانَ اللّٰهِ (٣٣x) اَلْحَمْدُ لِلّٰهِ (٣٣x) اَللّٰهُ أَكْبَرُ (٣٤x)</div>
+            <div class="latin">Subhanallah (33x). Alhamdulillah (33x). Allahu Akbar (34x).</div>
+            <div class="translation">"Maha Suci Allah (33x). Segala puji bagi Allah (33x). Allah Maha Besar (34x). Total: 100x — menghapus dosa meski sebanyak buih di lautan."</div>
+            <div class="reference">— HR. Bukhari-Muslim (Wirid setelah shalat)</div>
+        </div>
+
+        <div class="doa-card">
+            <div class="arabic">لَا إِلٰهَ إِلَّا اللّٰهُ وَحْدَهُ لَا شَرِيْكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيْرٌ</div>
+            <div class="latin">Laa ilaaha illallahu wahdahu laa syariika lah, lahul-mulku wa lahul-hamdu wa huwa 'alaa kulli syai'in qadiir.</div>
+            <div class="translation">"Tiada Tuhan selain Allah Yang Maha Esa, tiada sekutu bagi-Nya. Bagi-Nya kerajaan dan bagi-Nya pujian, dan Dia Maha Kuasa atas segala sesuatu."</div>
+            <div class="reference">— Pelengkap 100x dzikir setelah shalat</div>
+        </div>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">📖</div>
+                <h4>Ayat Kursi</h4>
+                <p>Dibaca setelah setiap shalat fardhu. Barangsiapa membacanya, tidak ada yang menghalanginya masuk surga kecuali kematian.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌟</div>
+                <h4>Al-Ikhlas, Al-Falaq, An-Nas</h4>
+                <p>Dibaca 3x setelah shalat Subuh dan Maghrib sebagai penjagaan dari segala keburukan.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🤲</div>
+                <h4>Doa Pribadi</h4>
+                <p>Memohon kepada Allah dengan doa-doa pribadi sebelum salam kedua atau setelah dzikir.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">📿</div>
+                <h4>Wirid Harian</h4>
+                <p>Amalan dzikir rutin yang dibaca pada waktu pagi dan petang sesuai sunnah Nabi.</p>
+            </div>
+        </div>
+
+        <div class="reflection">
+            <div class="label">📌 Refleksi</div>
+            <p><strong>Dzikir: Oksigen bagi Ruh</strong><br>
+            Sebagaimana tubuh membutuhkan oksigen untuk bertahan hidup, demikian pula ruh membutuhkan dzikir untuk tetap hidup. Rasulullah SAW bersabda: <em>"Perumpamaan orang yang berdzikir kepada Tuhannya dengan orang yang tidak berdzikir kepada-Nya adalah seperti orang yang hidup dengan yang mati."</em> (HR. Bukhari). Maka, jangan biarkan ruh kita mati karena lalai dari dzikir.</p>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Dzikir Setelah Shalat</button>
+    </div>
+</div>
+
+<!-- Section H -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">H</div>
+        <h2 class="section-title">Fungsi dan Manfaat Shalat serta Dzikir</h2>
+    </div>
+    <div class="section-content">
+        <p>Shalat dan dzikir memiliki fungsi dan manfaat yang sangat luas, baik bagi individu maupun masyarakat. Berikut adalah beberapa fungsi dan manfaatnya:</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">💖</div>
+                <h4>Menyucikan Hati</h4>
+                <p>Shalat dan dzikir membersihkan hati dari noda dosa, kekotoran, dan penyakit hati.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🕊️</div>
+                <h4>Ketenangan Jiwa</h4>
+                <p>Rasulullah SAW bersabda: <em>"Ketenangan hatiku ada di dalam shalat."</em> (HR. Ahmad).</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🛡️</div>
+                <h4>Pencegah Maksiat</h4>
+                <p>Shalat yang khusyuk akan mencegah pelakunya dari perbuatan keji dan mungkar.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🤝</div>
+                <h4>Mempererat Ukhuwah</h4>
+                <p>Shalat berjamaah mempererat persaudaraan dan menyatukan barisan kaum muslimin.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💪</div>
+                <h4>Kesehatan Fisik</h4>
+                <p>Gerakan shalat (ruku', sujud, i'tidal) bermanfaat bagi kesehatan tubuh secara medis.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌟</div>
+                <h4>Mengangkat Derajat</h4>
+                <p>Allah mengangkat derajat orang-orang yang konsisten melaksanakan shalat dan dzikir.</p>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">أَلَا بِذِكْرِ ٱللَّهِ تَطْمَئِنُّ ٱلْقُلُوبُ</div>
+            <div class="translation">"Ingatlah, hanya dengan mengingati Allah-lah hati menjadi tenteram."</div>
+            <div class="reference">— QS. Ar-Ra'd [13]: 28</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Fungsi Shalat dan Dzikir</button>
+    </div>
+</div>
+
+<!-- Section I -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">I</div>
+        <h2 class="section-title">Perbandingan Perspektif Umum dan Islam</h2>
+    </div>
+    <div class="section-content">
+        <p>Untuk memahami keistimewaan shalat dan dzikir dalam Islam, berikut perbandingan antara perspektif umum (meditasi/spiritualitas umum) dengan perspektif Islam.</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Aspek</th>
+                    <th>Perspektif Umum / Meditasi</th>
+                    <th>Perspektif Islam</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Sumber Ajaran</strong></td>
+                    <td>Tradisi, filsafat, atau pengalaman pribadi</td>
+                    <td>Wahyu Allah (Al-Quran & As-Sunnah) yang pasti</td>
+                </tr>
+                <tr>
+                    <td><strong>Tujuan Utama</strong></td>
+                    <td>Ketenangan mental, relaksasi, self-healing</td>
+                    <td>Ta'abbud (penghambaan) kepada Allah dan meraih ridha-Nya</td>
+                </tr>
+                <tr>
+                    <td><strong>Bentuk Ritual</strong></td>
+                    <td>Bervariasi, tergantung tradisi</td>
+                    <td>Tertentu dan baku — tata cara, waktu, bacaan, dan gerakan telah diatur syariat</td>
+                </tr>
+                <tr>
+                    <td><strong>Dimensi Sosial</strong></td>
+                    <td>Cenderung individual</td>
+                    <td>Individual (munfarid) dan kolektif (berjamaah) — mempererat ukhuwah</td>
+                </tr>
+                <tr>
+                    <td><strong>Konsep Khusyuk</strong></td>
+                    <td>Fokus pikiran, mindfulness</td>
+                    <td>Hudhurul qalb (hadirnya hati) + tadabbur bacaan + ikhlas karena Allah</td>
+                </tr>
+                <tr>
+                    <td><strong>Waktu Pelaksanaan</strong></td>
+                    <td>Fleksibel, sesuai keinginan</td>
+                    <td>Terikat waktu-waktu tertentu (5 waktu) yang wajib</td>
+                </tr>
+                <tr>
+                    <td><strong>Tujuan Akhir</strong></td>
+                    <td>Kesejahteraan psikologis duniawi</td>
+                    <td>Ridha Allah, surga, dan kebahagiaan dunia-akhirat</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Perbandingan Perspektif</button>
+    </div>
+</div>
+
+<!-- Section J -->
+<div class="section">
+    <div class="section-header">
+        <div class="section-letter">J</div>
+        <h2 class="section-title">Urgensi Membiasakan Shalat Berjamaah dan Dzikir</h2>
+    </div>
+    <div class="section-content">
+        <p>Di tengah kesibukan dan godaan dunia modern, membiasakan shalat berjamaah dan dzikir menjadi sangat urgen bagi setiap muslim, terutama generasi muda. Berikut beberapa alasan strategis:</p>
+
+        <div class="icon-grid">
+            <div class="icon-card">
+                <div class="emoji">🕌</div>
+                <h4>Pondasi Iman</h4>
+                <p>Shalat adalah tiang agama — tanpa shalat, iman seseorang rapuh dan mudah goyah.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">👥</div>
+                <h4>27 Derajat</h4>
+                <p>Shalat berjamaah lebih utama 27 derajat daripada shalat sendirian (HR. Bukhari-Muslim).</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🛡️</div>
+                <h4>Benteng dari Maksiat</h4>
+                <p>Shalat yang khusyuk akan mencegah pelakunya dari perbuatan keji dan mungkar.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">💖</div>
+                <h4>Penawar Hati</h4>
+                <p>Dzikir adalah obat bagi hati yang gelisah, cemas, dan penuh kekhawatiran.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌐</div>
+                <h4>Identitas Muslim</h4>
+                <p>Shalat berjamaah menjadi identitas dan ciri khas seorang muslim di tengah masyarakat.</p>
+            </div>
+            <div class="icon-card">
+                <div class="emoji">🌟</div>
+                <h4>Kunci Keselamatan</h4>
+                <p>Konsisten dalam shalat dan dzikir adalah kunci keselamatan di dunia dan akhirat.</p>
+            </div>
+        </div>
+
+        <div class="quran-quote">
+            <div class="arabic">قَدْ أَفْلَحَ ٱلْمُؤْمِنُونَ ٱلَّذِينَ هُمْ فِى صَلَاتِهِمْ خَـٰشِعُونَ</div>
+            <div class="translation">"Sesungguhnya beruntunglah orang-orang yang beriman, (yaitu) orang-orang yang khusyuk dalam shalatnya."</div>
+            <div class="reference">— QS. Al-Mu'minun [23]: 1-2</div>
+        </div>
+
+        <button class="video-btn" onclick="openModal()">▶ 🎬 Tampilkan Video: Urgensi Shalat Berjamaah</button>
+    </div>
+</div>
+
+<!-- Keywords -->
+<div class="section">
+    <div class="keywords">
+        <h3>◆ Kata Kunci Bab Ini</h3>
+        <div class="keyword-tags">
+            <span class="keyword-tag">Shalat</span>
+            <span class="keyword-tag">Dzikir</span>
+            <span class="keyword-tag">Khusyuk</span>
+            <span class="keyword-tag">Tuma'ninah</span>
+            <span class="keyword-tag">Adab</span>
+            <span class="keyword-tag">Wudhu</span>
+            <span class="keyword-tag">Adzan</span>
+            <span class="keyword-tag">Iqamah</span>
+            <span class="keyword-tag">Takbiratul Ihram</span>
+            <span class="keyword-tag">Al-Fatihah</span>
+            <span class="keyword-tag">Ruku'</span>
+            <span class="keyword-tag">Sujud</span>
+            <span class="keyword-tag">Tasyahud</span>
+            <span class="keyword-tag">Salam</span>
+            <span class="keyword-tag">Tasbih</span>
+            <span class="keyword-tag">Tahmid</span>
+            <span class="keyword-tag">Tahlil</span>
+            <span class="keyword-tag">Takbir</span>
+            <span class="keyword-tag">Istighfar</span>
+            <span class="keyword-tag">Wirid</span>
+            <span class="keyword-tag">Ayat Kursi</span>
+            <span class="keyword-tag">Berjamaah</span>
+        </div>
+        <div class="quran-quote">
+            <div class="arabic">وَأَقِمِ ٱلصَّلَوٰةَ لِذِكْرِىٓ</div>
+            <div class="translation">"Dan dirikanlah shalat untuk mengingat-Ku."</div>
+            <div class="reference">— QS. Thaha [20]: 14</div>
+        </div>
+    </div>
+</div>
+
+<!-- Quiz -->
+<div class="section">
+    <div class="quiz-box">
+        <div class="icon">📝</div>
+        <h3>Uji Pemahaman Anda</h3>
+        <p>Setelah mempelajari Bab 5 tentang Adab Shalat dan Dzikir, ukur pemahaman Anda melalui uji formatif yang telah disiapkan.</p>
+        <a href="uji-formatif-5.html" class="quiz-btn">📝 Ikuti Uji Formatif Bab 5 →</a>
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="section">
+    <div class="chapter-nav">
+        <a href="4.html" class="nav-btn">
+            <div class="label">← Sebelumnya</div>
+            <div class="title">Bab 4: Akhlak Terpuji</div>
+        </a>
+        <a href="index.html" class="nav-btn">
+            <div class="label">🏠</div>
+            <div class="title">Daftar Isi Buku</div>
+        </a>
+        <a href="6.html" class="nav-btn next">
+            <div class="label">Selanjutnya →</div>
+            <div class="title">Bab 6: Kisah Keteladanan Nabi Yunus AS</div>
+        </a>
+    </div>
+</div>
+
+<!-- Modal Video -->
+<div class="modal-overlay" id="videoModal">
+    <div class="modal-box">
+        <button class="close-btn" onclick="closeModal()">✕</button>
+        <div class="icon">🎬</div>
+        <h3>Video Pembelajaran</h3>
+        <p>Video pembelajaran akan segera tersedia. Hubungi penulis untuk akses konten video lengkap.</p>
+        <button class="video-btn" onclick="closeModal()">Tutup</button>
+        <div class="credit">
+            <strong>O · BENIA</strong><br>
+            © 2026 · Okta Benia, S.Pd.I<br>
+            Guru PAI · MTsN 6 Agam · Hak Cipta Dilindungi Undang-Undang<br>
+            <a href="mailto:oktabenia17@gmail.com">oktabenia17@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2026 · <strong>Okta Benia, S.Pd.I</strong></p>
+    <p>Guru PAI · MTsN 6 Agam · Hak Cipta Dilindungi Undang-Undang</p>
+    <p><a href="mailto:oktabenia17@gmail.com">oktabenia17@gmail.com</a></p>
+</footer>
+
+<script>
+    function openModal() { document.getElementById('videoModal').classList.add('active'); }
+    function closeModal() { document.getElementById('videoModal').classList.remove('active'); }
+    document.getElementById('videoModal').addEventListener('click', function(e) { if (e.target === this) closeModal(); });
+</script>
+
+</body>
+</html>

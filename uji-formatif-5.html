@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uji Formatif Bab 5 - Adab Shalat dan Dzikir | Akidah Akhlak Kelas 7</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: #f8f9fa; }
+
+        .top-bar { background: linear-gradient(135deg, #0d6832, #148f47); color: white; padding: 0.8rem 2rem; text-align: center; font-size: 0.95rem; }
+        .top-bar a { color: #ffd700; text-decoration: none; font-weight: 600; }
+        .top-bar a:hover { text-decoration: underline; }
+
+        .breadcrumb { background: white; padding: 0.8rem 2rem; border-bottom: 2px solid #eee; font-size: 0.9rem; color: #666; }
+        .breadcrumb a { color: #0d6832; text-decoration: none; font-weight: 600; }
+        .breadcrumb a:hover { text-decoration: underline; }
+
+        .hero { background: linear-gradient(135deg, #0d6832, #1aaf55); color: white; padding: 3rem 2rem; text-align: center; }
+        .hero .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 0.3rem 1rem; border-radius: 20px; font-size: 0.9rem; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.3); }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .hero .subtitle { font-size: 1.1rem; opacity: 0.95; font-style: italic; margin-bottom: 1rem; }
+        .hero .info { background: rgba(255,255,255,0.15); padding: 0.8rem 1.5rem; border-radius: 10px; display: inline-block; font-size: 0.95rem; border: 1px solid rgba(255,255,255,0.2); }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 2rem; }
+
+        .section-title { background: white; padding: 1.5rem 2rem; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.06); margin-bottom: 1.5rem; border-left: 5px solid #1aaf55; }
+        .section-title h2 { color: #0d6832; font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .section-title p { color: #666; font-size: 0.95rem; }
+
+        .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+        .tab-btn { flex: 1; min-width: 200px; padding: 1rem; background: white; border: 2px solid #e0e0e0; border-radius: 10px; cursor: pointer; font-size: 1rem; font-weight: 600; color: #666; transition: all 0.3s; text-align: center; }
+        .tab-btn.active { background: linear-gradient(135deg, #0d6832, #1aaf55); color: white; border-color: #0d6832; box-shadow: 0 4px 12px rgba(13, 104, 50, 0.3); }
+        .tab-btn:hover:not(.active) { border-color: #1aaf55; color: #0d6832; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        .info-box { background: #e8f5ec; border-left: 5px solid #0d6832; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.95rem; }
+        .info-box strong { color: #0d6832; }
+        .warning-box { background: #fff9e6; border-left: 5px solid #b8860b; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.95rem; color: #8b6914; }
+
+        .form-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        .form-card h3 { color: #0d6832; margin-bottom: 1rem; font-size: 1.2rem; }
+        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; font-weight: 600; color: #333; margin-bottom: 0.3rem; font-size: 0.95rem; }
+        .form-group label .required { color: #e74c3c; }
+        .form-group input, .form-group select { width: 100%; padding: 0.7rem 1rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 0.95rem; transition: border-color 0.3s; font-family: inherit; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: #1aaf55; }
+
+        .question-card { background: white; padding: 1.5rem 2rem; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.06); margin-bottom: 1rem; border-left: 4px solid #1aaf55; transition: all 0.3s; }
+        .question-card:hover { box-shadow: 0 5px 18px rgba(0,0,0,0.1); }
+        .question-card.correct { border-left-color: #27ae60; background: #f0faf4; }
+        .question-card.incorrect { border-left-color: #e74c3c; background: #fdf2f2; }
+
+        .question-number { display: inline-block; background: linear-gradient(135deg, #0d6832, #1aaf55); color: white; width: 35px; height: 35px; border-radius: 50%; text-align: center; line-height: 35px; font-weight: bold; margin-right: 0.8rem; font-size: 0.95rem; }
+        .question-text { font-weight: 600; color: #333; margin-bottom: 1rem; font-size: 1rem; }
+
+        .options { display: grid; gap: 0.5rem; }
+        .option { display: flex; align-items: flex-start; gap: 0.8rem; padding: 0.7rem 1rem; background: #f8f9fa; border: 2px solid #e0e0e0; border-radius: 8px; cursor: pointer; transition: all 0.3s; }
+        .option:hover { background: #e8f5ec; border-color: #1aaf55; }
+        .option input[type="radio"] { margin-top: 0.3rem; accent-color: #0d6832; }
+        .option label { cursor: pointer; flex: 1; font-size: 0.95rem; }
+        .option.correct-answer { background: #d4edda; border-color: #27ae60; }
+        .option.wrong-answer { background: #f8d7da; border-color: #e74c3c; }
+
+        .feedback { margin-top: 0.8rem; padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.9rem; display: none; }
+        .feedback.correct { background: #d4edda; color: #155724; display: block; }
+        .feedback.incorrect { background: #f8d7da; color: #721c24; display: block; }
+
+        .essay-textarea { width: 100%; min-height: 120px; padding: 0.8rem 1rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 0.95rem; font-family: inherit; resize: vertical; transition: border-color 0.3s; }
+        .essay-textarea:focus { outline: none; border-color: #1aaf55; }
+        .char-count { text-align: right; font-size: 0.85rem; color: #999; margin-top: 0.3rem; }
+
+        .result-box { background: linear-gradient(135deg, #0d6832, #1aaf55); color: white; padding: 2.5rem; border-radius: 15px; text-align: center; margin: 2rem 0; display: none; box-shadow: 0 8px 25px rgba(13, 104, 50, 0.3); }
+        .result-box.show { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        .result-box h2 { font-size: 1.8rem; margin-bottom: 1rem; }
+        .result-box .thank-you { font-size: 1.1rem; opacity: 0.95; margin-bottom: 1.5rem; }
+        .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .score-item { background: rgba(255,255,255,0.15); padding: 1.2rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); }
+        .score-item .label { font-size: 0.85rem; opacity: 0.9; margin-bottom: 0.3rem; }
+        .score-item .value { font-size: 1.8rem; font-weight: bold; }
+        .score-item .max { font-size: 0.9rem; opacity: 0.8; }
+        .final-grade { background: #ffd700; color: #0d6832; padding: 1rem; border-radius: 10px; margin-top: 1rem; font-size: 1.3rem; font-weight: bold; }
+
+        .action-buttons { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; margin-top: 1.5rem; }
+        .action-btn { padding: 0.9rem 1.2rem; border: none; border-radius: 10px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-family: inherit; }
+        .action-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn-primary { background: linear-gradient(135deg, #b8860b, #ffd700); color: #0d6832; }
+        .btn-secondary { background: white; color: #0d6832; border: 2px solid #0d6832; }
+        .btn-reset { background: #e74c3c; color: white; }
+
+        .chapter-nav { display: flex; justify-content: space-between; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
+        .nav-btn { flex: 1; min-width: 250px; background: white; padding: 1.2rem 1.5rem; border-radius: 12px; text-decoration: none; color: #333; box-shadow: 0 3px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; border-left: 4px solid #1aaf55; }
+        .nav-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+        .nav-btn .label { font-size: 0.85rem; color: #666; margin-bottom: 0.3rem; }
+        .nav-btn .title { font-weight: bold; color: #0d6832; }
+        .nav-btn.next { text-align: right; border-left: none; border-right: 4px solid #1aaf55; }
+
+        footer { background: #0d6832; color: white; padding: 2.5rem 2rem 1.5rem; margin-top: 3rem; }
+        .footer-content { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 1.5rem; }
+        .footer-section h4 { color: #ffd700; margin-bottom: 0.8rem; font-size: 1rem; }
+        .footer-section p, .footer-section a { color: white; opacity: 0.9; font-size: 0.9rem; text-decoration: none; display: block; margin-bottom: 0.3rem; }
+        .footer-section a:hover { opacity: 1; text-decoration: underline; }
+        .footer-bottom { max-width: 1000px; margin: 0 auto; text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.85rem; opacity: 0.85; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .container { padding: 0 1rem; }
+            .form-card, .question-card { padding: 1.2rem; }
+        }
+
+        @media print {
+            .top-bar, .tabs, .action-buttons, .chapter-nav, footer { display: none; }
+            .result-box { color: #0d6832; background: #e8f5ec !important; }
+            body { background: white; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <a href="index.html">← Kembali ke Daftar Isi</a> | Buku Akidah Akhlak Semester 1 Kelas 7
+</div>
+
+<div class="breadcrumb">
+    <a href="index.html">Beranda</a> › <a href="index.html#bab">Daftar Bab</a> › <a href="5.html">Materi Bab 5</a> › <strong>Uji Formatif</strong>
+</div>
+
+<section class="hero">
+    <div class="badge">📝 UJI FORMATIF · BAB 05</div>
+    <h1>Adab Shalat dan Dzikir</h1>
+    <p class="subtitle">Ukur pemahaman Anda tentang tata cara shalat, adab-adabnya, dan wirid dzikir setelah shalat</p>
+    <div class="info">Okta Benia, S.Pd.I · MTsN 6 Agam · Akidah Akhlak Kelas 7</div>
+</section>
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>📋 Uji Formatif Bab 5</h2>
+        <p>Adab Shalat dan Dzikir — Pengertian, Hakikat, Dimensi, Adab, Dalil Naqli, Tata Cara, Wirid, Fungsi, dan Urgensi</p>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('pg')">📋 Bagian A: Pilihan Ganda (10 soal, skor 10/soal)</button>
+        <button class="tab-btn" onclick="switchTab('essay')">✍️ Bagian B: Essay (5 soal, skor 20/soal)</button>
+    </div>
+
+    <div class="info-box">
+        <strong>📚 Materi:</strong> Pengertian shalat dan dzikir, hakikat shalat sebagai tiang agama, dimensi-dimensi shalat dan dzikir (lahiriah, batiniah, sosial, universal), adab sebelum/saat/setelah shalat, dalil-dalil naqli, tata cara shalat (13 rukun), bacaan shalat (tasyahud, shalawat), dzikir setelah shalat (tasbih, tahmid, takbir), wirid, ayat kursi, fungsi dan manfaat, perbandingan perspektif, serta urgensi shalat berjamaah.<br>
+        <strong>⏱️ Waktu:</strong> Tidak terbatas | <strong>🎯 Total Skor:</strong> 200 poin
+    </div>
+
+    <div class="form-card">
+        <h3>📋 Data Siswa</h3>
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Nama Lengkap <span class="required">*</span></label>
+                <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+            </div>
+            <div class="form-group">
+                <label>NIS / No. Absen <span class="required">*</span></label>
+                <input type="text" id="nis" placeholder="Masukkan NIS atau No. Absen" required>
+            </div>
+            <div class="form-group">
+                <label>📅 Tanggal Ujian</label>
+                <input type="date" id="tanggal">
+            </div>
+            <div class="form-group">
+                <label>Kelas <span class="required">*</span></label>
+                <select id="kelas" required>
+                    <option value="">Pilih Kelas</option>
+                    <option value="7A">7A</option>
+                    <option value="7B">7B</option>
+                    <option value="7C">7C</option>
+                    <option value="7D">7D</option>
+                    <option value="7E">7E</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Mata Pelajaran</label>
+                <input type="text" value="Akidah Akhlak" readonly style="background:#f8f9fa;">
+            </div>
+            <div class="form-group">
+                <label>Semester</label>
+                <input type="text" value="Semester 1 (Ganjil)" readonly style="background:#f8f9fa;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab A: Pilihan Ganda -->
+    <div class="tab-content active" id="tab-pg">
+        <div class="warning-box">
+            ⚠️ <strong>Lengkapi semua 10 soal pilihan ganda!</strong> Setiap soal bernilai 10 poin. Pilih satu jawaban yang paling tepat.
+        </div>
+
+        <div class="question-card" id="q1">
+            <div class="question-number">1</div>
+            <span class="question-text">Secara etimologis, kata "shalat" berasal dari bahasa Arab yang bermakna...</span>
+            <div class="options">
+                <div class="option"><input type="radio" name="q1" id="q1a" value="a"><label for="q1a">a) Bersihkan</label></div>
+                <div class="option"><input type="radio" name="q1" id="q1b" value="b"><label for="q1b">b) Doa</label></div>
+                <div class="option"><input type="radio" name="q1" id="q1c" value="c"><label for="q1c">c) Puji-pujian</label></div>
+                <div class="option"><input type="radio" name="q1" id="q1d" value="d"><label for="q1d">d) Persembahan</label></div>
+            </div>
+            <div class="feedback" id="fb1"></div>
+        </div>
+
+        <div class="question-card" id="q2">
+            <div class="question-number">2</div>
+            <span class="question-text">Ibadah yang dimulai dengan takbiratul ihram dan diakhiri dengan salam disebut...</span>
+            <div class="options">
+                <div class="option"><input type="radio" name="q2" id="q2a" value="a"><label for="q2a">a) Puasa</label></div>
+                <div class="option"><input type="radio" name="q2" id="q2b" value="b"><label for="q2b">b) Zakat</label></div>
+                <div class="option"><input type="radio" name="q2" id="q2c" value="c"><label for="q2c">c) Shalat</label></div>
+                <div class="option"><input type="radio" name="q2" id="q2d" value="d"><label for="q2d">d) Haji</label></div>
+            </div>
+            <div class="feedback" id="fb2"></div>
+        </div>
+
+        <div class="question-card" id="q3">
+            <div class="question-number">3</div>
+            <span class="question-text">Rasulullah SAW bersabda: "Kunci surga adalah..."</span>
+            <div class="options">
+                <div class="option"><input type="radio" name="q3" id="q3a" value="a"><label for="q3a">a) Puasa</label></div>
+                <div class="option"><input type="radio" name="q3" id="q3b" value="b"><label for="q3b">b) Shalat</label></div>
+                <div class="option"><input type="radio" name="q3" id="q3c" value="c"><label for="q3c">c) Zakat</label></div>
+                <div class="option"><input type="radio" name="q3" id="q3d" value="d"><label for="q3d">d) Sedekah</label></div>
+            </div>
+            <div class="feedback" id="fb3"></div>
+        </div>
+
+        <div class="question-card" id="q4">
+            <div class="question-number">4</div>
+            <span class="question-text">Hadirnya hati dalam ibadah, tunduk dan rendah diri kepada Allah, serta fokus penuh pada apa yang diucapkan dan dilakukan dalam shalat disebut...</span>
+            <div class="options">
+                <div class="option"><input type="radio" name="q4" id="q4a" value="a"><label for="q4a">a) Tuma'ninah</label></div>
+                <div class="option"><input type="radio" name="q4" id="q4b" value="b"><label for="q4b">b) Khusyuk</label></div>
+                <div class="option"><input type="radio" name="q4" id="q4c" value="c"><label for="q4c">c) Ikhlas</label></div>
+                <div class="option"><input type="radio" name="q4" id="q4d" value="d"><label for="q4d">d) Tawadhu'</label></div>
+            </div>
+            <div class="feedback" id="fb4"></div>
+        </div>
+
+        <div class="question-card" id="q5">
+            <div class="question-number">5</div>
+            <span class="question-text">Wirid dzikir setelah shalat yang dianjurkan Rasulullah SAW berjumlah...</span>
+            <div class="options">
+                <div class="option"><input type="radio" name="q5" id="q5a" value="a"><label for="q5a">a) 33x tasbih, 33x tahmid, 34x takbir = 100x</label></div>
+                <div class="option"><input type="radio" name="q5" id="q5b" value="b"><label for="q5b">b) 50x tasbih, 50x tahmid = 100x</label></div>
+                <div class="option"><input type="radio" name="q5" id="q5c" value="c"><label for="q5c">c) 100x istighfar saja</label></div>
+                <div class="option"><input type="radio" name="q5" id="q5d" value="d"><label for="q5d">d) 10x tahlil, 10x tahmid, 10x takbir</label></div>
+            </div>
+            <div class="feedback" id="fb5"></div>
+        </div>
+
+        <div class="question-card" id="q6">
+            <div class="question-number">6</div>
+            <span class="question-text">Ayat yang menyatakan "Sesungguhnya shalat itu mencegah dari perbuatan keji dan mungkar" terdapat dalam surah...</span>
+            <div class="options">
+                <div class="option"><input type="radio" name="q6" id="q6a" value="a"><label for="q6a">a) QS. Al-Baqarah: 238</label></div>
+                <div class="option"><input type="radio" name="q6" id="q6b" value="b"><label for="q6b">b) QS. Al-'Ankabut: 45</label></div>
+                <div class="option"><input type="radio" name="q6" id="q6c" value="c"><label for="q6c">c) QS. Thaha: 14</label></div>
+                <div class="option"><input type="radio" name="q6" id="q6d" value="d"><label for="q6d">d) QS. Ar-Ra'd: 28</label></div>
+            </div>
+            <div class="feedback" id="fb6"></div>
+        </div>
+
+        <div class="question-card" id="q7">
+            <div class="question-number">7</div>
+            <span class="question-text">Shalat berjamaah lebih utama ... derajat daripada shalat sendirian.</span>
+            <div class="options">
+                <div class="option"><input type="radio" name="q7" id="q7a" value="a"><label for="q7a">a) 10 derajat</label></div>
+                <div class="option"><input type="radio" name="q7" id="q7b" value="b"><label for="q7b">b) 17 derajat</label></div>
+                <div class="option"><input type="radio" name="q7" id="q7c" value="c"><label for="q7c">c) 25 derajat</label></div>
+                <div class="option"><input type="radio" name="q7" id="q7d" value="d"><label for="q7d">d) 27 derajat</label></div>
+            </div>
+            <div class="feedback" id="fb7"></div>
+        </div>
+
+        <div class="question-card" id="q8">
+            <div class="question-number">8</div>
+            <span class="question-text">Ayat yang menyatakan "Ingatlah, hanya dengan mengingati Allah-lah hati menjadi tenteram" terdapat dalam surah...</span>
+            <div class="options">
+                <div class="option"><input type="radio" name="q8" id="q8a" value="a"><label for="q8a">a) QS. Ar-Ra'd: 28</label></div>
+                <div class="option"><input type="radio" name="q8" id="q8b" value="b"><label for="q8b">b) QS. Al-Ahzab: 41</label></div>
+                <div class="option"><input type="radio" name="q8" id="q8c" value="c"><label for="q8c">c) QS. Al-Mu'minun: 1</label></div>
+                <div class="option"><input type="radio" name="q8" id="q8d" value="d"><label for="q8d">d) QS. Al-Baqarah: 152</label></div>
+            </div>
+            <div class="feedback" id="fb8"></div>
+        </div>
+
+        <div class="question-card" id="q9">
+            <div class="question-number">9</div>
+            <span class="question-text">Bacaan "Asyhadu an laa ilaaha illallaah, wa asyhadu anna Muhammadan 'abduhu wa rasuuluh" merupakan bagian dari...</span>
+            <div class="options">
+                <div class="option"><input type="radio" name="q9" id="q9a" value="a"><label for="q9a">a) Takbiratul ihram</label></div>
+                <div class="option"><input type="radio" name="q9" id="q9b" value="b"><label for="q9b">b) Tasyahud akhir</label></div>
+                <div class="option"><input type="radio" name="q9" id="q9c" value="c"><label for="q9c">c) Doa iftitah</label></div>
+                <div class="option"><input type="radio" name="q9" id="q9d" value="d"><label for="q9d">d) Doa qunut</label></div>
+            </div>
+            <div class="feedback" id="fb9"></div>
+        </div>
+
+        <div class="question-card" id="q10">
+            <div class="question-number">10</div>
+            <span class="question-text">Orang-orang yang khusyuk dalam shalatnya disebutkan dalam Al-Quran sebagai orang yang...</span>
+            <div class="options">
+                <div class="option"><input type="radio" name="q10" id="q10a" value="a"><label for="q10a">a) Mendapat kekayaan</label></div>
+                <div class="option"><input type="radio" name="q10" id="q10b" value="b"><label for="q10b">b) Beruntung (muflihun)</label></div>
+                <div class="option"><input type="radio" name="q10" id="q10c" value="c"><label for="q10c">c) Menjadi ulama</label></div>
+                <div class="option"><input type="radio" name="q10" id="q10d" value="d"><label for="q10d">d) Terhindar dari penyakit</label></div>
+            </div>
+            <div class="feedback" id="fb10"></div>
+        </div>
+    </div>
+
+    <!-- Tab B: Essay -->
+    <div class="tab-content" id="tab-essay">
+        <div class="warning-box">
+            ⚠️ <strong>Isi Nama Lengkap dan NIS terlebih dahulu!</strong> Setiap soal essay bernilai 20 poin. Jawab dengan lengkap dan jelas.
+        </div>
+
+        <div class="question-card">
+            <div class="question-number">1</div>
+            <span class="question-text">Jelaskan pengertian shalat dan dzikir secara bahasa dan istilah! Sebutkan perbedaan mendasar antara keduanya!</span>
+            <textarea class="essay-textarea" id="essay1" placeholder="Tuliskan jawaban Anda di sini..." oninput="updateCharCount('essay1', 'cc1')"></textarea>
+            <div class="char-count" id="cc1">0 karakter</div>
+        </div>
+
+        <div class="question-card">
+            <div class="question-number">2</div>
+            <span class="question-text">Sebutkan dan jelaskan minimal lima kedudukan/hakikat shalat dalam Islam! Mengapa shalat disebut sebagai "tiang agama"?</span>
+            <textarea class="essay-textarea" id="essay2" placeholder="Tuliskan jawaban Anda di sini..." oninput="updateCharCount('essay2', 'cc2')"></textarea>
+            <div class="char-count" id="cc2">0 karakter</div>
+        </div>
+
+        <div class="question-card">
+            <div class="question-number">3</div>
+            <span class="question-text">Sebutkan dan jelaskan minimal lima adab sebelum shalat dan lima adab saat shalat! Mengapa adab-adab ini penting untuk diperhatikan?</span>
+            <textarea class="essay-textarea" id="essay3" placeholder="Tuliskan jawaban Anda di sini..." oninput="updateCharCount('essay3', 'cc3')"></textarea>
+            <div class="char-count" id="cc3">0 karakter</div>
+        </div>
+
+        <div class="question-card">
+            <div class="question-number">4</div>
+            <span class="question-text">Tuliskan wirid dzikir setelah shalat yang diajarkan Rasulullah SAW (tasbih, tahmid, takbir)! Berapa kali masing-masing dibaca dan apa keutamaannya?</span>
+            <textarea class="essay-textarea" id="essay4" placeholder="Tuliskan jawaban Anda di sini..." oninput="updateCharCount('essay4', 'cc4')"></textarea>
+            <div class="char-count" id="cc4">0 karakter</div>
+        </div>
+
+        <div class="question-card">
+            <div class="question-number">5</div>
+            <span class="question-text">Jelaskan minimal empat fungsi dan manfaat shalat serta dzikir dalam kehidupan seorang muslim! Mengapa Rasulullah SAW bersabda bahwa ketenangan hatinya ada di dalam shalat?</span>
+            <textarea class="essay-textarea" id="essay5" placeholder="Tuliskan jawaban Anda di sini..." oninput="updateCharCount('essay5', 'cc5')"></textarea>
+            <div class="char-count" id="cc5">0 karakter</div>
+        </div>
+    </div>
+
+    <div class="action-buttons">
+        <button class="action-btn btn-primary" onclick="submitQuiz()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+        <button class="action-btn btn-secondary" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+        <button class="action-btn btn-secondary" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+        <button class="action-btn btn-secondary" onclick="sendEmail()">✉️ Kirim Email Guru</button>
+        <button class="action-btn btn-reset" onclick="resetQuiz()">🔄 MULAI ULANG</button>
+    </div>
+
+    <div class="result-box" id="resultBox">
+        <h2>🎉 Hasil Uji Formatif</h2>
+        <p class="thank-you">Terima kasih telah menyelesaikan uji formatif ini!</p>
+        <div class="score-grid">
+            <div class="score-item">
+                <div class="label">Skor Pilihan Ganda</div>
+                <div class="value" id="scorePG">0</div>
+                <div class="max">/ 100</div>
+            </div>
+            <div class="score-item">
+                <div class="label">Skor Essay</div>
+                <div class="value" id="scoreEssay">0</div>
+                <div class="max">/ 100</div>
+            </div>
+            <div class="score-item">
+                <div class="label">Skor Total</div>
+                <div class="value" id="scoreTotal">0</div>
+                <div class="max">/ 200</div>
+            </div>
+        </div>
+        <div class="final-grade">
+            Nilai Akhir: <span id="finalGrade">0</span>
+        </div>
+    </div>
+
+    <div class="chapter-nav">
+        <a href="index.html" class="nav-btn">
+            <div class="label">← Kembali ke</div>
+            <div class="title">Daftar Isi Buku</div>
+        </a>
+        <a href="5.html" class="nav-btn">
+            <div class="label">← Kembali ke</div>
+            <div class="title">Materi Bab 5: Adab Shalat dan Dzikir</div>
+        </a>
+        <a href="6.html" class="nav-btn next">
+            <div class="label">Selanjutnya →</div>
+            <div class="title">Bab 6: Kisah Keteladanan Nabi Yunus AS</div>
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>📖 Buku</h4>
+            <p>Akidah Akhlak Semester 1 Kelas 7</p>
+            <p>Buku ajar untuk siswa MTs</p>
+            <p>Teori, praktik, dan aplikasi dalam pendidikan Islam</p>
+        </div>
+        <div class="footer-section">
+            <h4>🧭 Navigasi</h4>
+            <a href="index.html">Beranda</a>
+            <a href="index.html#tentang">Tentang Buku</a>
+            <a href="index.html#bab">Daftar Bab</a>
+            <a href="index.html#penulis">Penulis</a>
+        </div>
+        <div class="footer-section">
+            <h4>📚 Materi</h4>
+            <a href="4.html">Bab 4: Akhlak Terpuji</a>
+            <a href="5.html">Bab 5: Adab Shalat dan Dzikir</a>
+            <a href="6.html">Bab 6: Kisah Nabi Yunus AS</a>
+        </div>
+        <div class="footer-section">
+            <h4>📧 Kontak</h4>
+            <a href="mailto:oktabenia17@gmail.com">oktabenia17@gmail.com</a>
+            <p>MTsN 6 Agam</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 <strong>Okta Benia, S.Pd.I</strong> — MTsN 6 Agam</p>
+        <p>Akidah Akhlak Semester 1 Kelas 7 · Hak Cipta Dilindungi Undang-Undang</p>
+    </div>
+</footer>
+
+<script>
+    const correctAnswers = {
+        q1: 'b', q2: 'c', q3: 'b', q4: 'b', q5: 'a',
+        q6: 'b', q7: 'd', q8: 'a', q9: 'b', q10: 'b'
+    };
+
+    const essayKeywords = {
+        essay1: ['shalat', 'dzikir', 'bahasa', 'istilah', 'doa', 'mengingat', 'takbir', 'salam', 'perbedaan', 'ibadah'],
+        essay2: ['tiang', 'agama', 'kunci', 'surga', 'penghapus', 'dosa', 'mi\'raj', 'pencegah', 'maksiat', 'hisab', 'pertama', 'hadis'],
+        essay3: ['wudhu', 'pakaian', 'bersih', 'adzan', 'iqamah', 'khusyuk', 'tuma\'ninah', 'pandangan', 'fatihah', 'sunnah', 'penting'],
+        essay4: ['tasbih', 'tahmid', 'takbir', '33', '34', '100', 'wirid', 'muslim', 'keutamaan', 'dosa', 'buih', 'lautan'],
+        essay5: ['menyucikan', 'hati', 'ketenangan', 'maksiat', 'ukhuwah', 'kesehatan', 'derajat', 'rasulullah', 'sallallahu', 'shalat', 'dzikir']
+    };
+
+    document.getElementById('tanggal').valueAsDate = new Date();
+
+    function switchTab(tab) {
+        document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+        if (tab === 'pg') {
+            document.querySelectorAll('.tab-btn')[0].classList.add('active');
+            document.getElementById('tab-pg').classList.add('active');
+        } else {
+            document.querySelectorAll('.tab-btn')[1].classList.add('active');
+            document.getElementById('tab-essay').classList.add('active');
+        }
+    }
+
+    function updateCharCount(textareaId, countId) {
+        const textarea = document.getElementById(textareaId);
+        const count = document.getElementById(countId);
+        count.textContent = textarea.value.length + ' karakter';
+    }
+
+    function submitQuiz() {
+        const nama = document.getElementById('nama').value.trim();
+        const nis = document.getElementById('nis').value.trim();
+        const kelas = document.getElementById('kelas').value;
+
+        if (!nama || !nis || !kelas) {
+            alert('⚠️ Mohon lengkapi data siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+            return;
+        }
+
+        let allAnswered = true;
+        for (let i = 1; i <= 10; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            if (!selected) { allAnswered = false; break; }
+        }
+
+        if (!allAnswered) {
+            alert('⚠️ Mohon jawab semua 10 soal pilihan ganda terlebih dahulu!');
+            return;
+        }
+
+        let pgScore = 0;
+        for (let i = 1; i <= 10; i++) {
+            const selected = document.querySelector(`input[name="q${i}"]:checked`);
+            const card = document.getElementById(`q${i}`);
+            const feedback = document.getElementById(`fb${i}`);
+            card.classList.remove('correct', 'incorrect');
+            document.querySelectorAll(`#q${i} .option`).forEach(opt => opt.classList.remove('correct-answer', 'wrong-answer'));
+            
+            if (selected.value === correctAnswers[`q${i}`]) {
+                pgScore += 10;
+                card.classList.add('correct');
+                selected.closest('.option').classList.add('correct-answer');
+                feedback.className = 'feedback correct';
+                feedback.innerHTML = '✅ <strong>Benar!</strong> Jawaban Anda tepat.';
+            } else {
+                card.classList.add('incorrect');
+                selected.closest('.option').classList.add('wrong-answer');
+                const correctOption = document.querySelector(`#q${i} input[value="${correctAnswers[`q${i}`]}"]`);
+                correctOption.closest('.option').classList.add('correct-answer');
+                feedback.className = 'feedback incorrect';
+                feedback.innerHTML = `❌ <strong>Kurang tepat.</strong> Jawaban yang benar: <strong>${correctAnswers[`q${i}`].toUpperCase()}</strong>`;
+            }
+        }
+
+        let essayScore = 0;
+        for (let i = 1; i <= 5; i++) {
+            const answer = document.getElementById(`essay${i}`).value.toLowerCase();
+            const keywords = essayKeywords[`essay${i}`];
+            let matched = 0;
+            keywords.forEach(keyword => { if (answer.includes(keyword)) matched++; });
+            const ratio = matched / keywords.length;
+            essayScore += Math.round(ratio * 20);
+        }
+
+        const totalScore = pgScore + essayScore;
+        const finalGrade = Math.round((totalScore / 200) * 100);
+
+        document.getElementById('scorePG').textContent = pgScore;
+        document.getElementById('scoreEssay').textContent = essayScore;
+        document.getElementById('scoreTotal').textContent = totalScore;
+        document.getElementById('finalGrade').textContent = finalGrade;
+        document.getElementById('resultBox').classList.add('show');
+        document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function downloadPDF() {
+        const nama = document.getElementById('nama').value || 'Siswa';
+        if (!nama || nama === 'Siswa') { alert('⚠️ Mohon isi data siswa terlebih dahulu!'); return; }
+        window.print();
+    }
+
+    function downloadScore() {
+        const nama = document.getElementById('nama').value;
+        const nis = document.getElementById('nis').value;
+        const kelas = document.getElementById('kelas').value;
+        if (!nama || !nis || !kelas) { alert('⚠️ Mohon lengkapi data siswa terlebih dahulu!'); return; }
+        const pgScore = document.getElementById('scorePG').textContent;
+        const essayScore = document.getElementById('scoreEssay').textContent;
+        const totalScore = document.getElementById('scoreTotal').textContent;
+        const grade = document.getElementById('finalGrade').textContent;
+        if (pgScore === '0' && essayScore === '0') { alert('⚠️ Silakan kirim jawaban terlebih dahulu!'); return; }
+
+        const content = `HASIL UJI FORMATIF - ADAB SHALAT DAN DZIKIR
+=====================================
+Nama    : ${nama}
+NIS     : ${nis}
+Kelas   : ${kelas}
+Tanggal : ${document.getElementById('tanggal').value}
+Mapel   : Akidah Akhlak
+Bab     : 5 - Adab Shalat dan Dzikir
+
+SKOR:
+- Pilihan Ganda : ${pgScore} / 100
+- Essay         : ${essayScore} / 100
+- Total         : ${totalScore} / 200
+- Nilai Akhir   : ${grade}
+
+=====================================
+Okta Benia, S.Pd.I - MTsN 6 Agam`;
+
+        const blob = new Blob([content], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `Skor-Uji-Formatif-Bab5-${nama.replace(/\s+/g, '-')}.txt`;
+        a.click();
+    }
+
+    function sendEmail() {
+        const nama = document.getElementById('nama').value;
+        const nis = document.getElementById('nis').value;
+        const kelas = document.getElementById('kelas').value;
+        if (!nama || !nis || !kelas) { alert('⚠️ Mohon lengkapi data siswa terlebih dahulu!'); return; }
+        const pgScore = document.getElementById('scorePG').textContent;
+        const essayScore = document.getElementById('scoreEssay').textContent;
+        const totalScore = document.getElementById('scoreTotal').textContent;
+        const grade = document.getElementById('finalGrade').textContent;
+        const subject = `Hasil Uji Formatif Bab 5 - ${nama} (${kelas})`;
+        const body = `Yth. Bapak/Ibu Okta Benia, S.Pd.I,
+
+Berikut hasil Uji Formatif Bab 5 (Adab Shalat dan Dzikir):
+
+Nama    : ${nama}
+NIS     : ${nis}
+Kelas   : ${kelas}
+Tanggal : ${document.getElementById('tanggal').value}
+
+SKOR:
+- Pilihan Ganda : ${pgScore} / 100
+- Essay         : ${essayScore} / 100
+- Total         : ${totalScore} / 200
+- Nilai Akhir   : ${grade}
+
+Terima kasih.
+
+Hormat saya,
+${nama}`;
+        window.location.href = `mailto:oktabenia17@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+
+    function resetQuiz() {
+        if (!confirm('⚠️ Yakin ingin mengulang ujian? Semua jawaban akan dihapus.')) return;
+        for (let i = 1; i <= 10; i++) {
+            document.querySelectorAll(`input[name="q${i}"]`).forEach(radio => radio.checked = false);
+            const card = document.getElementById(`q${i}`);
+            card.classList.remove('correct', 'incorrect');
+            document.querySelectorAll(`#q${i} .option`).forEach(opt => opt.classList.remove('correct-answer', 'wrong-answer'));
+            document.getElementById(`fb${i}`).className = 'feedback';
+            document.getElementById(`fb${i}`).innerHTML = '';
+        }
+        for (let i = 1; i <= 5; i++) {
+            document.getElementById(`essay${i}`).value = '';
+            document.getElementById(`cc${i}`).textContent = '0 karakter';
+        }
+        document.getElementById('resultBox').classList.remove('show');
+        document.getElementById('scorePG').textContent = '0';
+        document.getElementById('scoreEssay').textContent = '0';
+        document.getElementById('scoreTotal').textContent = '0';
+        document.getElementById('finalGrade').textContent = '0';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>

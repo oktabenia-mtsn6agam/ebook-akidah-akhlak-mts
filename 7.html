@@ -1,0 +1,1503 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UAS - Ujian Akhir Semester | Akidah Akhlak Kelas 7</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.7; color: #333; background: #f8f9fa; }
+
+        .top-bar { background: linear-gradient(135deg, #b8860b, #daa520); color: white; padding: 0.8rem 2rem; text-align: center; font-size: 0.95rem; }
+        .top-bar a { color: #fff; text-decoration: none; font-weight: 600; }
+        .top-bar a:hover { text-decoration: underline; }
+
+        .breadcrumb { background: white; padding: 0.8rem 2rem; border-bottom: 2px solid #eee; font-size: 0.9rem; color: #666; }
+        .breadcrumb a { color: #b8860b; text-decoration: none; font-weight: 600; }
+        .breadcrumb a:hover { text-decoration: underline; }
+
+        .hero { background: linear-gradient(135deg, #b8860b, #daa520, #ffd700); color: #0d6832; padding: 4rem 2rem; text-align: center; }
+        .hero .badge { display: inline-block; background: rgba(13, 104, 50, 0.15); padding: 0.4rem 1.2rem; border-radius: 20px; font-size: 0.95rem; margin-bottom: 1rem; border: 1px solid rgba(13, 104, 50, 0.3); font-weight: 600; }
+        .hero h1 { font-size: 2.8rem; margin-bottom: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+        .hero .subtitle { font-size: 1.15rem; opacity: 0.95; font-style: italic; margin-bottom: 1rem; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .hero .info { background: rgba(13, 104, 50, 0.15); padding: 0.8rem 1.5rem; border-radius: 10px; display: inline-block; font-size: 0.95rem; border: 1px solid rgba(13, 104, 50, 0.2); font-weight: 600; }
+        .hero .exam-stats { display: flex; justify-content: center; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap; }
+        .hero .stat-pill { background: white; color: #b8860b; padding: 0.5rem 1.2rem; border-radius: 25px; font-size: 0.9rem; font-weight: bold; box-shadow: 0 3px 10px rgba(0,0,0,0.1); }
+
+        .container { max-width: 1000px; margin: 2rem auto; padding: 0 2rem; }
+
+        .section-title { background: white; padding: 1.5rem 2rem; border-radius: 12px; box-shadow: 0 3px 15px rgba(0,0,0,0.06); margin-bottom: 1.5rem; border-left: 5px solid #b8860b; }
+        .section-title h2 { color: #b8860b; font-size: 1.5rem; margin-bottom: 0.3rem; }
+        .section-title p { color: #666; font-size: 0.95rem; }
+
+        .info-box { background: #fff9e6; border-left: 5px solid #b8860b; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.95rem; }
+        .info-box strong { color: #b8860b; }
+        .warning-box { background: #fff3cd; border-left: 5px solid #b8860b; padding: 1rem 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; font-size: 0.95rem; color: #856404; }
+
+        .form-card { background: white; padding: 2rem; border-radius: 15px; box-shadow: 0 3px 15px rgba(0,0,0,0.06); margin-bottom: 1.5rem; }
+        .form-card h3 { color: #b8860b; margin-bottom: 1rem; font-size: 1.2rem; }
+        .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+        .form-group { margin-bottom: 1rem; }
+        .form-group label { display: block; font-weight: 600; color: #333; margin-bottom: 0.3rem; font-size: 0.95rem; }
+        .form-group label .required { color: #e74c3c; }
+        .form-group input, .form-group select { width: 100%; padding: 0.7rem 1rem; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 0.95rem; transition: border-color 0.3s; font-family: inherit; }
+        .form-group input:focus, .form-group select:focus { outline: none; border-color: #b8860b; }
+
+        .section-divider { background: linear-gradient(135deg, #b8860b, #daa520); color: white; padding: 1.5rem 2rem; border-radius: 12px; margin: 2rem 0 1.5rem; display: flex; align-items: center; gap: 1rem; box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3); }
+        .section-divider .icon { font-size: 2.5rem; }
+        .section-divider h3 { font-size: 1.3rem; margin-bottom: 0.2rem; }
+        .section-divider p { font-size: 0.9rem; opacity: 0.95; }
+
+        .question-card { background: white; padding: 1.5rem 2rem; border-radius: 12px; box-shadow: 0 3px 12px rgba(0,0,0,0.06); margin-bottom: 1rem; border-left: 4px solid #b8860b; transition: all 0.3s; }
+        .question-card:hover { box-shadow: 0 5px 18px rgba(0,0,0,0.1); }
+        .question-card.correct { border-left-color: #27ae60; background: #f0faf4; }
+        .question-card.incorrect { border-left-color: #e74c3c; background: #fdf2f2; }
+
+        .question-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+        .question-number { display: inline-block; background: linear-gradient(135deg, #b8860b, #daa520); color: white; width: 38px; height: 38px; border-radius: 50%; text-align: center; line-height: 38px; font-weight: bold; font-size: 0.95rem; flex-shrink: 0; }
+        .question-type { display: inline-block; background: #fff9e6; color: #b8860b; padding: 0.2rem 0.8rem; border-radius: 15px; font-size: 0.75rem; font-weight: 600; border: 1px solid #daa520; }
+
+        .stimulus { background: linear-gradient(135deg, #fffdf5, #fff9e6); border-left: 4px solid #b8860b; padding: 1rem 1.2rem; border-radius: 8px; margin-bottom: 1rem; font-size: 0.95rem; }
+        .stimulus .label { font-weight: bold; color: #b8860b; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.3rem; }
+        .stimulus .arabic { font-family: 'Traditional Arabic', 'Amiri', serif; font-size: 1.4rem; color: #0d6832; direction: rtl; line-height: 2; margin: 0.5rem 0; }
+        .stimulus .translation { font-style: italic; color: #555; }
+        .stimulus .reference { font-weight: bold; color: #b8860b; font-size: 0.85rem; margin-top: 0.3rem; }
+
+        .question-text { font-weight: 600; color: #333; margin-bottom: 1rem; font-size: 1rem; }
+
+        .options { display: grid; gap: 0.5rem; }
+        .option { display: flex; align-items: flex-start; gap: 0.8rem; padding: 0.7rem 1rem; background: #f8f9fa; border: 2px solid #e0e0e0; border-radius: 8px; cursor: pointer; transition: all 0.3s; }
+        .option:hover { background: #fff9e6; border-color: #daa520; }
+        .option input[type="radio"], .option input[type="checkbox"] { margin-top: 0.3rem; accent-color: #b8860b; }
+        .option label { cursor: pointer; flex: 1; font-size: 0.95rem; }
+        .option.correct-answer { background: #d4edda; border-color: #27ae60; }
+        .option.wrong-answer { background: #f8d7da; border-color: #e74c3c; }
+
+        .feedback { margin-top: 0.8rem; padding: 0.6rem 1rem; border-radius: 6px; font-size: 0.9rem; display: none; }
+        .feedback.correct { background: #d4edda; color: #155724; display: block; }
+        .feedback.incorrect { background: #f8d7da; color: #721c24; display: block; }
+
+        .bs-options { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .bs-option { flex: 1; min-width: 120px; display: flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1rem; background: #f8f9fa; border: 2px solid #e0e0e0; border-radius: 8px; cursor: pointer; transition: all 0.3s; }
+        .bs-option:hover { background: #fff9e6; border-color: #daa520; }
+        .bs-option input[type="radio"] { accent-color: #b8860b; }
+        .bs-option.correct-answer { background: #d4edda; border-color: #27ae60; }
+        .bs-option.wrong-answer { background: #f8d7da; border-color: #e74c3c; }
+
+        .match-grid { display: grid; gap: 0.8rem; }
+        .match-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; align-items: center; padding: 0.7rem 1rem; background: #f8f9fa; border: 2px solid #e0e0e0; border-radius: 8px; }
+        .match-row .term { font-weight: 600; color: #333; }
+        .match-row select { padding: 0.5rem; border: 2px solid #e0e0e0; border-radius: 6px; font-family: inherit; font-size: 0.9rem; background: white; }
+        .match-row select:focus { outline: none; border-color: #b8860b; }
+        .match-row.correct-answer { background: #d4edda; border-color: #27ae60; }
+        .match-row.wrong-answer { background: #f8d7da; border-color: #e74c3c; }
+
+        .result-box { background: linear-gradient(135deg, #b8860b, #daa520); color: white; padding: 2.5rem; border-radius: 15px; text-align: center; margin: 2rem 0; display: none; box-shadow: 0 8px 25px rgba(184, 134, 11, 0.3); }
+        .result-box.show { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        .result-box h2 { font-size: 1.8rem; margin-bottom: 1rem; }
+        .result-box .thank-you { font-size: 1.1rem; opacity: 0.95; margin-bottom: 1.5rem; }
+        .score-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .score-item { background: rgba(255,255,255,0.15); padding: 1.2rem; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2); }
+        .score-item .label { font-size: 0.85rem; opacity: 0.9; margin-bottom: 0.3rem; }
+        .score-item .value { font-size: 1.6rem; font-weight: bold; }
+        .score-item .max { font-size: 0.85rem; opacity: 0.8; }
+        .final-grade { background: #0d6832; color: #ffd700; padding: 1rem; border-radius: 10px; margin-top: 1rem; font-size: 1.3rem; font-weight: bold; }
+
+        .action-buttons { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.8rem; margin-top: 1.5rem; }
+        .action-btn { padding: 0.9rem 1.2rem; border: none; border-radius: 10px; font-size: 0.95rem; font-weight: 600; cursor: pointer; transition: all 0.3s; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; font-family: inherit; }
+        .action-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .btn-primary { background: linear-gradient(135deg, #0d6832, #1aaf55); color: white; }
+        .btn-secondary { background: white; color: #b8860b; border: 2px solid #b8860b; }
+        .btn-reset { background: #e74c3c; color: white; }
+
+        .chapter-nav { display: flex; justify-content: space-between; gap: 1rem; margin: 2rem 0; flex-wrap: wrap; }
+        .nav-btn { flex: 1; min-width: 250px; background: white; padding: 1.2rem 1.5rem; border-radius: 12px; text-decoration: none; color: #333; box-shadow: 0 3px 12px rgba(0,0,0,0.08); transition: transform 0.3s, box-shadow 0.3s; border-left: 4px solid #b8860b; }
+        .nav-btn:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+        .nav-btn .label { font-size: 0.85rem; color: #666; margin-bottom: 0.3rem; }
+        .nav-btn .title { font-weight: bold; color: #b8860b; }
+        .nav-btn.next { text-align: right; border-left: none; border-right: 4px solid #b8860b; }
+
+        footer { background: #0d6832; color: white; padding: 2.5rem 2rem 1.5rem; margin-top: 3rem; }
+        .footer-content { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 1.5rem; }
+        .footer-section h4 { color: #ffd700; margin-bottom: 0.8rem; font-size: 1rem; }
+        .footer-section p, .footer-section a { color: white; opacity: 0.9; font-size: 0.9rem; text-decoration: none; display: block; margin-bottom: 0.3rem; }
+        .footer-section a:hover { opacity: 1; text-decoration: underline; }
+        .footer-bottom { max-width: 1000px; margin: 0 auto; text-align: center; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.2); font-size: 0.85rem; opacity: 0.85; }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .container { padding: 0 1rem; }
+            .form-card, .question-card { padding: 1.2rem; }
+            .match-row { grid-template-columns: 1fr; }
+        }
+
+        @media print {
+            .top-bar, .action-buttons, .chapter-nav, footer { display: none; }
+            .result-box { color: #b8860b; background: #fff9e6 !important; }
+            body { background: white; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <a href="index.html">← Kembali ke Daftar Isi</a> | Buku Akidah Akhlak Semester 1 Kelas 7 | UAS
+</div>
+
+<div class="breadcrumb">
+    <a href="index.html">Beranda</a> › <a href="index.html#bab">Daftar Bab</a> › <strong>Ujian Akhir Semester</strong>
+</div>
+
+<section class="hero">
+    <div class="badge">🏆 UJIAN AKHIR SEMESTER · BAB 07</div>
+    <h1>Ujian Akhir Semester</h1>
+    <p class="subtitle">Evaluasi komprehensif seluruh materi Semester 1 (Bab 1-6): Akidah Islam, Sifat-sifat Allah dan Rasul, Akhlak Terpuji, Adab Shalat dan Dzikir, serta Kisah Keteladanan Nabi Yunus AS.</p>
+    <div class="info">Okta Benia, S.Pd.I · MTsN 6 Agam · Akidah Akhlak Kelas 7</div>
+    <div class="exam-stats">
+        <div class="stat-pill">📝 40 Soal</div>
+        <div class="stat-pill">🎯 400 Poin</div>
+        <div class="stat-pill">📚 Bab 1-6</div>
+        <div class="stat-pill">⏱️ 120 Menit</div>
+    </div>
+</section>
+
+<div class="container">
+
+    <div class="section-title">
+        <h2>📋 Ujian Akhir Semester (UAS)</h2>
+        <p>Review Komprehensif — 4 Jenis Soal: PG HOTS, PG Kompleks, Benar/Salah, Menjodohkan</p>
+    </div>
+
+    <div class="info-box">
+        <strong>📚 Materi Ujian:</strong> Bab 1 (Akidah Islam), Bab 2 (Sifat-sifat Allah dan Rasul), Bab 4 (Akhlak Terpuji: Taat, Taubat, Ikhlas, Istiqamah), Bab 5 (Adab Shalat dan Dzikir), dan Bab 6 (Kisah Keteladanan Nabi Yunus AS).<br>
+        <strong>📊 Bobot Nilai:</strong> PG HOTS (200) + PG Kompleks (100) + Benar/Salah (50) + Menjodohkan (50) = <strong>400 poin</strong>
+    </div>
+
+    <div class="form-card">
+        <h3>📋 Data Siswa</h3>
+        <div class="form-grid">
+            <div class="form-group">
+                <label>Nama Lengkap <span class="required">*</span></label>
+                <input type="text" id="nama" placeholder="Masukkan nama lengkap" required>
+            </div>
+            <div class="form-group">
+                <label>NIS / No. Absen <span class="required">*</span></label>
+                <input type="text" id="nis" placeholder="Masukkan NIS atau No. Absen" required>
+            </div>
+            <div class="form-group">
+                <label>📅 Tanggal Ujian</label>
+                <input type="date" id="tanggal">
+            </div>
+            <div class="form-group">
+                <label>Kelas <span class="required">*</span></label>
+                <select id="kelas" required>
+                    <option value="">Pilih Kelas</option>
+                    <option value="7A">7A</option>
+                    <option value="7B">7B</option>
+                    <option value="7C">7C</option>
+                    <option value="7D">7D</option>
+                    <option value="7E">7E</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Mata Pelajaran</label>
+                <input type="text" value="Akidah Akhlak" readonly style="background:#f8f9fa;">
+            </div>
+            <div class="form-group">
+                <label>Semester</label>
+                <input type="text" value="Semester 1 (Ganjil)" readonly style="background:#f8f9fa;">
+            </div>
+        </div>
+    </div>
+
+    <!-- ============ BAGIAN A: PG HOTS ============ -->
+    <div class="section-divider">
+        <div class="icon">🎯</div>
+        <div>
+            <h3>BAGIAN A: Pilihan Ganda HOTS (20 Soal × 10 poin = 200)</h3>
+            <p>Analisis stimulus (ayat, hadis, kasus) dari Bab 1-6 dan pilih jawaban paling tepat</p>
+        </div>
+    </div>
+
+    <div class="warning-box">
+        ⚠️ <strong>Perhatikan stimulus dengan seksama!</strong> Setiap soal disertai narasi/ayat sebagai dasar analisis. Pilih satu jawaban yang paling tepat.
+    </div>
+
+    <!-- PG 1 - Bab 1 -->
+    <div class="question-card" id="pg1">
+        <div class="question-header">
+            <div class="question-number">1</div>
+            <span class="question-type">HOTS · Bab 1 · Stimulus Ayat</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <div class="arabic">قُلْ هُوَ ٱللَّهُ أَحَدٌ ۝ ٱللَّهُ ٱلصَّمَدُ ۝ لَمْ يَلِدْ وَلَمْ يُولَدْ</div>
+            <div class="translation">"Katakanlah: Dia-lah Allah, Yang Maha Esa. Allah adalah Tuhan yang bergantung kepada-Nya segala sesuatu. Dia tiada beranak dan tidak pula diperanakkan."</div>
+            <div class="reference">— QS. Al-Ikhlas [112]: 1-3</div>
+        </div>
+        <div class="question-text">Ayat di atas merupakan dalil naqli utama bagi konsep akidah Islam tentang...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg1" id="pg1a" value="a"><label for="pg1a">a) Tauhid Uluhiyah — mengesakan Allah dalam ibadah</label></div>
+            <div class="option"><input type="radio" name="pg1" id="pg1b" value="b"><label for="pg1b">b) Tauhid secara utuh — menafikan sekutu, anak, dan tandingan bagi Allah</label></div>
+            <div class="option"><input type="radio" name="pg1" id="pg1c" value="c"><label for="pg1c">c) Tauhid Rububiyah — meyakini Allah sebagai Pencipta</label></div>
+            <div class="option"><input type="radio" name="pg1" id="pg1d" value="d"><label for="pg1d">d) Iman kepada Hari Akhir</label></div>
+        </div>
+        <div class="feedback" id="fbpg1"></div>
+    </div>
+
+    <!-- PG 2 - Bab 2 -->
+    <div class="question-card" id="pg2">
+        <div class="question-header">
+            <div class="question-number">2</div>
+            <span class="question-type">HOTS · Bab 2 · Stimulus Ayat</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <div class="arabic">لَيْسَ كَمِثْلِهِۦ شَىْءٌ ۖ وَهُوَ ٱلسَّمِيعُ ٱلْبَصِيرُ</div>
+            <div class="translation">"Tidak ada sesuatu pun yang serupa dengan Dia, dan Dia-lah Yang Maha Mendengar lagi Maha Melihat."</div>
+            <div class="reference">— QS. Asy-Syura [42]: 11</div>
+        </div>
+        <div class="question-text">Ayat tersebut menjadi dalil naqli bagi sifat wajib Allah...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg2" id="pg2a" value="a"><label for="pg2a">a) Qudrat (Berkuasa)</label></div>
+            <div class="option"><input type="radio" name="pg2" id="pg2b" value="b"><label for="pg2b">b) Iradat (Berkehendak)</label></div>
+            <div class="option"><input type="radio" name="pg2" id="pg2c" value="c"><label for="pg2c">c) Mukhalafatu lil hawadits (Berbeda dengan makhluk)</label></div>
+            <div class="option"><input type="radio" name="pg2" id="pg2d" value="d"><label for="pg2d">d) Wujud (Ada)</label></div>
+        </div>
+        <div class="feedback" id="fbpg2"></div>
+    </div>
+
+    <!-- PG 3 - Bab 4 -->
+    <div class="question-card" id="pg3">
+        <div class="question-header">
+            <div class="question-number">3</div>
+            <span class="question-type">HOTS · Bab 4 · Stimulus Kasus</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <p>Seorang muslim beramal saleh, rajin bersedekah, dan aktif dalam kegiatan sosial. Namun ia selalu memposting kegiatannya di media sosial dengan caption yang membanggakan diri. Banyak orang memujinya, dan ia merasa senang dengan pujian tersebut.</p>
+        </div>
+        <div class="question-text">Perilaku tersebut bertentangan dengan akhlak terpuji yang disebut...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg3" id="pg3a" value="a"><label for="pg3a">a) Taat</label></div>
+            <div class="option"><input type="radio" name="pg3" id="pg3b" value="b"><label for="pg3b">b) Taubat</label></div>
+            <div class="option"><input type="radio" name="pg3" id="pg3c" value="c"><label for="pg3c">c) Ikhlas — karena tercampur riya' (pamer) dan sum'ah (ingin dipuji)</label></div>
+            <div class="option"><input type="radio" name="pg3" id="pg3d" value="d"><label for="pg3d">d) Istiqamah</label></div>
+        </div>
+        <div class="feedback" id="fbpg3"></div>
+    </div>
+
+    <!-- PG 4 - Bab 5 -->
+    <div class="question-card" id="pg4">
+        <div class="question-header">
+            <div class="question-number">4</div>
+            <span class="question-type">HOTS · Bab 5 · Stimulus Ayat</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <div class="arabic">إِنَّ ٱلصَّلَوٰةَ تَنْهَىٰ عَنِ ٱلْفَحْشَآءِ وَٱلْمُنكَرِ</div>
+            <div class="translation">"Sesungguhnya shalat itu mencegah dari (perbuatan-perbuatan) keji dan mungkar."</div>
+            <div class="reference">— QS. Al-'Ankabut [29]: 45</div>
+        </div>
+        <div class="question-text">Ayat tersebut menjelaskan fungsi shalat sebagai...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg4" id="pg4a" value="a"><label for="pg4a">a) Kunci surga</label></div>
+            <div class="option"><input type="radio" name="pg4" id="pg4b" value="b"><label for="pg4b">b) Penghapus dosa</label></div>
+            <div class="option"><input type="radio" name="pg4" id="pg4c" value="c"><label for="pg4c">c) Pencegah dari perbuatan keji dan mungkar</label></div>
+            <div class="option"><input type="radio" name="pg4" id="pg4d" value="d"><label for="pg4d">d) Tiang agama</label></div>
+        </div>
+        <div class="feedback" id="fbpg4"></div>
+    </div>
+
+    <!-- PG 5 - Bab 6 -->
+    <div class="question-card" id="pg5">
+        <div class="question-header">
+            <div class="question-number">5</div>
+            <span class="question-type">HOTS · Bab 6 · Stimulus Ayat</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <div class="arabic">فَنَادَىٰ فِى ٱلظُّلُمَـٰتِ أَن لَّآ إِلَـٰهَ إِلَّآ أَنتَ سُبْحَـٰنَكَ إِنِّى كُنتُ مِنَ ٱلظَّـٰلِمِينَ</div>
+            <div class="translation">"Maka ia menyeru dalam keadaan yang gelap-gulita: 'Bahwa tidak ada Tuhan (yang berhak disembah) selain Engkau, Maha Suci Engkau, sesungguhnya aku adalah termasuk orang-orang yang zalim.'"</div>
+            <div class="reference">— QS. Al-Anbiya [21]: 87</div>
+        </div>
+        <div class="question-text">Doa Dzun Nun (Nabi Yunus) di atas mengandung tiga unsur penting, yaitu...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg5" id="pg5a" value="a"><label for="pg5a">a) Tauhid, tasbih, dan pengakuan dosa (taubat)</label></div>
+            <div class="option"><input type="radio" name="pg5" id="pg5b" value="b"><label for="pg5b">b) Doa, dzikir, dan istighfar</label></div>
+            <div class="option"><input type="radio" name="pg5" id="pg5c" value="c"><label for="pg5c">c) Sabar, syukur, dan tawakkal</label></div>
+            <div class="option"><input type="radio" name="pg5" id="pg5d" value="d"><label for="pg5d">d) Takbir, tahmid, dan tahlil</label></div>
+        </div>
+        <div class="feedback" id="fbpg5"></div>
+    </div>
+
+    <!-- PG 6 - Bab 1 -->
+    <div class="question-card" id="pg6">
+        <div class="question-header">
+            <div class="question-number">6</div>
+            <span class="question-type">HOTS · Bab 1 · Stimulus Kasus</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <p>Seorang muslim berdoa dengan menyebut nama seorang "wali" sebagai perantara agar doanya cepat dikabulkan Allah. Ia meyakini bahwa wali tersebut memiliki kekuatan khusus untuk mengabulkan doa selain Allah.</p>
+        </div>
+        <div class="question-text">Perilaku tersebut bertentangan dengan dimensi akidah...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg6" id="pg6a" value="a"><label for="pg6a">a) Rububiyah, karena meyakini wali sebagai pencipta</label></div>
+            <div class="option"><input type="radio" name="pg6" id="pg6b" value="b"><label for="pg6b">b) Uluhiyah, karena beribadah (berdoa) kepada selain Allah</label></div>
+            <div class="option"><input type="radio" name="pg6" id="pg6c" value="c"><label for="pg6c">c) Asma' wa Sifat, karena menambah nama Allah</label></div>
+            <div class="option"><input type="radio" name="pg6" id="pg6d" value="d"><label for="pg6d">d) Raja', karena kehilangan harapan kepada Allah</label></div>
+        </div>
+        <div class="feedback" id="fbpg6"></div>
+    </div>
+
+    <!-- PG 7 - Bab 2 -->
+    <div class="question-card" id="pg7">
+        <div class="question-header">
+            <div class="question-number">7</div>
+            <span class="question-type">HOTS · Bab 2 · Stimulus Hadis</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <p>Dalam Hadis Jibril, ketika malaikat Jibril bertanya tentang iman, Rasulullah SAW menjawab: <em>"Engkau beriman kepada Allah, malaikat-malaikat-Nya, kitab-kitab-Nya, rasul-rasul-Nya, hari akhir, dan takdir baik maupun buruk."</em></p>
+        </div>
+        <div class="question-text">Hadis tersebut menjelaskan bahwa rukun iman yang keenam adalah...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg7" id="pg7a" value="a"><label for="pg7a">a) Iman kepada hari akhir</label></div>
+            <div class="option"><input type="radio" name="pg7" id="pg7b" value="b"><label for="pg7b">b) Iman kepada qada dan qadar (takdir)</label></div>
+            <div class="option"><input type="radio" name="pg7" id="pg7c" value="c"><label for="pg7c">c) Iman kepada kitab-kitab Allah</label></div>
+            <div class="option"><input type="radio" name="pg7" id="pg7d" value="d"><label for="pg7d">d) Iman kepada malaikat</label></div>
+        </div>
+        <div class="feedback" id="fbpg7"></div>
+    </div>
+
+    <!-- PG 8 - Bab 4 -->
+    <div class="question-card" id="pg8">
+        <div class="question-header">
+            <div class="question-number">8</div>
+            <span class="question-type">HOTS · Bab 4 · Stimulus Hadis</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <p>Rasulullah SAW bersabda: <em>"Sesungguhnya setiap amal itu tergantung pada niatnya, dan setiap orang hanya mendapatkan sesuai dengan apa yang dia niatkan."</em> (HR. Bukhari-Muslim)</p>
+        </div>
+        <div class="question-text">Hadis tersebut menjadi fondasi utama dalam memahami akhlak terpuji yang disebut...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg8" id="pg8a" value="a"><label for="pg8a">a) Taat</label></div>
+            <div class="option"><input type="radio" name="pg8" id="pg8b" value="b"><label for="pg8b">b) Taubat</label></div>
+            <div class="option"><input type="radio" name="pg8" id="pg8c" value="c"><label for="pg8c">c) Ikhlas — memurnikan niat semata karena Allah</label></div>
+            <div class="option"><input type="radio" name="pg8" id="pg8d" value="d"><label for="pg8d">d) Istiqamah</label></div>
+        </div>
+        <div class="feedback" id="fbpg8"></div>
+    </div>
+
+    <!-- PG 9 - Bab 5 -->
+    <div class="question-card" id="pg9">
+        <div class="question-header">
+            <div class="question-number">9</div>
+            <span class="question-type">HOTS · Bab 5 · Stimulus Hadis</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <p>Rasulullah SAW bersabda: <em>"Barangsiapa yang bertasbih setelah setiap shalat sebanyak 33x, bertahmid 33x, dan bertakbir 34x, maka itu lebih baik baginya daripada seekor kuda perang."</em> (HR. Muslim)</p>
+        </div>
+        <div class="question-text">Total jumlah dzikir yang diajarkan Rasulullah SAW dalam hadis tersebut adalah...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg9" id="pg9a" value="a"><label for="pg9a">a) 99x</label></div>
+            <div class="option"><input type="radio" name="pg9" id="pg9b" value="b"><label for="pg9b">b) 100x</label></div>
+            <div class="option"><input type="radio" name="pg9" id="pg9c" value="c"><label for="pg9c">c) 110x</label></div>
+            <div class="option"><input type="radio" name="pg9" id="pg9d" value="d"><label for="pg9d">d) 33x</label></div>
+        </div>
+        <div class="feedback" id="fbpg9"></div>
+    </div>
+
+    <!-- PG 10 - Bab 6 -->
+    <div class="question-card" id="pg10">
+        <div class="question-header">
+            <div class="question-number">10</div>
+            <span class="question-type">HOTS · Bab 6 · Stimulus Kasus</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <p>Nabi Yunus AS berada dalam tiga kegelapan: kegelapan malam, kegelapan lautan, dan kegelapan perut ikan paus. Namun cahaya tauhid di hatinya tidak pernah padam. Beliau terus berdzikir dan berdoa kepada Allah dengan penuh kerendahan hati.</p>
+        </div>
+        <div class="question-text">Pelajaran utama dari kisah ini adalah...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg10" id="pg10a" value="a"><label for="pg10a">a) Tidak ada jalan keluar dari kegelapan kecuali dengan kembali kepada Allah melalui doa dan dzikir</label></div>
+            <div class="option"><input type="radio" name="pg10" id="pg10b" value="b"><label for="pg10b">b) Seorang nabi tidak boleh mengalami kesusahan</label></div>
+            <div class="option"><input type="radio" name="pg10" id="pg10c" value="c"><label for="pg10c">c) Ikan paus adalah makhluk yang jinak</label></div>
+            <div class="option"><input type="radio" name="pg10" id="pg10d" value="d"><label for="pg10d">d) Lautan adalah tempat yang berbahaya</label></div>
+        </div>
+        <div class="feedback" id="fbpg10"></div>
+    </div>
+
+    <!-- PG 11 - Bab 1 -->
+    <div class="question-card" id="pg11">
+        <div class="question-header">
+            <div class="question-number">11</div>
+            <span class="question-type">HOTS · Bab 1 · Stimulus Ayat</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <div class="arabic">فَٱعْلَمْ أَنَّهُۥ لَآ إِلَـٰهَ إِلَّا ٱللَّهُ وَٱسْتَغْفِرْ لِذَنۢبِكَ</div>
+            <div class="translation">"Maka ketahuilah, bahwa sesungguhnya tidak ada Tuhan (yang berhak disembah) selain Allah dan mohonlah ampunan atas dosamu."</div>
+            <div class="reference">— QS. Muhammad [47]: 19</div>
+        </div>
+        <div class="question-text">Ayat tersebut dimulai dengan perintah "fa'lam" (maka ketahuilah). Hal ini menunjukkan bahwa...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg11" id="pg11a" value="a"><label for="pg11a">a) Mempelajari akidah (ilmu tauhid) adalah kewajiban sebelum beramal</label></div>
+            <div class="option"><input type="radio" name="pg11" id="pg11b" value="b"><label for="pg11b">b) Akidah tidak perlu dipelajari</label></div>
+            <div class="option"><input type="radio" name="pg11" id="pg11c" value="c"><label for="pg11c">c) Ilmu tidak penting dalam Islam</label></div>
+            <div class="option"><input type="radio" name="pg11" id="pg11d" value="d"><label for="pg11d">d) Hanya ulama yang wajib mempelajari akidah</label></div>
+        </div>
+        <div class="feedback" id="fbpg11"></div>
+    </div>
+
+    <!-- PG 12 - Bab 2 -->
+    <div class="question-card" id="pg12">
+        <div class="question-header">
+            <div class="question-number">12</div>
+            <span class="question-type">HOTS · Bab 2 · Stimulus Ayat</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <div class="arabic">وَٱللَّهُ لَهُۥ ٱلْمَثَلُ ٱلْأَعْلَىٰ ۚ وَهُوَ ٱلْعَزِيزُ ٱلْحَكِيمُ</div>
+            <div class="translation">"Dan Allah mempunyai sifat yang Maha Tinggi, dan Dia-lah Yang Maha Perkasa lagi Maha Bijaksana."</div>
+            <div class="reference">— QS. An-Nahl [16]: 60</div>
+        </div>
+        <div class="question-text">Frasa "al-matsal al-a'la" (sifat yang Maha Tinggi) menegaskan bahwa sifat-sifat Allah...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg12" id="pg12a" value="a"><label for="pg12a">a) Sama dengan sifat makhluk</label></div>
+            <div class="option"><input type="radio" name="pg12" id="pg12b" value="b"><label for="pg12b">b) Sempurna dan tinggi, tidak menyerupai sifat makhluk sedikitpun</label></div>
+            <div class="option"><input type="radio" name="pg12" id="pg12c" value="c"><label for="pg12c">c) Hanya simbolis dan tidak perlu diimani</label></div>
+            <div class="option"><input type="radio" name="pg12" id="pg12d" value="d"><label for="pg12d">d) Dapat diubah sesuai zaman</label></div>
+        </div>
+        <div class="feedback" id="fbpg12"></div>
+    </div>
+
+    <!-- PG 13 - Bab 4 -->
+    <div class="question-card" id="pg13">
+        <div class="question-header">
+            <div class="question-number">13</div>
+            <span class="question-type">HOTS · Bab 4 · Stimulus Ayat</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <div class="arabic">فَٱسْتَقِمْ كَمَآ أُمِرْتَ وَمَن تَابَ مَعَكَ</div>
+            <div class="translation">"Maka istiqamahlah kamu pada jalan yang benar, sebagaimana diperintahkan kepadamu dan (juga) orang yang telah taubat beserta kamu."</div>
+            <div class="reference">— QS. Hud [11]: 112</div>
+        </div>
+        <div class="question-text">Ayat tersebut menjadi dalil naqli utama bagi akhlak terpuji yang disebut...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg13" id="pg13a" value="a"><label for="pg13a">a) Taat</label></div>
+            <div class="option"><input type="radio" name="pg13" id="pg13b" value="b"><label for="pg13b">b) Taubat</label></div>
+            <div class="option"><input type="radio" name="pg13" id="pg13c" value="c"><label for="pg13c">c) Ikhlas</label></div>
+            <div class="option"><input type="radio" name="pg13" id="pg13d" value="d"><label for="pg13d">d) Istiqamah — tegak lurus dan konsisten di atas jalan kebenaran</label></div>
+        </div>
+        <div class="feedback" id="fbpg13"></div>
+    </div>
+
+    <!-- PG 14 - Bab 5 -->
+    <div class="question-card" id="pg14">
+        <div class="question-header">
+            <div class="question-number">14</div>
+            <span class="question-type">HOTS · Bab 5 · Stimulus Ayat</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <div class="arabic">قَدْ أَفْلَحَ ٱلْمُؤْمِنُونَ ٱلَّذِينَ هُمْ فِى صَلَاتِهِمْ خَـٰشِعُونَ</div>
+            <div class="translation">"Sesungguhnya beruntunglah orang-orang yang beriman, (yaitu) orang-orang yang khusyuk dalam shalatnya."</div>
+            <div class="reference">— QS. Al-Mu'minun [23]: 1-2</div>
+        </div>
+        <div class="question-text">Ayat tersebut menjelaskan bahwa orang-orang yang khusyuk dalam shalatnya akan memperoleh...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg14" id="pg14a" value="a"><label for="pg14a">a) Kekayaan duniawi</label></div>
+            <div class="option"><input type="radio" name="pg14" id="pg14b" value="b"><label for="pg14b">b) Keberuntungan (falah) — kebahagiaan dunia dan akhirat</label></div>
+            <div class="option"><input type="radio" name="pg14" id="pg14c" value="c"><label for="pg14c">c) Popularitas di masyarakat</label></div>
+            <div class="option"><input type="radio" name="pg14" id="pg14d" value="d"><label for="pg14d">d) Kesehatan fisik yang sempurna</label></div>
+        </div>
+        <div class="feedback" id="fbpg14"></div>
+    </div>
+
+    <!-- PG 15 - Bab 6 -->
+    <div class="question-card" id="pg15">
+        <div class="question-header">
+            <div class="question-number">15</div>
+            <span class="question-type">HOTS · Bab 6 · Stimulus Ayat</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <div class="arabic">فَلَوْلَآ أَنَّهُۥ كَانَ مِنَ ٱلْمُسَبِّحِينَ لَلَبِثَ فِى بَطْنِهِۦٓ إِلَىٰ يَوْمِ يُبْعَثُونَ</div>
+            <div class="translation">"Maka sekiranya dia tidak termasuk orang-orang yang banyak berzikir (bertasbih) kepada Allah, niscaya ia akan tetap tinggal di perut ikan itu sampai hari dibangkitkan."</div>
+            <div class="reference">— QS. As-Saffat [37]: 143-144</div>
+        </div>
+        <div class="question-text">Ayat tersebut menjelaskan bahwa penyebab keselamatan Nabi Yunus dari perut ikan adalah...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg15" id="pg15a" value="a"><label for="pg15a">a) Kekuatan fisiknya yang luar biasa</label></div>
+            <div class="option"><input type="radio" name="pg15" id="pg15b" value="b"><label for="pg15b">b) Kebiasaan beliau berdzikir dan bertasbih kepada Allah</label></div>
+            <div class="option"><input type="radio" name="pg15" id="pg15c" value="c"><label for="pg15c">c) Bantuan malaikat</label></div>
+            <div class="option"><input type="radio" name="pg15" id="pg15d" value="d"><label for="pg15d">d) Ikan tersebut sudah kenyang</label></div>
+        </div>
+        <div class="feedback" id="fbpg15"></div>
+    </div>
+
+    <!-- PG 16 - Bab 1 -->
+    <div class="question-card" id="pg16">
+        <div class="question-header">
+            <div class="question-number">16</div>
+            <span class="question-type">HOTS · Bab 1 · Stimulus Kasus</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <p>Di era globalisasi, generasi muda muslim sering terpapar konten dari berbagai ideologi — atheisme, liberalisme, pluralisme, hingga sekularisme — melalui media sosial. Banyak yang bingung dan goyah imannya karena tidak memiliki fondasi akidah yang kuat.</p>
+        </div>
+        <div class="question-text">Solusi paling strategis untuk menghadapi tantangan tersebut adalah...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg16" id="pg16a" value="a"><label for="pg16a">a) Memblokir semua akses internet</label></div>
+            <div class="option"><input type="radio" name="pg16" id="pg16b" value="b"><label for="pg16b">b) Mempelajari akidah Islam dengan sungguh-sungguh sebagai benteng dari syubhat dan pemikiran menyimpang</label></div>
+            <div class="option"><input type="radio" name="pg16" id="pg16c" value="c"><label for="pg16c">c) Mengikuti semua ideologi agar toleran</label></div>
+            <div class="option"><input type="radio" name="pg16" id="pg16d" value="d"><label for="pg16d">d) Meninggalkan agama karena dianggap kuno</label></div>
+        </div>
+        <div class="feedback" id="fbpg16"></div>
+    </div>
+
+    <!-- PG 17 - Bab 2 -->
+    <div class="question-card" id="pg17">
+        <div class="question-header">
+            <div class="question-number">17</div>
+            <span class="question-type">HOTS · Bab 2 · Stimulus Ayat</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <div class="arabic">إِنَّ ٱللَّهَ لَا يَغْفِرُ أَن يُشْرَكَ بِهِۦ وَيَغْفِرُ مَا دُونَ ذَٰلِكَ لِمَن يَشَآءُ</div>
+            <div class="translation">"Sesungguhnya Allah tidak akan mengampuni dosa syirik, dan Dia mengampuni segala dosa yang selain dari (syirik) itu, bagi siapa yang dikehendaki-Nya."</div>
+            <div class="reference">— QS. An-Nisa [4]: 48</div>
+        </div>
+        <div class="question-text">Ayat tersebut menjelaskan bahwa syirik adalah dosa yang tidak diampuni. Hal ini menunjukkan bahwa akidah tauhid merupakan...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg17" id="pg17a" value="a"><label for="pg17a">a) Hal yang bisa dinegosiasikan</label></div>
+            <div class="option"><input type="radio" name="pg17" id="pg17b" value="b"><label for="pg17b">b) Fondasi utama yang menentukan keselamatan abadi di akhirat</label></div>
+            <div class="option"><input type="radio" name="pg17" id="pg17c" value="c"><label for="pg17c">c) Sekadar pengetahuan tambahan</label></div>
+            <div class="option"><input type="radio" name="pg17" id="pg17d" value="d"><label for="pg17d">d) Sunnah yang boleh ditinggalkan</label></div>
+        </div>
+        <div class="feedback" id="fbpg17"></div>
+    </div>
+
+    <!-- PG 18 - Bab 4 -->
+    <div class="question-card" id="pg18">
+        <div class="question-header">
+            <div class="question-number">18</div>
+            <span class="question-type">HOTS · Bab 4 · Stimulus Kasus</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <p>Ahmad adalah seorang siswa yang rajin beribadah dan berakhlak mulia. Namun, ia pernah melakukan kesalahan besar dan merasa sangat bersalah. Ia pun bertaubat dengan sungguh-sungguh, menyesali perbuatannya, meninggalkan dosa tersebut, dan bertekad tidak mengulanginya. Hatinya pun merasa lega dan tenang setelah bertaubat.</p>
+        </div>
+        <div class="question-text">Perilaku Ahmad merupakan manifestasi dari akhlak terpuji yang disebut...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg18" id="pg18a" value="a"><label for="pg18a">a) Taat</label></div>
+            <div class="option"><input type="radio" name="pg18" id="pg18b" value="b"><label for="pg18b">b) Taubat Nasuha — taubat yang sungguh-sungguh dengan memenuhi syarat-syaratnya</label></div>
+            <div class="option"><input type="radio" name="pg18" id="pg18c" value="c"><label for="pg18c">c) Ikhlas</label></div>
+            <div class="option"><input type="radio" name="pg18" id="pg18d" value="d"><label for="pg18d">d) Istiqamah</label></div>
+        </div>
+        <div class="feedback" id="fbpg18"></div>
+    </div>
+
+    <!-- PG 19 - Bab 5 -->
+    <div class="question-card" id="pg19">
+        <div class="question-header">
+            <div class="question-number">19</div>
+            <span class="question-type">HOTS · Bab 5 · Stimulus Hadis</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <p>Rasulullah SAW bersabda: <em>"Shalat berjamaah lebih utama 27 derajat daripada shalat sendirian."</em> (HR. Bukhari-Muslim)</p>
+        </div>
+        <div class="question-text">Hadis tersebut menjelaskan keutamaan shalat berjamaah dibandingkan shalat sendirian sebesar...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg19" id="pg19a" value="a"><label for="pg19a">a) 10 derajat</label></div>
+            <div class="option"><input type="radio" name="pg19" id="pg19b" value="b"><label for="pg19b">b) 17 derajat</label></div>
+            <div class="option"><input type="radio" name="pg19" id="pg19c" value="c"><label for="pg19c">c) 25 derajat</label></div>
+            <div class="option"><input type="radio" name="pg19" id="pg19d" value="d"><label for="pg19d">d) 27 derajat</label></div>
+        </div>
+        <div class="feedback" id="fbpg19"></div>
+    </div>
+
+    <!-- PG 20 - Bab 6 -->
+    <div class="question-card" id="pg20">
+        <div class="question-header">
+            <div class="question-number">20</div>
+            <span class="question-type">HOTS · Bab 6 · Stimulus Hadis</span>
+        </div>
+        <div class="stimulus">
+            <div class="label">📖 Stimulus</div>
+            <p>Rasulullah SAW bersabda: <em>"Doa Dzun Nun (Nabi Yunus) ketika ia berdoa dalam perut ikan paus: 'Laa ilaaha illa anta subhaanaka inni kuntu minaz-zhaalimiin' — sesungguhnya tidak seorang muslim pun berdoa dengan doa ini dalam suatu urusan, melainkan Allah akan mengabulkannya."</em> (HR. Tirmidzi)</p>
+        </div>
+        <div class="question-text">Hadis tersebut menjelaskan keutamaan Doa Dzun Nun, yaitu...</div>
+        <div class="options">
+            <div class="option"><input type="radio" name="pg20" id="pg20a" value="a"><label for="pg20a">a) Menghapus dosa-dosa besar</label></div>
+            <div class="option"><input type="radio" name="pg20" id="pg20b" value="b"><label for="pg20b">b) Tidak seorang muslim pun berdoa dengannya melainkan Allah akan mengabulkannya</label></div>
+            <div class="option"><input type="radio" name="pg20" id="pg20c" value="c"><label for="pg20c">c) Mendapat pahala seperti membebaskan 100 budak</label></div>
+            <div class="option"><input type="radio" name="pg20" id="pg20d" value="d"><label for="pg20d">d) Dijamin masuk surga tanpa hisab</label></div>
+        </div>
+        <div class="feedback" id="fbpg20"></div>
+    </div>
+
+    <!-- ============ BAGIAN B: PG KOMPLEKS ============ -->
+    <div class="section-divider">
+        <div class="icon">☑️</div>
+        <div>
+            <h3>BAGIAN B: Pilihan Ganda Kompleks (10 Soal × 10 poin = 100)</h3>
+            <p>Pilih <strong>LEBIH DARI SATU</strong> jawaban yang benar (centang semua yang tepat)</p>
+        </div>
+    </div>
+
+    <div class="warning-box">
+        ⚠️ <strong>Perhatian!</strong> Pada bagian ini, Anda dapat memilih lebih dari satu jawaban. Nilai penuh hanya jika semua jawaban benar tercentang dan tidak ada yang salah tercentang.
+    </div>
+
+    <!-- PG Kompleks 1 - Bab 1 -->
+    <div class="question-card" id="pck1">
+        <div class="question-header">
+            <div class="question-number">21</div>
+            <span class="question-type">PG Kompleks · Bab 1</span>
+        </div>
+        <div class="question-text">Yang termasuk <strong>Rukun Iman</strong> dalam akidah Islam adalah...</div>
+        <div class="options">
+            <div class="option"><input type="checkbox" name="pck1" id="pck1a" value="a"><label for="pck1a">a) Iman kepada Allah</label></div>
+            <div class="option"><input type="checkbox" name="pck1" id="pck1b" value="b"><label for="pck1b">b) Iman kepada Malaikat</label></div>
+            <div class="option"><input type="checkbox" name="pck1" id="pck1c" value="c"><label for="pck1c">c) Iman kepada Kitab-kitab Allah</label></div>
+            <div class="option"><input type="checkbox" name="pck1" id="pck1d" value="d"><label for="pck1d">d) Iman kepada Rasul-rasul</label></div>
+            <div class="option"><input type="checkbox" name="pck1" id="pck1e" value="e"><label for="pck1e">e) Iman kepada Kiamat, Qada, dan Qadar</label></div>
+        </div>
+        <div class="feedback" id="fbpck1"></div>
+    </div>
+
+    <!-- PG Kompleks 2 - Bab 2 -->
+    <div class="question-card" id="pck2">
+        <div class="question-header">
+            <div class="question-number">22</div>
+            <span class="question-type">PG Kompleks · Bab 2</span>
+        </div>
+        <div class="question-text">Yang termasuk <strong>Sifat Wajib Rasul</strong> adalah...</div>
+        <div class="options">
+            <div class="option"><input type="checkbox" name="pck2" id="pck2a" value="a"><label for="pck2a">a) Shiddiq (Benar)</label></div>
+            <div class="option"><input type="checkbox" name="pck2" id="pck2b" value="b"><label for="pck2b">b) Amanah (Terpercaya)</label></div>
+            <div class="option"><input type="checkbox" name="pck2" id="pck2c" value="c"><label for="pck2c">c) Kidzib (Dusta)</label></div>
+            <div class="option"><input type="checkbox" name="pck2" id="pck2d" value="d"><label for="pck2d">d) Tabligh (Menyampaikan)</label></div>
+            <div class="option"><input type="checkbox" name="pck2" id="pck2e" value="e"><label for="pck2e">e) Fathanah (Cerdas)</label></div>
+        </div>
+        <div class="feedback" id="fbpck2"></div>
+    </div>
+
+    <!-- PG Kompleks 3 - Bab 4 -->
+    <div class="question-card" id="pck3">
+        <div class="question-header">
+            <div class="question-number">23</div>
+            <span class="question-type">PG Kompleks · Bab 4</span>
+        </div>
+        <div class="question-text">Yang termasuk <strong>Akhlak Terpuji</strong> yang menjadi fokus pembahasan Bab 4 adalah...</div>
+        <div class="options">
+            <div class="option"><input type="checkbox" name="pck3" id="pck3a" value="a"><label for="pck3a">a) Taat</label></div>
+            <div class="option"><input type="checkbox" name="pck3" id="pck3b" value="b"><label for="pck3b">b) Taubat</label></div>
+            <div class="option"><input type="checkbox" name="pck3" id="pck3c" value="c"><label for="pck3c">c) Riya'</label></div>
+            <div class="option"><input type="checkbox" name="pck3" id="pck3d" value="d"><label for="pck3d">d) Ikhlas</label></div>
+            <div class="option"><input type="checkbox" name="pck3" id="pck3e" value="e"><label for="pck3e">e) Istiqamah</label></div>
+        </div>
+        <div class="feedback" id="fbpck3"></div>
+    </div>
+
+    <!-- PG Kompleks 4 - Bab 5 -->
+    <div class="question-card" id="pck4">
+        <div class="question-header">
+            <div class="question-number">24</div>
+            <span class="question-type">PG Kompleks · Bab 5</span>
+        </div>
+        <div class="question-text">Yang termasuk <strong>Rukun Shalat</strong> adalah...</div>
+        <div class="options">
+            <div class="option"><input type="checkbox" name="pck4" id="pck4a" value="a"><label for="pck4a">a) Niat</label></div>
+            <div class="option"><input type="checkbox" name="pck4" id="pck4b" value="b"><label for="pck4b">b) Takbiratul Ihram</label></div>
+            <div class="option"><input type="checkbox" name="pck4" id="pck4c" value="c"><label for="pck4c">c) Membaca Al-Fatihah</label></div>
+            <div class="option"><input type="checkbox" name="pck4" id="pck4d" value="d"><label for="pck4d">d) Ruku' dengan tuma'ninah</label></div>
+            <div class="option"><input type="checkbox" name="pck4" id="pck4e" value="e"><label for="pck4e">e) Membaca doa iftitah</label></div>
+        </div>
+        <div class="feedback" id="fbpck4"></div>
+    </div>
+
+    <!-- PG Kompleks 5 - Bab 6 -->
+    <div class="question-card" id="pck5">
+        <div class="question-header">
+            <div class="question-number">25</div>
+            <span class="question-type">PG Kompleks · Bab 6</span>
+        </div>
+        <div class="question-text">Yang termasuk <strong>Keteladanan dari Kisah Nabi Yunus AS</strong> adalah...</div>
+        <div class="options">
+            <div class="option"><input type="checkbox" name="pck5" id="pck5a" value="a"><label for="pck5a">a) Kesabaran dalam menghadapi penolakan kaum</label></div>
+            <div class="option"><input type="checkbox" name="pck5" id="pck5b" value="b"><label for="pck5b">b) Taubat dan pengakuan dosa dengan jujur</label></div>
+            <div class="option"><input type="checkbox" name="pck5" id="pck5c" value="c"><label for="pck5c">c) Tawakkal kepada Allah dalam keadaan sulit</label></div>
+            <div class="option"><input type="checkbox" name="pck5" id="pck5d" value="d"><label for="pck5d">d) Kebiasaan berdzikir dan bertasbih</label></div>
+            <div class="option"><input type="checkbox" name="pck5" id="pck5e" value="e"><label for="pck5e">e) Meninggalkan kaumnya tanpa alasan</label></div>
+        </div>
+        <div class="feedback" id="fbpck5"></div>
+    </div>
+
+    <!-- PG Kompleks 6 - Bab 2 -->
+    <div class="question-card" id="pck6">
+        <div class="question-header">
+            <div class="question-number">26</div>
+            <span class="question-type">PG Kompleks · Bab 2</span>
+        </div>
+        <div class="question-text">Yang termasuk <strong>Sifat Ma'ani</strong> (sifat abstrak yang berdiri pada dzat Allah) adalah...</div>
+        <div class="options">
+            <div class="option"><input type="checkbox" name="pck6" id="pck6a" value="a"><label for="pck6a">a) Qudrat (Berkuasa)</label></div>
+            <div class="option"><input type="checkbox" name="pck6" id="pck6b" value="b"><label for="pck6b">b) Iradat (Berkehendak)</label></div>
+            <div class="option"><input type="checkbox" name="pck6" id="pck6c" value="c"><label for="pck6c">c) Ilmu (Mengetahui)</label></div>
+            <div class="option"><input type="checkbox" name="pck6" id="pck6d" value="d"><label for="pck6d">d) Hayat (Hidup)</label></div>
+            <div class="option"><input type="checkbox" name="pck6" id="pck6e" value="e"><label for="pck6e">e) Wujud (Ada)</label></div>
+        </div>
+        <div class="feedback" id="fbpck6"></div>
+    </div>
+
+    <!-- PG Kompleks 7 - Bab 5 -->
+    <div class="question-card" id="pck7">
+        <div class="question-header">
+            <div class="question-number">27</div>
+            <span class="question-type">PG Kompleks · Bab 5</span>
+        </div>
+        <div class="question-text">Yang termasuk <strong>Adab Sebelum Shalat</strong> adalah...</div>
+        <div class="options">
+            <div class="option"><input type="checkbox" name="pck7" id="pck7a" value="a"><label for="pck7a">a) Berwudhu dengan sempurna</label></div>
+            <div class="option"><input type="checkbox" name="pck7" id="pck7b" value="b"><label for="pck7b">b) Memakai pakaian yang bersih dan menutup aurat</label></div>
+            <div class="option"><input type="checkbox" name="pck7" id="pck7c" value="c"><label for="pck7c">c) Mengumandangkan adzan dan iqamah</label></div>
+            <div class="option"><input type="checkbox" name="pck7" id="pck7d" value="d"><label for="pck7d">d) Menyegerakan shalat ketika waktunya masuk</label></div>
+            <div class="option"><input type="checkbox" name="pck7" id="pck7e" value="e"><label for="pck7e">e) Langsung bertakbir tanpa persiapan</label></div>
+        </div>
+        <div class="feedback" id="fbpck7"></div>
+    </div>
+
+    <!-- PG Kompleks 8 - Bab 1 -->
+    <div class="question-card" id="pck8">
+        <div class="question-header">
+            <div class="question-number">28</div>
+            <span class="question-type">PG Kompleks · Bab 1</span>
+        </div>
+        <div class="question-text">Yang termasuk <strong>Sumber Akidah Islam</strong> adalah...</div>
+        <div class="options">
+            <div class="option"><input type="checkbox" name="pck8" id="pck8a" value="a"><label for="pck8a">a) Al-Quran</label></div>
+            <div class="option"><input type="checkbox" name="pck8" id="pck8b" value="b"><label for="pck8b">b) As-Sunnah</label></div>
+            <div class="option"><input type="checkbox" name="pck8" id="pck8c" value="c"><label for="pck8c">c) Ijma' Sahabat</label></div>
+            <div class="option"><input type="checkbox" name="pck8" id="pck8d" value="d"><label for="pck8d">d) Mimpi pribadi</label></div>
+            <div class="option"><input type="checkbox" name="pck8" id="pck8e" value="e"><label for="pck8e">e) Akal sehat sebagai alat memahami wahyu</label></div>
+        </div>
+        <div class="feedback" id="fbpck8"></div>
+    </div>
+
+    <!-- PG Kompleks 9 - Bab 4 -->
+    <div class="question-card" id="pck9">
+        <div class="question-header">
+            <div class="question-number">29</div>
+            <span class="question-type">PG Kompleks · Bab 4</span>
+        </div>
+        <div class="question-text">Yang termasuk <strong>Fungsi Akhlak Terpuji</strong> dalam kehidupan seorang muslim adalah...</div>
+        <div class="options">
+            <div class="option"><input type="checkbox" name="pck9" id="pck9a" value="a"><label for="pck9a">a) Menyucikan hati dari noda dosa</label></div>
+            <div class="option"><input type="checkbox" name="pck9" id="pck9b" value="b"><label for="pck9b">b) Memberikan ketenangan jiwa</label></div>
+            <div class="option"><input type="checkbox" name="pck9" id="pck9c" value="c"><label for="pck9c">c) Mempererat ukhuwah islamiyah</label></div>
+            <div class="option"><input type="checkbox" name="pck9" id="pck9d" value="d"><label for="pck9d">d) Mengangkat derajat di sisi Allah</label></div>
+            <div class="option"><input type="checkbox" name="pck9" id="pck9e" value="e"><label for="pck9e">e) Menambah kekayaan duniawi</label></div>
+        </div>
+        <div class="feedback" id="fbpck9"></div>
+    </div>
+
+    <!-- PG Kompleks 10 - Bab 6 -->
+    <div class="question-card" id="pck10">
+        <div class="question-header">
+            <div class="question-number">30</div>
+            <span class="question-type">PG Kompleks · Bab 6</span>
+        </div>
+        <div class="question-text">Yang termasuk <strong>Dimensi Kisah Nabi Yunus AS</strong> adalah...</div>
+        <div class="options">
+            <div class="option"><input type="checkbox" name="pck10" id="pck10a" value="a"><label for="pck10a">a) Dimensi Akidah</label></div>
+            <div class="option"><input type="checkbox" name="pck10" id="pck10b" value="b"><label for="pck10b">b) Dimensi Akhlak</label></div>
+            <div class="option"><input type="checkbox" name="pck10" id="pck10c" value="c"><label for="pck10c">c) Dimensi Dakwah</label></div>
+            <div class="option"><input type="checkbox" name="pck10" id="pck10d" value="d"><label for="pck10d">d) Dimensi Doa</label></div>
+            <div class="option"><input type="checkbox" name="pck10" id="pck10e" value="e"><label for="pck10e">e) Dimensi Ekonomi</label></div>
+        </div>
+        <div class="feedback" id="fbpck10"></div>
+    </div>
+
+    <!-- ============ BAGIAN C: BENAR/SALAH ============ -->
+    <div class="section-divider">
+        <div class="icon">✔️</div>
+        <div>
+            <h3>BAGIAN C: Benar/Salah (5 Soal × 10 poin = 50)</h3>
+            <p>Tentukan apakah pernyataan berikut BENAR atau SALAH</p>
+        </div>
+    </div>
+
+    <!-- BS 1 - Bab 2 -->
+    <div class="question-card" id="bs1">
+        <div class="question-header">
+            <div class="question-number">31</div>
+            <span class="question-type">Benar/Salah · Bab 2</span>
+        </div>
+        <div class="question-text">Sifat "Wujud" (Ada) termasuk dalam kategori Sifat Nafsiyah Allah.</div>
+        <div class="bs-options">
+            <div class="bs-option"><input type="radio" name="bs1" id="bs1a" value="benar"><label for="bs1a">✔️ Benar</label></div>
+            <div class="bs-option"><input type="radio" name="bs1" id="bs1b" value="salah"><label for="bs1b">❌ Salah</label></div>
+        </div>
+        <div class="feedback" id="fbbs1"></div>
+    </div>
+
+    <!-- BS 2 - Bab 4 -->
+    <div class="question-card" id="bs2">
+        <div class="question-header">
+            <div class="question-number">32</div>
+            <span class="question-type">Benar/Salah · Bab 4</span>
+        </div>
+        <div class="question-text">Lawan dari ikhlas dalam beramal adalah riya' (pamer) dan sum'ah (ingin didengar).</div>
+        <div class="bs-options">
+            <div class="bs-option"><input type="radio" name="bs2" id="bs2a" value="benar"><label for="bs2a">✔️ Benar</label></div>
+            <div class="bs-option"><input type="radio" name="bs2" id="bs2b" value="salah"><label for="bs2b">❌ Salah</label></div>
+        </div>
+        <div class="feedback" id="fbbs2"></div>
+    </div>
+
+    <!-- BS 3 - Bab 5 -->
+    <div class="question-card" id="bs3">
+        <div class="question-header">
+            <div class="question-number">33</div>
+            <span class="question-type">Benar/Salah · Bab 5</span>
+        </div>
+        <div class="question-text">Wirid dzikir setelah shalat yang diajarkan Rasulullah SAW berjumlah 100x (33x tasbih, 33x tahmid, 34x takbir).</div>
+        <div class="bs-options">
+            <div class="bs-option"><input type="radio" name="bs3" id="bs3a" value="benar"><label for="bs3a">✔️ Benar</label></div>
+            <div class="bs-option"><input type="radio" name="bs3" id="bs3b" value="salah"><label for="bs3b">❌ Salah</label></div>
+        </div>
+        <div class="feedback" id="fbbs3"></div>
+    </div>
+
+    <!-- BS 4 - Bab 6 -->
+    <div class="question-card" id="bs4">
+        <div class="question-header">
+            <div class="question-number">34</div>
+            <span class="question-type">Benar/Salah · Bab 6</span>
+        </div>
+        <div class="question-text">Nabi Yunus AS diutus oleh Allah kepada kaum Asyura di kota Ninive yang berjumlah lebih dari 100.000 orang.</div>
+        <div class="bs-options">
+            <div class="bs-option"><input type="radio" name="bs4" id="bs4a" value="benar"><label for="bs4a">✔️ Benar</label></div>
+            <div class="bs-option"><input type="radio" name="bs4" id="bs4b" value="salah"><label for="bs4b">❌ Salah</label></div>
+        </div>
+        <div class="feedback" id="fbbs4"></div>
+    </div>
+
+    <!-- BS 5 - Bab 1 -->
+    <div class="question-card" id="bs5">
+        <div class="question-header">
+            <div class="question-number">35</div>
+            <span class="question-type">Benar/Salah · Bab 1</span>
+        </div>
+        <div class="question-text">Akidah Islam bersumber utama dari akal pikiran manusia, bukan dari wahyu Allah.</div>
+        <div class="bs-options">
+            <div class="bs-option"><input type="radio" name="bs5" id="bs5a" value="benar"><label for="bs5a">✔️ Benar</label></div>
+            <div class="bs-option"><input type="radio" name="bs5" id="bs5b" value="salah"><label for="bs5b">❌ Salah</label></div>
+        </div>
+        <div class="feedback" id="fbbs5"></div>
+    </div>
+
+    <!-- ============ BAGIAN D: MENJODOHKAN ============ -->
+    <div class="section-divider">
+        <div class="icon">🔗</div>
+        <div>
+            <h3>BAGIAN D: Menjodohkan (5 Soal × 10 poin = 50)</h3>
+            <p>Pasangkan istilah di sebelah kiri dengan pasangan yang tepat di sebelah kanan</p>
+        </div>
+    </div>
+
+    <!-- Menjodohkan 1 - Bab 2 -->
+    <div class="question-card" id="mj1">
+        <div class="question-header">
+            <div class="question-number">36</div>
+            <span class="question-type">Menjodohkan · Bab 2</span>
+        </div>
+        <div class="question-text">Pasangkan sifat Allah dengan kategorinya yang tepat!</div>
+        <div class="match-grid">
+            <div class="match-row">
+                <div class="term">1. Qudrat (Berkuasa)</div>
+                <select id="mj1">
+                    <option value="">-- Pilih Kategori --</option>
+                    <option value="nafsiyah">Sifat Nafsiyah</option>
+                    <option value="salbiyah">Sifat Salbiyah</option>
+                    <option value="maani">Sifat Ma'ani</option>
+                    <option value="magnawiyah">Sifat Ma'nawiyah</option>
+                    <option value="jaiz">Sifat Jaiz</option>
+                </select>
+            </div>
+        </div>
+        <div class="feedback" id="fbmj1"></div>
+    </div>
+
+    <!-- Menjodohkan 2 - Bab 4 -->
+    <div class="question-card" id="mj2">
+        <div class="question-header">
+            <div class="question-number">37</div>
+            <span class="question-type">Menjodohkan · Bab 4</span>
+        </div>
+        <div class="question-text">Pasangkan akhlak terpuji dengan artinya yang tepat!</div>
+        <div class="match-grid">
+            <div class="match-row">
+                <div class="term">2. Ikhlas</div>
+                <select id="mj2">
+                    <option value="">-- Pilih Arti --</option>
+                    <option value="taat">Kepatuhan kepada Allah</option>
+                    <option value="taubat">Kembali kepada Allah dari dosa</option>
+                    <option value="ikhlas">Memurnikan niat semata karena Allah</option>
+                    <option value="istiqamah">Tegak lurus di atas kebenaran</option>
+                </select>
+            </div>
+        </div>
+        <div class="feedback" id="fbmj2"></div>
+    </div>
+
+    <!-- Menjodohkan 3 - Bab 5 -->
+    <div class="question-card" id="mj3">
+        <div class="question-header">
+            <div class="question-number">38</div>
+            <span class="question-type">Menjodohkan · Bab 5</span>
+        </div>
+        <div class="question-text">Pasangkan bacaan shalat dengan posisinya yang tepat!</div>
+        <div class="match-grid">
+            <div class="match-row">
+                <div class="term">3. "Asyhadu an laa ilaaha illallaah..."</div>
+                <select id="mj3">
+                    <option value="">-- Pilih Posisi --</option>
+                    <option value="takbir">Takbiratul Ihram</option>
+                    <option value="fatihah">Bacaan Al-Fatihah</option>
+                    <option value="tasyahud">Tasyahud Akhir</option>
+                    <option value="salam">Salam Penutup</option>
+                </select>
+            </div>
+        </div>
+        <div class="feedback" id="fbmj3"></div>
+    </div>
+
+    <!-- Menjodohkan 4 - Bab 6 -->
+    <div class="question-card" id="mj4">
+        <div class="question-header">
+            <div class="question-number">39</div>
+            <span class="question-type">Menjodohkan · Bab 6</span>
+        </div>
+        <div class="question-text">Pasangkan istilah dengan maknanya yang tepat!</div>
+        <div class="match-grid">
+            <div class="match-row">
+                <div class="term">4. Dzun Nun</div>
+                <select id="mj4">
+                    <option value="">-- Pilih Makna --</option>
+                    <option value="ninive">Kota tempat dakwah Nabi Yunus</option>
+                    <option value="dzun nun">Julukan Nabi Yunus (Pemilik Ikan)</option>
+                    <option value="yaqthin">Pohon labu yang menaungi Nabi Yunus</option>
+                    <option value="paus">Ikan yang menelan Nabi Yunus</option>
+                </select>
+            </div>
+        </div>
+        <div class="feedback" id="fbmj4"></div>
+    </div>
+
+    <!-- Menjodohkan 5 - Bab 1 -->
+    <div class="question-card" id="mj5">
+        <div class="question-header">
+            <div class="question-number">40</div>
+            <span class="question-type">Menjodohkan · Bab 1</span>
+        </div>
+        <div class="question-text">Pasangkan dimensi akidah dengan maknanya yang tepat!</div>
+        <div class="match-grid">
+            <div class="match-row">
+                <div class="term">5. Uluhiyah</div>
+                <select id="mj5">
+                    <option value="">-- Pilih Makna --</option>
+                    <option value="rububiyah">Meyakini Allah sebagai Pencipta</option>
+                    <option value="uluhiyah">Mengesakan Allah dalam ibadah</option>
+                    <option value="asma">Mengimani nama-nama dan sifat Allah</option>
+                    <option value="mahabbah">Cinta kepada Allah dan Rasul-Nya</option>
+                </select>
+            </div>
+        </div>
+        <div class="feedback" id="fbmj5"></div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="action-buttons">
+        <button class="action-btn btn-primary" onclick="submitUAS()">✉️ KIRIM JAWABAN & LIHAT HASIL</button>
+        <button class="action-btn btn-secondary" onclick="downloadPDF()">📥 UNDUH PDF LENGKAP</button>
+        <button class="action-btn btn-secondary" onclick="downloadScore()">📊 UNDUH SKOR SAJA</button>
+        <button class="action-btn btn-secondary" onclick="sendEmail()">✉️ Kirim Email Guru</button>
+        <button class="action-btn btn-reset" onclick="resetUAS()">🔄 MULAI ULANG</button>
+    </div>
+
+    <!-- Result Box -->
+    <div class="result-box" id="resultBox">
+        <h2>🏆 Hasil Ujian Akhir Semester</h2>
+        <p class="thank-you">Terima kasih telah menyelesaikan UAS Akidah Akhlak Semester 1!</p>
+        <div class="score-grid">
+            <div class="score-item">
+                <div class="label">PG HOTS</div>
+                <div class="value" id="scorePG">0</div>
+                <div class="max">/ 200</div>
+            </div>
+            <div class="score-item">
+                <div class="label">PG Kompleks</div>
+                <div class="value" id="scorePCK">0</div>
+                <div class="max">/ 100</div>
+            </div>
+            <div class="score-item">
+                <div class="label">Benar/Salah</div>
+                <div class="value" id="scoreBS">0</div>
+                <div class="max">/ 50</div>
+            </div>
+            <div class="score-item">
+                <div class="label">Menjodohkan</div>
+                <div class="value" id="scoreMJ">0</div>
+                <div class="max">/ 50</div>
+            </div>
+        </div>
+        <div class="final-grade">
+            Nilai Akhir: <span id="finalGrade">0</span> / 400
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="chapter-nav">
+        <a href="6.html" class="nav-btn">
+            <div class="label">← Sebelumnya</div>
+            <div class="title">Bab 6: Kisah Keteladanan Nabi Yunus AS</div>
+        </a>
+        <a href="index.html" class="nav-btn">
+            <div class="label">🏠</div>
+            <div class="title">Daftar Isi Buku</div>
+        </a>
+        <a href="index.html" class="nav-btn next">
+            <div class="label">🎓</div>
+            <div class="title">Selesai Semester 1</div>
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h4>📖 Buku</h4>
+            <p>Akidah Akhlak Semester 1 Kelas 7</p>
+            <p>Buku ajar untuk siswa MTs</p>
+            <p>Teori, praktik, dan aplikasi dalam pendidikan Islam</p>
+        </div>
+        <div class="footer-section">
+            <h4>🧭 Navigasi</h4>
+            <a href="index.html">Beranda</a>
+            <a href="index.html#tentang">Tentang Buku</a>
+            <a href="index.html#bab">Daftar Bab</a>
+            <a href="index.html#penulis">Penulis</a>
+        </div>
+        <div class="footer-section">
+            <h4>📚 Materi</h4>
+            <a href="1.html">Bab 1: Akidah Islam</a>
+            <a href="2.html">Bab 2: Sifat-sifat Allah dan Rasul</a>
+            <a href="6.html">Bab 6: Kisah Nabi Yunus AS</a>
+        </div>
+        <div class="footer-section">
+            <h4>📧 Kontak</h4>
+            <a href="mailto:oktabenia17@gmail.com">oktabenia17@gmail.com</a>
+            <p>MTsN 6 Agam</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 <strong>Okta Benia, S.Pd.I</strong> — MTsN 6 Agam</p>
+        <p>Akidah Akhlak Semester 1 Kelas 7 · Hak Cipta Dilindungi Undang-Undang</p>
+    </div>
+</footer>
+
+<script>
+    // ============ KUNCI JAWABAN ============
+    // PG HOTS
+    const pgAnswers = {
+        pg1: 'b', pg2: 'c', pg3: 'c', pg4: 'c', pg5: 'a',
+        pg6: 'b', pg7: 'b', pg8: 'c', pg9: 'b', pg10: 'a',
+        pg11: 'a', pg12: 'b', pg13: 'd', pg14: 'b', pg15: 'b',
+        pg16: 'b', pg17: 'b', pg18: 'b', pg19: 'd', pg20: 'b'
+    };
+
+    // PG Kompleks (multiple correct answers)
+    const pckAnswers = {
+        pck1: ['a', 'b', 'c', 'd', 'e'],  // Rukun Iman: semua benar
+        pck2: ['a', 'b', 'd', 'e'],       // Sifat Wajib Rasul: Shiddiq, Amanah, Tabligh, Fathanah
+        pck3: ['a', 'b', 'd', 'e'],       // Akhlak Terpuji: Taat, Taubat, Ikhlas, Istiqamah
+        pck4: ['a', 'b', 'c', 'd'],       // Rukun Shalat: Niat, Takbir, Fatihah, Ruku'
+        pck5: ['a', 'b', 'c', 'd'],       // Keteladanan Nabi Yunus: sabar, taubat, tawakkal, dzikir
+        pck6: ['a', 'b', 'c', 'd'],       // Sifat Ma'ani: Qudrat, Iradat, Ilmu, Hayat
+        pck7: ['a', 'b', 'c', 'd'],       // Adab Sebelum Shalat: wudhu, pakaian, adzan, menyegerakan
+        pck8: ['a', 'b', 'c', 'e'],       // Sumber Akidah: Quran, Sunnah, Ijma', Akal sehat
+        pck9: ['a', 'b', 'c', 'd'],       // Fungsi Akhlak: menyucikan hati, ketenangan, ukhuwah, derajat
+        pck10: ['a', 'b', 'c', 'd']       // Dimensi Kisah Nabi Yunus: akidah, akhlak, dakwah, doa
+    };
+
+    // Benar/Salah
+    const bsAnswers = {
+        bs1: 'benar',   // Wujud = Nafsiyah ✓
+        bs2: 'benar',   // Lawan ikhlas = riya' & sum'ah ✓
+        bs3: 'benar',   // 33+33+34 = 100 ✓
+        bs4: 'benar',   // 100.000 orang ✓
+        bs5: 'salah'    // Akidah bersumber dari wahyu, bukan akal
+    };
+
+    // Menjodohkan
+    const mjAnswers = {
+        mj1: 'maani',        // Qudrat → Ma'ani
+        mj2: 'ikhlas',       // Ikhlas → Memurnikan niat
+        mj3: 'tasyahud',     // Asyhadu... → Tasyahud Akhir
+        mj4: 'dzun nun',     // Dzun Nun → Julukan Nabi Yunus
+        mj5: 'uluhiyah'      // Uluhiyah → Mengesakan Allah dalam ibadah
+    };
+
+    document.getElementById('tanggal').valueAsDate = new Date();
+
+    function submitUAS() {
+        const nama = document.getElementById('nama').value.trim();
+        const nis = document.getElementById('nis').value.trim();
+        const kelas = document.getElementById('kelas').value;
+
+        if (!nama || !nis || !kelas) {
+            alert('⚠️ Mohon lengkapi data siswa (Nama, NIS, dan Kelas) terlebih dahulu!');
+            return;
+        }
+
+        // ===== PG HOTS =====
+        let scorePG = 0;
+        for (let i = 1; i <= 20; i++) {
+            const id = `pg${i}`;
+            const selected = document.querySelector(`input[name="${id}"]:checked`);
+            const card = document.getElementById(id);
+            const feedback = document.getElementById(`fb${id}`);
+
+            card.classList.remove('correct', 'incorrect');
+            document.querySelectorAll(`#${id} .option`).forEach(opt => {
+                opt.classList.remove('correct-answer', 'wrong-answer');
+            });
+
+            if (!selected) {
+                card.classList.add('incorrect');
+                feedback.className = 'feedback incorrect';
+                feedback.innerHTML = `⚠️ <strong>Belum dijawab.</strong> Jawaban yang benar: <strong>${pgAnswers[id].toUpperCase()}</strong>`;
+                continue;
+            }
+
+            if (selected.value === pgAnswers[id]) {
+                scorePG += 10;
+                card.classList.add('correct');
+                selected.closest('.option').classList.add('correct-answer');
+                feedback.className = 'feedback correct';
+                feedback.innerHTML = '✅ <strong>Benar!</strong> Jawaban Anda tepat.';
+            } else {
+                card.classList.add('incorrect');
+                selected.closest('.option').classList.add('wrong-answer');
+                const correctOption = document.querySelector(`#${id} input[value="${pgAnswers[id]}"]`);
+                correctOption.closest('.option').classList.add('correct-answer');
+                feedback.className = 'feedback incorrect';
+                feedback.innerHTML = `❌ <strong>Kurang tepat.</strong> Jawaban yang benar: <strong>${pgAnswers[id].toUpperCase()}</strong>`;
+            }
+        }
+
+        // ===== PG KOMPLEKS =====
+        let scorePCK = 0;
+        for (let i = 1; i <= 10; i++) {
+            const id = `pck${i}`;
+            const card = document.getElementById(id);
+            const feedback = document.getElementById(`fb${id}`);
+            const correct = pckAnswers[id];
+
+            card.classList.remove('correct', 'incorrect');
+            document.querySelectorAll(`#${id} .option`).forEach(opt => {
+                opt.classList.remove('correct-answer', 'wrong-answer');
+            });
+
+            const selected = [];
+            document.querySelectorAll(`input[name="${id}"]:checked`).forEach(cb => {
+                selected.push(cb.value);
+            });
+
+            const isCorrect = selected.length === correct.length &&
+                selected.every(v => correct.includes(v)) &&
+                correct.every(v => selected.includes(v));
+
+            document.querySelectorAll(`#${id} .option`).forEach(opt => {
+                const input = opt.querySelector('input');
+                if (correct.includes(input.value)) {
+                    opt.classList.add('correct-answer');
+                }
+                if (selected.includes(input.value) && !correct.includes(input.value)) {
+                    opt.classList.add('wrong-answer');
+                }
+            });
+
+            if (isCorrect) {
+                scorePCK += 10;
+                card.classList.add('correct');
+                feedback.className = 'feedback correct';
+                feedback.innerHTML = `✅ <strong>Benar!</strong> Jawaban: <strong>${correct.map(c => c.toUpperCase()).join(', ')}</strong>`;
+            } else {
+                card.classList.add('incorrect');
+                feedback.className = 'feedback incorrect';
+                feedback.innerHTML = `❌ <strong>Kurang tepat.</strong> Jawaban yang benar: <strong>${correct.map(c => c.toUpperCase()).join(', ')}</strong>`;
+            }
+        }
+
+        // ===== BENAR/SALAH =====
+        let scoreBS = 0;
+        for (let i = 1; i <= 5; i++) {
+            const id = `bs${i}`;
+            const card = document.getElementById(id);
+            const feedback = document.getElementById(`fb${id}`);
+            const selected = document.querySelector(`input[name="${id}"]:checked`);
+
+            card.classList.remove('correct', 'incorrect');
+            document.querySelectorAll(`#${id} .bs-option`).forEach(opt => {
+                opt.classList.remove('correct-answer', 'wrong-answer');
+            });
+
+            if (!selected) {
+                card.classList.add('incorrect');
+                feedback.className = 'feedback incorrect';
+                feedback.innerHTML = `⚠️ <strong>Belum dijawab.</strong> Jawaban yang benar: <strong>${bsAnswers[id].toUpperCase()}</strong>`;
+                continue;
+            }
+
+            document.querySelectorAll(`#${id} .bs-option`).forEach(opt => {
+                const input = opt.querySelector('input');
+                if (input.value === bsAnswers[id]) {
+                    opt.classList.add('correct-answer');
+                }
+                if (input.checked && input.value !== bsAnswers[id]) {
+                    opt.classList.add('wrong-answer');
+                }
+            });
+
+            if (selected.value === bsAnswers[id]) {
+                scoreBS += 10;
+                card.classList.add('correct');
+                feedback.className = 'feedback correct';
+                feedback.innerHTML = '✅ <strong>Benar!</strong> Jawaban Anda tepat.';
+            } else {
+                card.classList.add('incorrect');
+                feedback.className = 'feedback incorrect';
+                feedback.innerHTML = `❌ <strong>Kurang tepat.</strong> Jawaban yang benar: <strong>${bsAnswers[id].toUpperCase()}</strong>`;
+            }
+        }
+
+        // ===== MENJODOHKAN =====
+        let scoreMJ = 0;
+        for (let i = 1; i <= 5; i++) {
+            const id = `mj${i}`;
+            const card = document.getElementById(id);
+            const feedback = document.getElementById(`fb${id}`);
+            const select = document.getElementById(id);
+            const row = select.closest('.match-row');
+
+            row.classList.remove('correct-answer', 'wrong-answer');
+
+            if (!select.value) {
+                row.classList.add('wrong-answer');
+                feedback.className = 'feedback incorrect';
+                feedback.innerHTML = `⚠️ <strong>Belum dijawab.</strong> Jawaban yang benar: <strong>${mjAnswers[id].toUpperCase()}</strong>`;
+                continue;
+            }
+
+            if (select.value === mjAnswers[id]) {
+                scoreMJ += 10;
+                row.classList.add('correct-answer');
+                feedback.className = 'feedback correct';
+                feedback.innerHTML = '✅ <strong>Benar!</strong> Pasangan Anda tepat.';
+            } else {
+                row.classList.add('wrong-answer');
+                feedback.className = 'feedback incorrect';
+                feedback.innerHTML = `❌ <strong>Kurang tepat.</strong> Jawaban yang benar: <strong>${mjAnswers[id].toUpperCase()}</strong>`;
+            }
+        }
+
+        // ===== TOTAL =====
+        const totalScore = scorePG + scorePCK + scoreBS + scoreMJ;
+
+        document.getElementById('scorePG').textContent = scorePG;
+        document.getElementById('scorePCK').textContent = scorePCK;
+        document.getElementById('scoreBS').textContent = scoreBS;
+        document.getElementById('scoreMJ').textContent = scoreMJ;
+        document.getElementById('finalGrade').textContent = totalScore;
+        document.getElementById('resultBox').classList.add('show');
+
+        document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function downloadPDF() {
+        const nama = document.getElementById('nama').value || 'Siswa';
+        if (!nama || nama === 'Siswa') {
+            alert('⚠️ Mohon isi data siswa terlebih dahulu!');
+            return;
+        }
+        window.print();
+    }
+
+    function downloadScore() {
+        const nama = document.getElementById('nama').value;
+        const nis = document.getElementById('nis').value;
+        const kelas = document.getElementById('kelas').value;
+
+        if (!nama || !nis || !kelas) {
+            alert('⚠️ Mohon lengkapi data siswa terlebih dahulu!');
+            return;
+        }
+
+        const pgScore = document.getElementById('scorePG').textContent;
+        const pckScore = document.getElementById('scorePCK').textContent;
+        const bsScore = document.getElementById('scoreBS').textContent;
+        const mjScore = document.getElementById('scoreMJ').textContent;
+        const total = document.getElementById('finalGrade').textContent;
+
+        if (total === '0') {
+            alert('⚠️ Silakan kirim jawaban terlebih dahulu untuk melihat skor!');
+            return;
+        }
+
+        const content = `HASIL UJIAN AKHIR SEMESTER - AKIDAH AKHLAK
+=====================================
+Nama    : ${nama}
+NIS     : ${nis}
+Kelas   : ${kelas}
+Tanggal : ${document.getElementById('tanggal').value}
+Mapel   : Akidah Akhlak
+Ujian   : UAS (Review Bab 1-6)
+
+SKOR PER BAGIAN:
+- PG HOTS (20 soal)    : ${pgScore} / 200
+- PG Kompleks (10 soal): ${pckScore} / 100
+- Benar/Salah (5 soal) : ${bsScore} / 50
+- Menjodohkan (5 soal) : ${mjScore} / 50
+-------------------------------------
+TOTAL                  : ${total} / 400
+
+=====================================
+Okta Benia, S.Pd.I - MTsN 6 Agam`;
+
+        const blob = new Blob([content], { type: 'text/plain' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = `Skor-UAS-Akidah-Akhlak-${nama.replace(/\s+/g, '-')}.txt`;
+        a.click();
+    }
+
+    function sendEmail() {
+        const nama = document.getElementById('nama').value;
+        const nis = document.getElementById('nis').value;
+        const kelas = document.getElementById('kelas').value;
+
+        if (!nama || !nis || !kelas) {
+            alert('⚠️ Mohon lengkapi data siswa terlebih dahulu!');
+            return;
+        }
+
+        const pgScore = document.getElementById('scorePG').textContent;
+        const pckScore = document.getElementById('scorePCK').textContent;
+        const bsScore = document.getElementById('scoreBS').textContent;
+        const mjScore = document.getElementById('scoreMJ').textContent;
+        const total = document.getElementById('finalGrade').textContent;
+
+        const subject = `Hasil UAS Akidah Akhlak - ${nama} (${kelas})`;
+        const body = `Yth. Bapak/Ibu Okta Benia, S.Pd.I,
+
+Berikut hasil Ujian Akhir Semester Akidah Akhlak (Review Bab 1-6):
+
+Nama    : ${nama}
+NIS     : ${nis}
+Kelas   : ${kelas}
+Tanggal : ${document.getElementById('tanggal').value}
+
+SKOR:
+- PG HOTS         : ${pgScore} / 200
+- PG Kompleks     : ${pckScore} / 100
+- Benar/Salah     : ${bsScore} / 50
+- Menjodohkan     : ${mjScore} / 50
+- TOTAL           : ${total} / 400
+
+Terima kasih.
+
+Hormat saya,
+${nama}`;
+
+        window.location.href = `mailto:oktabenia17@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    }
+
+    function resetUAS() {
+        if (!confirm('⚠️ Yakin ingin mengulang ujian? Semua jawaban akan dihapus.')) return;
+
+        // Reset PG HOTS
+        for (let i = 1; i <= 20; i++) {
+            const id = `pg${i}`;
+            document.querySelectorAll(`input[name="${id}"]`).forEach(radio => radio.checked = false);
+            const card = document.getElementById(id);
+            card.classList.remove('correct', 'incorrect');
+            document.querySelectorAll(`#${id} .option`).forEach(opt => {
+                opt.classList.remove('correct-answer', 'wrong-answer');
+            });
+            document.getElementById(`fb${id}`).className = 'feedback';
+            document.getElementById(`fb${id}`).innerHTML = '';
+        }
+
+        // Reset PG Kompleks
+        for (let i = 1; i <= 10; i++) {
+            const id = `pck${i}`;
+            document.querySelectorAll(`input[name="${id}"]`).forEach(cb => cb.checked = false);
+            const card = document.getElementById(id);
+            card.classList.remove('correct', 'incorrect');
+            document.querySelectorAll(`#${id} .option`).forEach(opt => {
+                opt.classList.remove('correct-answer', 'wrong-answer');
+            });
+            document.getElementById(`fb${id}`).className = 'feedback';
+            document.getElementById(`fb${id}`).innerHTML = '';
+        }
+
+        // Reset Benar/Salah
+        for (let i = 1; i <= 5; i++) {
+            const id = `bs${i}`;
+            document.querySelectorAll(`input[name="${id}"]`).forEach(radio => radio.checked = false);
+            const card = document.getElementById(id);
+            card.classList.remove('correct', 'incorrect');
+            document.querySelectorAll(`#${id} .bs-option`).forEach(opt => {
+                opt.classList.remove('correct-answer', 'wrong-answer');
+            });
+            document.getElementById(`fb${id}`).className = 'feedback';
+            document.getElementById(`fb${id}`).innerHTML = '';
+        }
+
+        // Reset Menjodohkan
+        for (let i = 1; i <= 5; i++) {
+            const id = `mj${i}`;
+            document.getElementById(id).value = '';
+            const row = document.getElementById(id).closest('.match-row');
+            row.classList.remove('correct-answer', 'wrong-answer');
+            document.getElementById(`fb${id}`).className = 'feedback';
+            document.getElementById(`fb${id}`).innerHTML = '';
+        }
+
+        // Reset results
+        document.getElementById('resultBox').classList.remove('show');
+        document.getElementById('scorePG').textContent = '0';
+        document.getElementById('scorePCK').textContent = '0';
+        document.getElementById('scoreBS').textContent = '0';
+        document.getElementById('scoreMJ').textContent = '0';
+        document.getElementById('finalGrade').textContent = '0';
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+</script>
+
+</body>
+</html>
